@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33502.453
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BruteForceMnemonic", "BruteForceMnemonic\BruteForceMnemonicCUDA.vcxproj", "{202AD2C6-8F2B-46BF-85F2-12DDC9397CE2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BDD96E21-6557-41B6-8C0A-9A77404D3E6F} = {BDD96E21-6557-41B6-8C0A-9A77404D3E6F}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tools", "Tools\Tools.vcxproj", "{BDD96E21-6557-41B6-8C0A-9A77404D3E6F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "image", "image", "{10E46495-7764-41B7-8745-2AC0FBCF3D2F}"
+	ProjectSection(SolutionItems) = preProject
+		image\Screenshot_1.png = image\Screenshot_1.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "exe", "exe", "{57AB8E96-D945-430B-99A8-9588665B8592}"
+	ProjectSection(SolutionItems) = preProject
+		exe\BruteForceMnemonicOld.exe = exe\BruteForceMnemonicOld.exe
+		exe\config.cfg = exe\config.cfg
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{90B63A17-4556-4B91-B54A-4236226F993F}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{202AD2C6-8F2B-46BF-85F2-12DDC9397CE2}.Debug|x64.ActiveCfg = Debug|x64
+		{202AD2C6-8F2B-46BF-85F2-12DDC9397CE2}.Debug|x64.Build.0 = Debug|x64
+		{202AD2C6-8F2B-46BF-85F2-12DDC9397CE2}.Debug|x86.ActiveCfg = Debug|x64
+		{202AD2C6-8F2B-46BF-85F2-12DDC9397CE2}.Debug|x86.Build.0 = Debug|x64
+		{202AD2C6-8F2B-46BF-85F2-12DDC9397CE2}.Release|x64.ActiveCfg = Release|x64
+		{202AD2C6-8F2B-46BF-85F2-12DDC9397CE2}.Release|x64.Build.0 = Release|x64
+		{202AD2C6-8F2B-46BF-85F2-12DDC9397CE2}.Release|x86.ActiveCfg = Release|x64
+		{202AD2C6-8F2B-46BF-85F2-12DDC9397CE2}.Release|x86.Build.0 = Release|x64
+		{BDD96E21-6557-41B6-8C0A-9A77404D3E6F}.Debug|x64.ActiveCfg = Debug|x64
+		{BDD96E21-6557-41B6-8C0A-9A77404D3E6F}.Debug|x64.Build.0 = Debug|x64
+		{BDD96E21-6557-41B6-8C0A-9A77404D3E6F}.Debug|x86.ActiveCfg = Debug|x64
+		{BDD96E21-6557-41B6-8C0A-9A77404D3E6F}.Debug|x86.Build.0 = Debug|x64
+		{BDD96E21-6557-41B6-8C0A-9A77404D3E6F}.Release|x64.ActiveCfg = Release|x64
+		{BDD96E21-6557-41B6-8C0A-9A77404D3E6F}.Release|x64.Build.0 = Release|x64
+		{BDD96E21-6557-41B6-8C0A-9A77404D3E6F}.Release|x86.ActiveCfg = Release|x64
+		{BDD96E21-6557-41B6-8C0A-9A77404D3E6F}.Release|x86.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {671446A2-96E3-452E-AA1E-84A2D0B0DBD3}
+	EndGlobalSection
+EndGlobal

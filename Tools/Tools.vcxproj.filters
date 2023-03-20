@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="bitcoin">
+      <UniqueIdentifier>{e17b2c31-ad64-47bf-9062-d0b6f8890b18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bitcoin\util">
+      <UniqueIdentifier>{a2aed640-9658-430a-8df6-3449828cc488}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bitcoin\crypto">
+      <UniqueIdentifier>{a713e8c7-f0e4-4652-b617-7b0b2b7df8a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bitcoin\secp256k1">
+      <UniqueIdentifier>{e7abdfb5-f141-4c0d-a6ed-c2fddbbef485}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bitcoin\secp256k1\src">
+      <UniqueIdentifier>{8a8ac03f-3270-496a-86b8-0fbc5bca1497}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bitcoin\secp256k1\include">
+      <UniqueIdentifier>{9be665d4-c62c-4bfe-8b67-6263ce139932}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config">
+      <UniqueIdentifier>{45c96dbe-bb35-4091-ab1a-ae83df6414ca}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bitcoin\base58.cpp">
+      <Filter>bitcoin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bitcoin\hash.cpp">
+      <Filter>bitcoin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bitcoin\util\strencodings.cpp">
+      <Filter>bitcoin\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bitcoin\util\string.cpp">
+      <Filter>bitcoin\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bitcoin\crypto\hmac_sha256.cpp">
+      <Filter>bitcoin\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bitcoin\crypto\sha256.cpp">
+      <Filter>bitcoin\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bitcoin\crypto\ripemd160.cpp">
+      <Filter>bitcoin\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bitcoin\crypto\hmac_sha512.cpp">
+      <Filter>bitcoin\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bitcoin\crypto\sha512.cpp">
+      <Filter>bitcoin\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="tools.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bitcoin\secp256k1\src\secp256k1.c">
+      <Filter>bitcoin\secp256k1\src</Filter>
+    </ClCompile>
+    <ClCompile Include="segwit_addr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\config\Config.cpp">
+      <Filter>config</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\bitcoin\base58.h">
+      <Filter>bitcoin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bitcoin\hash.h">
+      <Filter>bitcoin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bitcoin\util\strencodings.h">
+      <Filter>bitcoin\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bitcoin\util\string.h">
+      <Filter>bitcoin\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bitcoin\crypto\hmac_sha256.h">
+      <Filter>bitcoin\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bitcoin\crypto\sha256.h">
+      <Filter>bitcoin\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bitcoin\crypto\ripemd160.h">
+      <Filter>bitcoin\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bitcoin\crypto\hmac_sha512.h">
+      <Filter>bitcoin\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bitcoin\crypto\sha512.h">
+      <Filter>bitcoin\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="tools.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bitcoin\secp256k1\include\secp256k1.h">
+      <Filter>bitcoin\secp256k1\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bitcoin\secp256k1\include\libsecp256k1-config.h">
+      <Filter>bitcoin\secp256k1\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bitcoin\secp256k1\include\secp256k1_recovery.h">
+      <Filter>bitcoin\secp256k1\include</Filter>
+    </ClInclude>
+    <ClInclude Include="segwit_addr.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="utils.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\config\Config.hpp">
+      <Filter>config</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
