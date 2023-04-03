@@ -17,7 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "image", "image", "{10E46495
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "exe", "exe", "{57AB8E96-D945-430B-99A8-9588665B8592}"
 	ProjectSection(SolutionItems) = preProject
-		exe\BruteForceMnemonicOld.exe = exe\BruteForceMnemonicOld.exe
+		exe\BruteForceMnemonicOldV11.exe = exe\BruteForceMnemonicOldV11.exe
 		exe\config.cfg = exe\config.cfg
 	EndProjectSection
 EndProject

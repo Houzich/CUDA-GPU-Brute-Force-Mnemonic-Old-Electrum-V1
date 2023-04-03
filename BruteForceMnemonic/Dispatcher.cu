@@ -76,6 +76,11 @@ int Generate_Mnemonic_And_Hash(void)
 	}
 
 	size_t num_wallets_gpu = config.cuda_grid * config.cuda_block;
+	if (num_wallets_gpu < NUM_PACKETS_SAVE_IN_FILE)
+	{
+		std::cerr << "Error num_wallets_gpu < NUM_PACKETS_SAVE_IN_FILE!" << std::endl;
+		return -1;
+	}
 
 	tools::clearFiles();
 	//18,446,744,073,709,551,615
@@ -92,7 +97,7 @@ int Generate_Mnemonic_And_Hash(void)
 	std::cout << "Enter num rounds save data in file: ";
 	std::cin >> count_save_data_in_file;
 
-	std::cout << "!!!FOR TEST!!! Enter num bytes for check 6...8: ";
+	std::cout << "Enter num bytes for check 6...8: ";
 	std::cin >> num_bytes;
 	if (num_bytes != 0)
 		if ((num_bytes < 6) || (num_bytes > 8)) {
@@ -111,18 +116,18 @@ int Generate_Mnemonic_And_Hash(void)
 
 	int err = tools::readAllTables(Board->host.tables, config.folder_database, "");
 	if (err == -1) {
-		std::cout << "Error get_all_tables segwit!" << std::endl;
+		std::cerr << "Error get_all_tables segwit!" << std::endl;
 		goto Error;
 	}
 
 
 	if (Board->malloc(config.cuda_grid, config.cuda_block, count_save_data_in_file == 0 ? false : true) != 0) {
-		std::cout << "Error Board->Malloc()!" << std::endl;
+		std::cerr << "Error Board->Malloc()!" << std::endl;
 		goto Error;
 	}
 
 	if (Stride->init() != 0) {
-		printf("Error INIT!!\n");
+		std::cerr << "Error INIT!!" << std::endl;
 		goto Error;
 	}
 
@@ -148,14 +153,14 @@ int Generate_Mnemonic_And_Hash(void)
 		number_of_addresses_generate = (step + 1) * (Board->wallets_in_round_gpu);
 		if (start_save < count_save_data_in_file) {
 			if (Stride->start_for_save(config.cuda_grid, config.cuda_block) != 0) {
-				printf("Error START!!\n");
+				std::cerr << "Error START!!" << std::endl;
 				goto Error;
 			}
 		}
 		else
 		{
 			if (Stride->start(config.cuda_grid, config.cuda_block) != 0) {
-				printf("Error START!!\n");
+				std::cerr << "Error START!!" << std::endl;
 				goto Error;
 			}
 		}
@@ -164,14 +169,14 @@ int Generate_Mnemonic_And_Hash(void)
 		tools::generateRandomWordsIndex(Board->host.words_index, WORDS_MNEMONIC);
 		if (start_save < count_save_data_in_file) {
 			if (Stride->end_for_save() != 0) {
-				printf("Error END!!\n");
+				std::cerr << "Error END!!" << std::endl;
 				goto Error;
 			}
 		}
 		else
 		{
 			if (Stride->end() != 0) {
-				printf("Error END!!\n");
+				std::cerr << "Error END!!" << std::endl;
 				goto Error;
 			}
 		}

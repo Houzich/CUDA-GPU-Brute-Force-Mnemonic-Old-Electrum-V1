@@ -2495,14 +2495,10 @@ void ripemd160_GPU(const uint8_t* msg, uint32_t msg_len, uint32_t hash[5])
 
 
 __device__
-void hash160(const uint8_t* input, int input_len, uint32_t* output) {
+void calc_hash160(const uint8_t* input, int input_len, uint32_t* output) {
 	uint8_t sha256_result[32];
 	sha256((const uint32_t*)input, input_len, (uint32_t*)&sha256_result);
 	ripemd160_GPU((const uint8_t*)&sha256_result, 32, output);
-}
-__device__
-void calc_hash160(extended_public_key_t* pub, uint32_t* address_bytes) {
-	hash160((const uint8_t*)pub, 65, address_bytes);
 }
 
 __constant__ uint8_t smbl[16] = { '0', '1',  '2',  '3',  '4',  '5',  '6',  '7',  '8',  '9',  'a',  'b',  'c',  'd',  'e',  'f' };
@@ -2721,37 +2717,32 @@ __device__ uint32_t add_256b(uint32_t* const r, const uint32_t* const a) {
 	return c;
 }
 
-//__constant__ uint32_t max_priv[8] = { 0xffffffff, 0xffffffff, 0xffffffff, 0xfffffffe, 0xbaaedce6, 0xaf48a03b, 0xbfd25e8c, 0xd0364141 };
-__constant__ uint32_t max_priv[8] = { 0xffffffff, 0xffffffff, 0xffffffff, 0xfeffffff, 0xe6dcaeba, 0x3ba048af, 0x8c5ed2bf, 0x414136d0 };
-__device__ uint32_t sub_max_priv(uint32_t* const r, const uint32_t* const a, const uint32_t* const b) {
-	uint32_t c = 0;
-
-	for (int i = 7; i >= 0; i--) {
-		r[i] = a[i] - b[i] - c;
-		c = r[i] > a[i] ? 1 : (r[i] == a[i] ? c : 0);
-	}
-
-	return c;
-}
+__constant__ uint32_t max_priv[8] = { 0xffffffff, 0xffffffff, 0xffffffff, 0xfffffffe, 0xbaaedce6, 0xaf48a03b, 0xbfd25e8c, 0xd0364141 };
+__constant__ uint32_t max_priv_neg[8] = { 0x00000000, 0x00000000, 0x00000000, 0x00000001, 0x45512319, 0x50b75fc4, 0x402da173, 0x2fc9bebf };
 
 __device__ uint32_t add_privkeys(uint32_t* const r, const uint32_t* const a) {
 	uint32_t c = add_256b(r, a);
 	if (c) {
-		sub_max_priv(r, r, max_priv);
+		add_256b(r, max_priv_neg);
 	}
 	else if ((r[0] == max_priv[0]) &&
 			(r[1] == max_priv[1]) &&
 			(r[2] == max_priv[2]) &&
-			(r[3] >= max_priv[3]) &&
-			(r[4] >= max_priv[4]) &&
-			(r[5] >= max_priv[5]) &&
-			(r[6] >= max_priv[6]) &&
-			(r[7] >= (max_priv[7] + 1)))
+			(r[3] >= max_priv[3]))
 	{
-		sub_max_priv(r, r, max_priv);
+		int cmp = 0;
+		for (int i = 0; i < 5; i++)
+		{
+			if (r[3 + i] > max_priv[3 + i]) {
+				cmp = 1; break;
+			}
+			if (r[3 + i] < max_priv[3 + i]) {
+				cmp = -1; break;
+			}
+		}
+		if(cmp == 1)
+			add_256b(r, max_priv_neg);
 	}
-
-
 	return c;
 }
 
@@ -2784,10 +2775,10 @@ __device__ void key_to_hash160(
 		for (int i = 0; i < 32 / 4; i++) {
 			priv[i] = SWAP256(priv[i]);
 		}
-		uint8_t pub_key[65];
+		uint8_t pub_key[68];
 		pub_key[0] = 4;
 		calc_public((extended_private_key_t*)priv, (extended_public_key_t*)&pub_key[1]);
-		calc_hash160((extended_public_key_t*)pub_key, hash);
+		calc_hash160(pub_key, 65, hash);
 		dev_search_hash160_in_tables(hash, tables, words_index, ret);
 	}
 	//______________________________________________________________________________________________________________________
@@ -2807,16 +2798,16 @@ __device__ void key_to_hash160(
 		for (int i = 0; i < 32 / 4; i++) {
 			priv[i] = SWAP256(priv[i]);
 		}
-		uint8_t pub_key[65];
+		uint8_t pub_key[68];
 		pub_key[0] = 4;
 		calc_public((extended_private_key_t*)priv, (extended_public_key_t*)&pub_key[1]);
-		calc_hash160((extended_public_key_t*)pub_key, hash);
+		calc_hash160(pub_key, 65, hash);
 		dev_search_hash160_in_tables(hash, tables, words_index, ret);
 	}
 }
 
 __device__ void key_to_hash160_for_save(
-	const uint32_t* master_private,
+	uint32_t* master_private,
 	uint32_t* master_public,
 	const tableStruct* tables,
 	const uint16_t* words_index,
@@ -2842,10 +2833,10 @@ __device__ void key_to_hash160_for_save(
 		for (int i = 0; i < 32 / 4; i++) {
 			priv[i] = SWAP256(priv[i]);
 		}
-		uint8_t pub_key[65];
+		uint8_t pub_key[68]; //65
 		pub_key[0] = 4;
 		calc_public((extended_private_key_t*)priv, (extended_public_key_t*)&pub_key[1]);
-		calc_hash160((extended_public_key_t*)pub_key, &hash[(num_cld + NUM_CHILDS * 0) * 5]);
+		calc_hash160(pub_key, 65, &hash[(num_cld + NUM_CHILDS * 0) * 5]);
 		dev_search_hash160_in_tables(&hash[(num_cld + NUM_CHILDS * 0) * 5], tables, words_index, ret);
 	}
 	//______________________________________________________________________________________________________________________
@@ -2864,16 +2855,14 @@ __device__ void key_to_hash160_for_save(
 		add_privkeys(priv, master_private);
 		for (int i = 0; i < 32 / 4; i++) {
 			priv[i] = SWAP256(priv[i]);
-		}
-		uint8_t pub_key[65];
+		};
+		uint8_t pub_key[68]; //65
 		pub_key[0] = 4;
 		calc_public((extended_private_key_t*)priv, (extended_public_key_t*)&pub_key[1]);
-		calc_hash160((extended_public_key_t*)pub_key, &hash[(num_cld + NUM_CHILDS * 1) * 5]);
+		calc_hash160(pub_key, 65, &hash[(num_cld + NUM_CHILDS * 1) * 5]);
 		dev_search_hash160_in_tables(&hash[(num_cld + NUM_CHILDS * 1) * 5], tables, words_index, ret);
 	}
 }
-
-//{ 1189, 1189, 1562, 1562, 1189, 566, 566, 745, 1135, 57, 1285, 1135 }
 
 __global__ void gl_bruteforce_mnemonic(
 	const uint16_t* __restrict__ words_index,

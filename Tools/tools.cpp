@@ -38,7 +38,6 @@ namespace tools {
 		{
 			buff[i] = distr(eng) % 1626;
 		}
-
 	}
 
 	int pushToMemory(uint8_t* addr_buff, std::vector<std::string>& lines, int max_len) {
@@ -143,11 +142,11 @@ namespace tools {
 		out.open(FILE_PATH_RESULT);
 		out.close();
 	}
-#define NUM_PACKETS_SAVE_IN_FILE 8
+
 	void saveResult(char* mnemonic, uint8_t* hash160, size_t num_wallets) {
 		std::ofstream out;
 		out.open(FILE_PATH_RESULT, std::ios::app);
-//#pragma omp parallel for 
+#pragma omp parallel for 
 		for (int x = 0; x < NUM_PACKETS_SAVE_IN_FILE; x++) {
 			if (out.is_open())
 			{
@@ -158,13 +157,13 @@ namespace tools {
 					for (int ii = 0; ii < NUM_ALL_CHILDS; ii++) {
 						uint8_t* hash = (uint8_t*)&hash160[(i * NUM_ALL_CHILDS + ii) * 20];
 						encodeAddressBase58((const uint8_t*)hash, addr);
-						ss << "," << addr;
+						ss << ',' << addr;
 					}
 					ss << '\n';
-//#pragma omp critical
-//					{
+#pragma omp critical
+					{
 						out << ss.str();
-//					}
+					}
 				}
 			}
 			else

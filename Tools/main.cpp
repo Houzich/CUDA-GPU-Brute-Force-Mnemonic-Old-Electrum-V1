@@ -17,7 +17,6 @@
 #include "tools.h"
 #include "segwit_addr.h"
 
-
 using namespace tools;
 
 int main()

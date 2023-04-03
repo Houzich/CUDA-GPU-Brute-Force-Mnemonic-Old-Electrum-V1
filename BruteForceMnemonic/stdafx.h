@@ -11,7 +11,7 @@
 #pragma once
 //compute_86, sm_86
 
-#define NUM_CHILDS					(10)
+#define NUM_CHILDS					(5)
 #define NUM_ALL_CHILDS				(NUM_CHILDS*2)
 
 
@@ -31,6 +31,7 @@
 
 #define USE_REVERSE_32
 
+#define NUM_PACKETS_SAVE_IN_FILE 8
 #define FILE_PATH_RESULT "Save_Addresses.csv"
 #define FILE_PATH_FOUND_ADDRESSES "Found_Addresses.csv"
 #define FILE_PATH_FOUND_BYTES "Found_Bytes.csv"

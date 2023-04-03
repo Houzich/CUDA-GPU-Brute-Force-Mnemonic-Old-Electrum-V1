@@ -1,8 +1,10 @@
-# Brute-force Mnemomonic old Electrum (V1)
+# Brute-force Mnemomonic Old Electrum (V1)
+## (Version 1.1)
+## Генерация мнемонических фраз Electrum (V1) и соответствующих приватных ключей адресов m/0/x, m/1/x. Поиск адресов в базе.
 ![](image/Screenshot_1.png)
 
 ## Файл config.cfg
-* ***"folder_database": "C:\\database"***  - путь к папке с таблицами искомых адресов. Адреса в таблицах должны быть в формате hash160 и отсортированы программой https://github.com/Houzich/Convert-Addresses-To-Hash160-For-Brute-Force
+* ***"folder_database": "F:\\database"***  - путь к папке с таблицами искомых адресов. Адреса в таблицах должны быть в формате hash160 и отсортированы программой https://github.com/Houzich/Convert-Addresses-To-Hash160-For-Brute-Force
 * ***"cuda_grid": 1024*** - настройка под видеокарту
 * ***"cuda_block": 256*** - настройка под видеокарту
 Кол-во генерируемых мнемоник за раунд равно cuda_grid*cuda_block
@@ -25,7 +27,7 @@
 
 Нужно ввести номер используемой карты.
 Начинается считывание и преобразование файлов баз с адресами:
-> *PROCESSED 2168134 ROWS IN FILE C:\\database\A0.csv*
+> *PROCESSED 2168134 ROWS IN FILE F:\\database\A0.csv*
 > *.....*
 
 Где 2168134 - это кол-во адресов в файле. Адреса в файле хранятся в 20 байтовом формате в виде hex-строки. И отсортированы по возрастанию.
@@ -40,7 +42,7 @@
 Запись производится очень медленно. Так как преобразование 20-ти байтного формата в формат WIF производится на ЦПУ.
 При проверке скорости выбирать кол-во циклов 0.
 
-> *!!!FOR TEST!!! Enter num bytes for check BIP44 6...8:*
+> *Enter num bytes for check BIP44 6...8:*
 
 Можно ввести количество байт по которым будет производиться дополнительная сверка. Чтоб пропустить этот шаг, ввести 0.
 Если ввести число, то адреса будут проверятmся на совпадение еще и по заданному количеству байт.
@@ -54,7 +56,7 @@
 
 ## Проверка на совпадение по байтам
 Если при старте программы ввести
-> *!!!FOR TEST!!! Enter num bytes for check BIP44 5...8:*
+> *Enter num bytes for check BIP44 5...8:*
 
 к примеру, 5. То периодически на экране будут появляться надписи такого формата:
 > *!!!FOUND BYTES: blossom window trouble everyday return use dot reflect sweat midnight cost made,14FtUvN1BHV4kto2t1V3pkAkZnLwrmat9f,14FtUvN14hVyyXJFDcwTkz5vkDyYWYBRCN,23B92CE0FF27BD38A6D7E1B8C8EED9D4F372E295,23B92CE0FF03C3AF18CF8A182D9B791CD260D8D0*
@@ -80,7 +82,7 @@
 В файле строки хранятся в виде:
 *emotion first beard escape shield rough flame carefully dish handle really dad, 17oaREDuDrWg1ECCyQZHwNJJyWTp3Bfnw1,Fri Feb  3 12:21:27 2023*
 
-## Файл BruteForceMnemonicOld.exe находится в папке exe
+## Файл BruteForceMnemonicOldV11.exe находится в папке exe
 
 
 
