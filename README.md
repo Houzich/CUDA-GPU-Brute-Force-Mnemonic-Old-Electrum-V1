@@ -1,4 +1,4 @@
-# Brute-force Mnemomonic Old Electrum (V1)
+# Brute-force Mnemonic Old Electrum (V1)
 ## (Version 1.1)
 ## Генерация мнемонических фраз Electrum (V1) и соответствующих приватных ключей адресов m/0/x, m/1/x. Поиск адресов в базе.
 ![](image/Screenshot_1.png)
