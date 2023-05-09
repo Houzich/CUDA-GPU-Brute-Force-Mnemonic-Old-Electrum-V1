@@ -1,10 +1,24 @@
 # Brute-force Mnemonic Old Electrum (V1)
-## (Version 1.1)
+## (Version 2.0.0)
 ## Генерация мнемонических фраз Electrum (V1) и соответствующих приватных ключей адресов m/0/x, m/1/x. Поиск адресов в базе.
-![](image/Screenshot_1.png)
+
 
 ## Файл config.cfg
-* ***"folder_database": "F:\\database"***  - путь к папке с таблицами искомых адресов. Адреса в таблицах должны быть в формате hash160 и отсортированы программой https://github.com/Houzich/Convert-Addresses-To-Hash160-For-Brute-Force
+* ***"folder_tables": "F:\\tables"***  - путь к папке с таблицами искомых адресов. Адреса в таблицах должны быть в формате hash160 и отсортированы программой https://github.com/Houzich/Convert-Addresses-To-Hash160-For-Brute-Force
+
+* ***"number_of_generated_mnemonics": 18000000000000000000*** - Общее кол-во мнемоник которое мы хотим генерировать. Это введено для проверки скорости генерации или для сохранения результатов генерации в файлы. Если хотим бесконечно, то устанавливаем максимальное значение 18000000000000000000. 
+* ***"num_child_addresses": 10*** - количество генерируемых адресов для каждого патча. От 1 до 10.</br></br>
+
+* ***"path_m0_x": "yes"*** - генерировать ли адреса патча m/0/x? "yes" или "no".
+* ***"path_m1_x": "yes"*** - генерировать ли адреса патча m/1/x? "yes" или "no".
+
+* ***"chech_equal_bytes_in_adresses": "yes"*** - Проверять ли адереса на совпадение по байтам? "yes" или "no". Если "yes", то адреса будут проверяться на совпадение по байтам 
+больше 8 байт. Смотри ниже в "Описание".
+* ***"save_generation_result_in_file": "no"*** - Сохранять результат генерации в файл? "yes" или "no". Введено для проверки правильности генерации. Мнемоника и соответствующие ей адреса записываются в файл Save_Addresses.csv
+Запись производится очень медленно. Так как преобразование hash160 в формат WIF производится на ЦПУ. При основной работе программы выбирать "no".</br></br>
+
+* ***"static_words_generate_mnemonic": "suffocate threaten silently ? knee rhythm noise ? upon keep mud ?"*** - Какие слова генерировать? Можно задать слова мнемоники, которые будут постоянными. Генерироваться будут только те слова, которые указаны символом "?". К примеру, можно задать "suffocate threaten silently ? knee rhythm noise ? upon keep mud ?". Тогда генерироваться будут только 4, 8 и 12 слова.</br></br>
+
 * ***"cuda_grid": 1024*** - настройка под видеокарту
 * ***"cuda_block": 256*** - настройка под видеокарту
 Кол-во генерируемых мнемоник за раунд равно cuda_grid*cuda_block
@@ -17,73 +31,62 @@
 
 где число 3  - это количество найденных видеокарт NVIDIA.
 Далее выводятся характеристики каждой карты:
-> *Device 0: "NVIDIA GeForce GTX 1050 Ti"*
+> *Device 0: "NVIDIA GeForce GTX 1050 Ti"*</br>
+> *...*</br>
+> Device 1: "NVIDIA GeForce GTX 1050 Ti"</br>
+> *...*</br>
+> *Device 2: "NVIDIA GeForce GTX 1050 Ti"*</br>
+> *Enter the number of the used video card:*</br>
 
+Нужно ввести номер используемой карты.</br>
+
+Начинается считывание и преобразование файлов таблиц с адресами:
+> *PROCESSED 2168134 ROWS IN FILE F:\\tables\A0.csv*</br>
+> *...* </br>
+> *PROCESSED 1232455 ROWS IN FILE F:\\tables\A0.csv*</br>
+> *...*</br>
+> *PROCESSED 3455665 ROWS IN FILE F:\\tables\A0.csv*</br>
 > *...*
 
-> *Device 1: "NVIDIA GeForce GTX 1050 Ti"*
-
-> *Enter the number of the used video card:*
-
-Нужно ввести номер используемой карты.
-Начинается считывание и преобразование файлов баз с адресами:
-> *PROCESSED 2168134 ROWS IN FILE F:\\database\A0.csv*
-> *.....*
-
-Где 2168134 - это кол-во адресов в файле. Адреса в файле хранятся в 20 байтовом формате в виде hex-строки. И отсортированы по возрастанию.
-
-> *Enter number of generate mnemonic:*
-
-Кол-во мнемоник которое мы хотим генерировать. Это введено для проверки скорости генерации. Если хотим бесконечно, то устанавливаем максимальное значение 18000000000000000000.
-
-> *Enter num cycles save data in file:*
-
-Какое кол-во раундов мы хотим записывать в файл. Введено для проверки правильности генерации. Мнемоника и соответствующие ей адреса записываются в файл Save_Addresses.csv
-Запись производится очень медленно. Так как преобразование 20-ти байтного формата в формат WIF производится на ЦПУ.
-При проверке скорости выбирать кол-во циклов 0.
-
-> *Enter num bytes for check BIP44 6...8:*
-
-Можно ввести количество байт по которым будет производиться дополнительная сверка. Чтоб пропустить этот шаг, ввести 0.
-Если ввести число, то адреса будут проверятmся на совпадение еще и по заданному количеству байт.
+Где 2168134 - это кол-во адресов в файле. Адреса в файле хранятся в 20 байтовом формате(hash160) в виде hex-строки. И отсортированы по возрастанию.
 
 Далее выводится кол-во кошельков генерируемых за раунд. И начинается процесс генерации.
 В ходе работы программы, постоянно обновляется надпись
 
-> *SPEED: 250,234 MNEMONICS/SECOND AND 2,500,340 ADDRESSES/SECOND, ROUND: 9*
+> *GENERATE: 2,067 MNEMONICS/SEC AND 41,358 ADDRESSES/SEC | SCAN: 162.113215 GIGA ADDRESSES/SEC | ROUND: 5*
 
-Кол-во мнемоник и кол-во адресов генерируемых за секунду. В данном случае, для каждого сгенерированного кошелька генерировалось 10 адресов. 5 адресов патча m/0/x и пять адресов патча m/1/x
+Кол-во мнемоник и кол-во адресов генерируемых за секунду и общее кол-во отсканированных адресов в таблицах. В данном случае, для каждого сгенерированного кошелька генерировалось 20 адресов. 10 адресов патча m/0/x и 10 адресов патча m/1/x
 
 ## Проверка на совпадение по байтам
 Если при старте программы ввести
-> *Enter num bytes for check BIP44 5...8:*
+Если в файле config.cfg установить ***"chech_equal_bytes_in_adresses": "yes"***. То периодически на экране будут появляться надписи такого формата:
+> *!!!FOUND IN ADDRESS(HASH160) (m/0/6) EQUAL 5 BYTES:: blossom window trouble everyday return use dot reflect sweat midnight cost made,14FtUvN1BHV4kto2t1V3pkAkZnLwrmat9f,14FtUvN14hVyyXJFDcwTkz5vkDyYWYBRCN,23B92CE0FF27BD38A6D7E1B8C8EED9D4F372E295,23B92CE0FF03C3AF18CF8A182D9B791CD260D8D0*
 
-к примеру, 5. То периодически на экране будут появляться надписи такого формата:
-> *!!!FOUND BYTES: blossom window trouble everyday return use dot reflect sweat midnight cost made,14FtUvN1BHV4kto2t1V3pkAkZnLwrmat9f,14FtUvN14hVyyXJFDcwTkz5vkDyYWYBRCN,23B92CE0FF27BD38A6D7E1B8C8EED9D4F372E295,23B92CE0FF03C3AF18CF8A182D9B791CD260D8D0*
-
-Мнемоника сгенерированного кошелька. Его адрес. Адрес в базе, который совпал по первым байтам с адресом мнемоники. И соответственно, их представление в 20-и байтовом формате hash160. Можно посчитать одинаковые байты и убедиться в этом.
+(*EQUAL 5 BYTES*) - количество совпавших байт. Мнемоника сгенерированного кошелька. Его адрес. Адрес в базе, который совпал по первым байтам с адресом мнемоники. И соответственно, их представление в 20-и байтовом формате hash160. Можно посчитать одинаковые байты и убедиться в этом.
 Все эти адреса сохраняются в лог-файл Found_Bytes.csv.
 В файле, строки хранятся в виде:
-*usual disagree error juice gap renew jacket toe circle goose tank prefer,15JMEsfkJSE1BJ3FjyMFZheAtpn7qLyHUs,15JMEsfjbTyHN6Wf9x2HA7XnqfVqdgD4kD,2F28782544E96EBEC694FFF37AC20FD2B6389ABD,2F2878254409A3E553D017294757CC2DDF4A2E99,Fri Feb  3 11:40:56 2023*
+*EQUAL 5 BYTES,usual disagree error juice gap renew jacket toe circle goose tank prefer,15JMEsfkJSE1BJ3FjyMFZheAtpn7qLyHUs,15JMEsfjbTyHN6Wf9x2HA7XnqfVqdgD4kD,2F28782544E96EBEC694FFF37AC20FD2B6389ABD,2F2878254409A3E553D017294757CC2DDF4A2E99,Fri Feb  3 11:40:56 2023*
 
 # Если нашли кошелек
 В консоли появиться надписи:
-> * !!!FOUND!!!
-!!!FOUND!!!
-!!!FOUND!!!
-!!!FOUND!!!
-!!!FOUND: emotion first beard escape shield rough flame carefully dish handle really dad, 17oaREDuDrWg1ECCyQZHwNJJyWTp3Bfnw1
-!!!FOUND!!!
-!!!FOUND!!!
-!!!FOUND!!!
-!!!FOUND!!!*
+> *!!!FOUND!!!*</br>
+> *!!!FOUND!!!*</br>
+> *!!!FOUND!!!*</br>
+> *!!!FOUND!!!*</br>
+> *!!!FOUND ADDRESS (m/0/8): suffocate threaten silently eventually knee rhythm noise remember upon keep mud suit, 1KDpfMLLWohA4E1iN2bv8qt3HZC957CYMU*</br>
+> *!!!FOUND!!!*</br>
+> *!!!FOUND!!!*</br>
+> *!!!FOUND!!!*</br>
+> *!!!FOUND!!!*</br>
 
-Соответственно мнемоника и адрес который мы нашли. И информация добавиться в файл Found_Addresses.csv.
+Соответственно мнемоника и адрес который мы нашли. Эта информация добавиться в файл Found_Addresses.csv.
 В файле строки хранятся в виде:
-*emotion first beard escape shield rough flame carefully dish handle really dad, 17oaREDuDrWg1ECCyQZHwNJJyWTp3Bfnw1,Fri Feb  3 12:21:27 2023*
+*suffocate threaten silently eventually knee rhythm noise remember upon keep mud suit,address path m/0/8,1KDpfMLLWohA4E1iN2bv8qt3HZC957CYMU,Tue May  9 20:26:14 2023*
 
-## Файл BruteForceMnemonicOldV11.exe находится в папке exe
-
-
+## Файл BruteForceMnemonicOldV200.exe находится в папке exe
 
 ### ОБСУЖДЕНИЕ КОДА: https://t.me/BRUTE_FORCE_CRYPTO_WALLET
+
+## If you want to support the project don't hesitate to donate.
+**BTC** - bc1qqldn5lyk54rcvf5ndruh525v0qz8lf9yu5t9a5</br>
+**ETH** - 0x1193901D25604F55f5fA93Be09F5203b4B6F265f

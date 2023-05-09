@@ -51,7 +51,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IncludePath>$(ProjectDir)CUDA_Helper;$(ProjectDir);$(SolutionDir)Config;$(IncludePath)</IncludePath>
     <SourcePath>$(ProjectDir);$(ProjectDir)Source Files;$(SourcePath)</SourcePath>
-    <TargetName>BruteForceMnemonicOldV11</TargetName>
+    <TargetName>BruteForceMnemonicOldV200</TargetName>
     <LibraryPath>$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

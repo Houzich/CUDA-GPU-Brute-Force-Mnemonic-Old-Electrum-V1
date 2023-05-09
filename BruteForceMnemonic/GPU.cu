@@ -1,8 +1,8 @@
 ﻿/**
   ******************************************************************************
   * @author		Anton Houzich
-  * @version	V1.0.0
-  * @date		20-March-2023
+  * @version	V2.0.0
+  * @date		9-May-2023
   * @mail		houzich_anton@mail.ru
   * discussion  https://t.me/BRUTE_FORCE_CRYPTO_WALLET
   ******************************************************************************
@@ -185,7 +185,7 @@ static void sha256(const uint32_t* pass, int pass_len, uint32_t* hash) {
 	int plen = pass_len / 4;
 	if (mod(pass_len, 4)) plen++;
 	uint32_t* p = hash;
-	uint32_t W[0x10];
+	uint32_t W[16];
 	int loops = plen;
 	int curloop = 0;
 	uint32_t State[8];
@@ -215,7 +215,7 @@ static void sha256(const uint32_t* pass, int pass_len, uint32_t* hash) {
 		W[0xE] = 0x0;
 		W[0xF] = 0x0;
 		for (int m = 0; loops != 0 && m < 16; m++) {
-			W[m] ^= SWAP256(pass[m + (curloop * 16)]);
+			W[m] = SWAP256(pass[m + (curloop * 16)]);
 			loops--;
 		}
 		if (loops == 0 && mod(pass_len, 64) != 0) {
@@ -248,7 +248,7 @@ static void sha256(const uint32_t* pass, int pass_len, uint32_t* hash) {
 		W[0xF] = 0x0;
 		if ((pass_len & 0x3B) != 0x3B) {
 			uint32_t padding = 0x80 << (((pass_len + 4) - ((pass_len + 4) / 4 * 4)) * 8);
-			W[0] |= SWAP256(padding);
+			W[0] = SWAP256(padding);
 		}
 		W[0x0F] = pass_len * 8;
 		sha256_process2(W, State);
@@ -263,6 +263,91 @@ static void sha256(const uint32_t* pass, int pass_len, uint32_t* hash) {
 	p[7] = SWAP256(State[7]);
 	return;
 }
+
+__device__
+static void sha256_swap_64(const uint32_t* pass, uint32_t* hash) {
+	int plen = 64 / 4;
+	if (mod(64, 4)) plen++;
+	uint32_t* p = hash;
+	uint32_t W[16];
+	int loops = plen;
+	int curloop = 0;
+	uint32_t State[8];
+	State[0] = 0x6a09e667;
+	State[1] = 0xbb67ae85;
+	State[2] = 0x3c6ef372;
+	State[3] = 0xa54ff53a;
+	State[4] = 0x510e527f;
+	State[5] = 0x9b05688c;
+	State[6] = 0x1f83d9ab;
+	State[7] = 0x5be0cd19;
+	while (loops > 0) {
+		W[0x0] = 0x0;
+		W[0x1] = 0x0;
+		W[0x2] = 0x0;
+		W[0x3] = 0x0;
+		W[0x4] = 0x0;
+		W[0x5] = 0x0;
+		W[0x6] = 0x0;
+		W[0x7] = 0x0;
+		W[0x8] = 0x0;
+		W[0x9] = 0x0;
+		W[0xA] = 0x0;
+		W[0xB] = 0x0;
+		W[0xC] = 0x0;
+		W[0xD] = 0x0;
+		W[0xE] = 0x0;
+		W[0xF] = 0x0;
+		for (int m = 0; loops != 0 && m < 16; m++) {
+			W[m] = pass[m + (curloop * 16)];
+			loops--;
+		}
+		if (loops == 0 && mod(64, 64) != 0) {
+			uint32_t padding = 0x80 << (((64 + 4) - ((64 + 4) / 4 * 4)) * 8);
+			int v = mod(64, 64);
+			W[v / 4] |= SWAP256(padding);
+			if ((64 & 0x3B) != 0x3B) {
+				W[0x0F] = 64 * 8;
+			}
+		}
+		sha256_process2(W, State);
+		curloop++;
+	}
+	if (mod(plen, 16) == 0) {
+		W[0x0] = 0x0;
+		W[0x1] = 0x0;
+		W[0x2] = 0x0;
+		W[0x3] = 0x0;
+		W[0x4] = 0x0;
+		W[0x5] = 0x0;
+		W[0x6] = 0x0;
+		W[0x7] = 0x0;
+		W[0x8] = 0x0;
+		W[0x9] = 0x0;
+		W[0xA] = 0x0;
+		W[0xB] = 0x0;
+		W[0xC] = 0x0;
+		W[0xD] = 0x0;
+		W[0xE] = 0x0;
+		W[0xF] = 0x0;
+		if ((64 & 0x3B) != 0x3B) {
+			uint32_t padding = 0x80 << (((64 + 4) - ((64 + 4) / 4 * 4)) * 8);
+			W[0] = SWAP256(padding);
+		}
+		W[0x0F] = 64 * 8;
+		sha256_process2(W, State);
+	}
+	p[0] = State[0];
+	p[1] = State[1];
+	p[2] = State[2];
+	p[3] = State[3];
+	p[4] = State[4];
+	p[5] = State[5];
+	p[6] = State[6];
+	p[7] = State[7];
+	return;
+}
+
 
 #define ECMULT_GEN_PREC_BITS 2
 #define ECMULT_GEN_PREC_B ECMULT_GEN_PREC_BITS
@@ -1180,16 +1265,26 @@ static int secp256k1_scalar_check_overflow(const secp256k1_scalar* a) {
 	return yes;
 }
 __device__
-static void secp256k1_scalar_set_b32(secp256k1_scalar* r, const uint8_t* b32, int* overflow) {
+static void secp256k1_scalar_set_b32(secp256k1_scalar* r, const uint32_t* b32, int* overflow) {
 	int over;
-	r->d[0] = (uint32_t)b32[31] | (uint32_t)b32[30] << 8 | (uint32_t)b32[29] << 16 | (uint32_t)b32[28] << 24;
-	r->d[1] = (uint32_t)b32[27] | (uint32_t)b32[26] << 8 | (uint32_t)b32[25] << 16 | (uint32_t)b32[24] << 24;
-	r->d[2] = (uint32_t)b32[23] | (uint32_t)b32[22] << 8 | (uint32_t)b32[21] << 16 | (uint32_t)b32[20] << 24;
-	r->d[3] = (uint32_t)b32[19] | (uint32_t)b32[18] << 8 | (uint32_t)b32[17] << 16 | (uint32_t)b32[16] << 24;
-	r->d[4] = (uint32_t)b32[15] | (uint32_t)b32[14] << 8 | (uint32_t)b32[13] << 16 | (uint32_t)b32[12] << 24;
-	r->d[5] = (uint32_t)b32[11] | (uint32_t)b32[10] << 8 | (uint32_t)b32[9] << 16 | (uint32_t)b32[8] << 24;
-	r->d[6] = (uint32_t)b32[7] | (uint32_t)b32[6] << 8 | (uint32_t)b32[5] << 16 | (uint32_t)b32[4] << 24;
-	r->d[7] = (uint32_t)b32[3] | (uint32_t)b32[2] << 8 | (uint32_t)b32[1] << 16 | (uint32_t)b32[0] << 24;
+	//r->d[0] = (uint32_t)b32[31] | (uint32_t)b32[30] << 8 | (uint32_t)b32[29] << 16 | (uint32_t)b32[28] << 24;
+	//r->d[1] = (uint32_t)b32[27] | (uint32_t)b32[26] << 8 | (uint32_t)b32[25] << 16 | (uint32_t)b32[24] << 24;
+	//r->d[2] = (uint32_t)b32[23] | (uint32_t)b32[22] << 8 | (uint32_t)b32[21] << 16 | (uint32_t)b32[20] << 24;
+	//r->d[3] = (uint32_t)b32[19] | (uint32_t)b32[18] << 8 | (uint32_t)b32[17] << 16 | (uint32_t)b32[16] << 24;
+	//r->d[4] = (uint32_t)b32[15] | (uint32_t)b32[14] << 8 | (uint32_t)b32[13] << 16 | (uint32_t)b32[12] << 24;
+	//r->d[5] = (uint32_t)b32[11] | (uint32_t)b32[10] << 8 | (uint32_t)b32[9] << 16 | (uint32_t)b32[8] << 24;
+	//r->d[6] = (uint32_t)b32[7] | (uint32_t)b32[6] << 8 | (uint32_t)b32[5] << 16 | (uint32_t)b32[4] << 24;
+	//r->d[7] = (uint32_t)b32[3] | (uint32_t)b32[2] << 8 | (uint32_t)b32[1] << 16 | (uint32_t)b32[0] << 24;
+
+	r->d[0] = b32[7];
+	r->d[1] = b32[6];
+	r->d[2] = b32[5];
+	r->d[3] = b32[4];
+	r->d[4] = b32[3];
+	r->d[5] = b32[2];
+	r->d[6] = b32[1];
+	r->d[7] = b32[0];
+
 	over = secp256k1_scalar_reduce(r, secp256k1_scalar_check_overflow(r));
 	if (overflow) {
 		*overflow = over;
@@ -1200,7 +1295,7 @@ static int secp256k1_scalar_is_zero(const secp256k1_scalar* a) {
 	return (a->d[0] | a->d[1] | a->d[2] | a->d[3] | a->d[4] | a->d[5] | a->d[6] | a->d[7]) == 0;
 }
 __device__
-static int secp256k1_scalar_set_b32_seckey(secp256k1_scalar* r, const uint8_t* bin) {
+static int secp256k1_scalar_set_b32_seckey(secp256k1_scalar* r, const uint32_t* bin) {
 	int overflow;
 	secp256k1_scalar_set_b32(r, bin, &overflow);
 	return (!overflow) & (!secp256k1_scalar_is_zero(r));
@@ -2034,7 +2129,7 @@ static void secp256k1_pubkey_save(uint8_t* pubkey, secp256k1_ge* ge) {
 }
 
 __device__
-int secp256k1_ec_pubkey_create(uint8_t* pubkey, const uint8_t* seckey) {
+int secp256k1_ec_pubkey_create(uint8_t* pubkey, const uint32_t* seckey) {
 	secp256k1_gej pj;
 	secp256k1_ge p;
 	secp256k1_scalar sec;
@@ -2060,11 +2155,10 @@ int secp256k1_ec_pubkey_create(uint8_t* pubkey, const uint8_t* seckey) {
 }
 __device__
 void calc_public(const extended_private_key_t* priv, extended_public_key_t* pub) {
-	secp256k1_ec_pubkey_create(pub->key, (const uint8_t*)priv->key);
+	secp256k1_ec_pubkey_create(pub->key, (const uint32_t*)priv->key);
 }
 __device__
-static int secp256k1_fe_set_b32(secp256k1_fe* r, const uint8_t* a) {
-	int ret;
+static void secp256k1_fe_set_b32(secp256k1_fe* r, const uint8_t* a) {
 	r->n[0] = (uint32_t)a[31] | ((uint32_t)a[30] << 8) | ((uint32_t)a[29] << 16) | ((uint32_t)(a[28] & 0x3) << 24);
 	r->n[1] = (uint32_t)((a[28] >> 2) & 0x3f) | ((uint32_t)a[27] << 6) | ((uint32_t)a[26] << 14) | ((uint32_t)(a[25] & 0xf) << 22);
 	r->n[2] = (uint32_t)((a[25] >> 4) & 0xf) | ((uint32_t)a[24] << 4) | ((uint32_t)a[23] << 12) | ((uint32_t)(a[22] & 0x3f) << 20);
@@ -2075,9 +2169,6 @@ static int secp256k1_fe_set_b32(secp256k1_fe* r, const uint8_t* a) {
 	r->n[7] = (uint32_t)((a[9] >> 6) & 0x3) | ((uint32_t)a[8] << 2) | ((uint32_t)a[7] << 10) | ((uint32_t)a[6] << 18);
 	r->n[8] = (uint32_t)a[5] | ((uint32_t)a[4] << 8) | ((uint32_t)a[3] << 16) | ((uint32_t)(a[2] & 0x3) << 24);
 	r->n[9] = (uint32_t)((a[2] >> 2) & 0x3f) | ((uint32_t)a[1] << 6) | ((uint32_t)a[0] << 14);
-
-	ret = !((r->n[9] == 0x3FFFFFUL) & ((r->n[8] & r->n[7] & r->n[6] & r->n[5] & r->n[4] & r->n[3] & r->n[2]) == 0x3FFFFFFUL) & ((r->n[1] + 0x40UL + ((r->n[0] + 0x3D1UL) >> 26)) > 0x3FFFFFFUL));
-	return ret;
 }
 __device__
 static void secp256k1_ge_set_xy(secp256k1_ge* r, const secp256k1_fe* x, const secp256k1_fe* y) {
@@ -2170,35 +2261,35 @@ static void secp256k1_scalar_get_b32(uint8_t* bin, const secp256k1_scalar* a) {
 	bin[24] = a->d[1] >> 24; bin[25] = a->d[1] >> 16; bin[26] = a->d[1] >> 8; bin[27] = a->d[1];
 	bin[28] = a->d[0] >> 24; bin[29] = a->d[0] >> 16; bin[30] = a->d[0] >> 8; bin[31] = a->d[0];
 }
-__device__
-int secp256k1_ec_seckey_tweak_add(uint8_t* seckey, const uint8_t* tweak) {
-	secp256k1_scalar term;
-	secp256k1_scalar sec;
-	int ret;
-	int overflow;
-	overflow = 0;
-	secp256k1_scalar_set_b32(&term, tweak, &overflow);
-	ret = secp256k1_scalar_set_b32_seckey(&sec, seckey);
-
-	ret &= (!overflow) & secp256k1_eckey_privkey_tweak_add(&sec, &term);
-
-	//secp256k1_scalar secp256k1_scalar_zero = SECP256K1_SCALAR_CONST(0, 0, 0, 0, 0, 0, 0, 0);
-	secp256k1_scalar secp256k1_scalar_zero;
-	secp256k1_scalar_zero.d[0] = 0;
-	secp256k1_scalar_zero.d[1] = 0;
-	secp256k1_scalar_zero.d[2] = 0;
-	secp256k1_scalar_zero.d[3] = 0;
-	secp256k1_scalar_zero.d[4] = 0;
-	secp256k1_scalar_zero.d[5] = 0;
-	secp256k1_scalar_zero.d[6] = 0;
-	secp256k1_scalar_zero.d[7] = 0;
-	secp256k1_scalar_cmov(&sec, &secp256k1_scalar_zero, !ret);
-	secp256k1_scalar_get_b32(seckey, &sec);
-
-	//secp256k1_scalar_clear(&sec);
-	//secp256k1_scalar_clear(&term);
-	return ret;
-}
+//__device__
+//int secp256k1_ec_seckey_tweak_add(uint8_t* seckey, const uint8_t* tweak) {
+//	secp256k1_scalar term;
+//	secp256k1_scalar sec;
+//	int ret;
+//	int overflow;
+//	overflow = 0;
+//	secp256k1_scalar_set_b32(&term, tweak, &overflow);
+//	ret = secp256k1_scalar_set_b32_seckey(&sec, seckey);
+//
+//	ret &= (!overflow) & secp256k1_eckey_privkey_tweak_add(&sec, &term);
+//
+//	//secp256k1_scalar secp256k1_scalar_zero = SECP256K1_SCALAR_CONST(0, 0, 0, 0, 0, 0, 0, 0);
+//	secp256k1_scalar secp256k1_scalar_zero;
+//	secp256k1_scalar_zero.d[0] = 0;
+//	secp256k1_scalar_zero.d[1] = 0;
+//	secp256k1_scalar_zero.d[2] = 0;
+//	secp256k1_scalar_zero.d[3] = 0;
+//	secp256k1_scalar_zero.d[4] = 0;
+//	secp256k1_scalar_zero.d[5] = 0;
+//	secp256k1_scalar_zero.d[6] = 0;
+//	secp256k1_scalar_zero.d[7] = 0;
+//	secp256k1_scalar_cmov(&sec, &secp256k1_scalar_zero, !ret);
+//	secp256k1_scalar_get_b32(seckey, &sec);
+//
+//	//secp256k1_scalar_clear(&sec);
+//	//secp256k1_scalar_clear(&term);
+//	return ret;
+//}
 
 typedef struct {
 	uint32_t total[2];
@@ -2528,7 +2619,6 @@ __device__ void words_index_to_seed(const uint16_t* words_index, uint32_t* seed)
 
 __device__ void words_index_to_mnemonic(const uint16_t* words_index, uint8_t* mnemonic) {
 	int mnemonic_index = 0;
-
 	for (int i = 0; i < 12; i++) {
 		int word_index = words_index[i];
 		int word_length = word_lengths[word_index];
@@ -2544,23 +2634,19 @@ __device__ void words_index_to_mnemonic(const uint16_t* words_index, uint8_t* mn
 }
 
 //#define printf(...)
-__constant__ uint64_t gpu_packet[1];
-__constant__ uint32_t num_bytes_find[1];
-
+__constant__ uint32_t dev_num_bytes_find[1];
+__constant__ uint32_t dev_generate_path[2];
+__constant__ uint32_t dev_num_paths[1];
+__constant__ uint32_t dev_num_childs[1];
+__constant__ int16_t dev_static_words_indices[12];
 __device__
-int find_hash_in_table(const uint32_t* hash, const tableStruct table, const uint16_t* words_index, retStruct* ret, int num_bytes) {
+int find_hash_in_table(const uint32_t* hash, const tableStruct table, const uint16_t* words_idx, foundStruct* fnd_ret, uint32_t path, uint32_t child) {
 	int found = 0;
 	bool search_state = true;
 	uint32_t line_cnt = (table.size / 20);
 	uint32_t point = 0;
 	uint32_t point_last = 0;
 	uint32_t interval = line_cnt / 3;
-	uint32_t hash160_reverse[5];
-	REVERSE32_FOR_HASH(hash[0], hash160_reverse[0]);
-	REVERSE32_FOR_HASH(hash[1], hash160_reverse[1]);
-	REVERSE32_FOR_HASH(hash[2], hash160_reverse[2]);
-	REVERSE32_FOR_HASH(hash[3], hash160_reverse[3]);
-	REVERSE32_FOR_HASH(hash[4], hash160_reverse[4]);
 
 	uint32_t* hash_from_table;
 	while (point < line_cnt) {
@@ -2585,49 +2671,48 @@ int find_hash_in_table(const uint32_t* hash, const tableStruct table, const uint
 		}
 
 		int cmp = 0;
-		if (hash160_reverse[0] < hash_from_table[0])
+		if (hash[0] < hash_from_table[0])
 		{
 			cmp = -1;
 		}
-		else if (hash160_reverse[0] > hash_from_table[0])
+		else if (hash[0] > hash_from_table[0])
 		{
 			cmp = 1;
 		}
-		else if (hash160_reverse[1] < hash_from_table[1])
+		else if (hash[1] < hash_from_table[1])
 		{
 			cmp = -2;
 		}
-		else if (hash160_reverse[1] > hash_from_table[1])
+		else if (hash[1] > hash_from_table[1])
 		{
 			cmp = 2;
 		}
-		else if (hash160_reverse[2] < hash_from_table[2])
+		else if (hash[2] < hash_from_table[2])
 		{
 			cmp = -3;
 		}
-		else if (hash160_reverse[2] > hash_from_table[2])
+		else if (hash[2] > hash_from_table[2])
 		{
 			cmp = 3;
 		}
-		else if (hash160_reverse[3] < hash_from_table[3])
+		else if (hash[3] < hash_from_table[3])
 		{
 			cmp = -4;
 		}
-		else if (hash160_reverse[3] > hash_from_table[3])
+		else if (hash[3] > hash_from_table[3])
 		{
 			cmp = 4;
 		}
-		else if (hash160_reverse[4] < hash_from_table[4])
+		else if (hash[4] < hash_from_table[4])
 		{
 			cmp = -5;
 		}
-		else if (hash160_reverse[4] > hash_from_table[4])
+		else if (hash[4] > hash_from_table[4])
 		{
 			cmp = 5;
 		}
 
 		if (search_state) {
-			//printf("cmp = %d\n", cmp);
 			if (cmp < 0) {
 				if (interval < 20) {
 					search_state = false;
@@ -2651,40 +2736,50 @@ int find_hash_in_table(const uint32_t* hash, const tableStruct table, const uint
 			if (cmp == 0)
 			{
 				found = 1;
-				for (int i = 0; i < 5; i++) ret->hash160[i] = hash[i];
-				for (int i = 0; i < WORDS_MNEMONIC; i++) ret->words_index[i] = words_index[i];
-				ret->flag_found = 1;
+				uint32_t cnt = fnd_ret->count_found;
+				fnd_ret->count_found++;
+				if (cnt < MAX_FOUND_ADDRESSES)
+				{
+					for (int i = 0; i < 5; i++) fnd_ret->found_info[cnt].hash160[i] = hash[i];
+					for (int i = 0; i < NUM_WORDS_MNEMONIC; i++) fnd_ret->found_info[cnt].words_idx[i] = words_idx[i];
+					fnd_ret->found_info[cnt].path = path;
+					fnd_ret->found_info[cnt].child = child;
+				}
 			}
-			//printf("exit cmp = %d\n", cmp);
 			break;
 		}
 
 		if (cmp > 1) {
-			if (num_bytes == 5) {
-				if ((hash160_reverse[1] & 0xFF000000) == (hash_from_table[1] & 0xFF000000)) found = 2;
+			if (dev_num_bytes_find[0] == 8) {
+				if (hash[1] == hash_from_table[1]) found = 2;
 			}
-			else if (num_bytes == 6) {
-				if ((hash160_reverse[1] & 0xFFFF0000) == (hash_from_table[1] & 0xFFFF0000)) found = 2;
+#ifdef TEST_MODE
+			else if (dev_num_bytes_find[0] == 7) {
+				if ((hash[1] & 0x00FFFFFF) == (hash_from_table[1] & 0x00FFFFFF)) found = 2;
 			}
-			else if (num_bytes == 7) {
-				if ((hash160_reverse[1] & 0xFFFFFF00) == (hash_from_table[1] & 0xFFFFFF00)) found = 2;
+			else if (dev_num_bytes_find[0] == 6) {
+				if ((hash[1] & 0x0000FFFF) == (hash_from_table[1] & 0x0000FFFF)) found = 2;
 			}
-			else if (num_bytes == 8) {
-				if (hash160_reverse[1] == hash_from_table[1]) found = 2;
+			else if (dev_num_bytes_find[0] == 5) {
+				if ((hash[1] & 0x000000FF) == (hash_from_table[1] & 0x000000FF)) found = 2;
 			}
+#endif //TEST_MODE
 		}
 
 
 		if (found == 2) {
-			if (ret->flag_found_bytes == 0)
+			uint32_t cnt = fnd_ret->count_found_bytes;
+			fnd_ret->count_found_bytes++;
+			if (cnt < MAX_FOUND_ADDRESSES)
 			{
-				ret->flag_found_bytes = 2;
 				for (int i = 0; i < 5; i++)
 				{
-					ret->hash160_bytes_from_table[i] = hash_from_table[i];
-					ret->hash160_bytes[i] = hash[i];
+					fnd_ret->found_bytes_info[cnt].hash160_from_table[i] = hash_from_table[i];
+					fnd_ret->found_bytes_info[cnt].hash160[i] = hash[i];
 				}
-				for (int i = 0; i < WORDS_MNEMONIC; i++) ret->words_index_bytes[i] = words_index[i];
+				for (int i = 0; i < NUM_WORDS_MNEMONIC; i++) fnd_ret->found_bytes_info[cnt].words_idx[i] = words_idx[i];
+				fnd_ret->found_bytes_info[cnt].path = path;
+				fnd_ret->found_bytes_info[cnt].child = child;
 			}
 			break;
 		}
@@ -2694,26 +2789,13 @@ int find_hash_in_table(const uint32_t* hash, const tableStruct table, const uint
 	return found;
 }
 
-__device__
-void dev_search_hash160_in_tables(
-	const uint32_t* hash160_buffer,
-	const tableStruct* tables,
-	const uint16_t* words_index,
-	retStruct* ret
-)
-{
-	const uint8_t* hash160 = (const uint8_t*)hash160_buffer;
-	uint8_t num_tables = hash160[0];
-	int found = find_hash_in_table(hash160_buffer, tables[num_tables], words_index, ret, num_bytes_find[0]);
-
-}
-
 __device__ uint32_t add_256b(uint32_t* const r, const uint32_t* const a) {
 	uint32_t c = 0;
 
 	for (int i = 7; i >= 0; i--) {
 		r[i] += a[i] + c;
 		c = r[i] < a[i] ? 1 : (r[i] == a[i] ? c : 0);
+
 	}
 	return c;
 }
@@ -2724,7 +2806,7 @@ __constant__ uint32_t max_priv_neg[8] = { 0x00000000, 0x00000000, 0x00000000, 0x
 __device__ uint32_t add_privkeys(uint32_t* const r, const uint32_t* const a) {
 	uint32_t c = add_256b(r, a);
 	if (c) {
-		add_256b(r, max_priv_neg);
+		c = add_256b(r, max_priv_neg);
 	}
 	else if ((r[0] == max_priv[0]) &&
 			(r[1] == max_priv[1]) &&
@@ -2753,57 +2835,54 @@ __device__ void key_to_hash160(
 	const uint32_t* master_private,
 	uint32_t* master_public,
 	const tableStruct* tables,
-	const uint16_t* words_index,
+	const uint16_t* words_ind,
 	retStruct* ret
 )
 {
 	uint32_t hash[(20 / 4)];
 	uint32_t priv[32 / 4];
+	uint8_t pub_key[68];
 	//______________________________________________________________________________________________________________________
 	//______________________________________________________________________________________________________________________
 	//______________________________________________________________________________________________________________________
 	//______________________________________________________________________________________________________________________
-	master_public[0] = 0x3a303a2f;
-	//m/0/x
-	for (int num_cld = 0; num_cld < NUM_CHILDS; num_cld++) {
-		master_public[0] += 0x00000001;
-		sha256(master_public, 68, priv);
-		sha256(priv, 32, priv);
-		for (int i = 0; i < 32 / 4; i++) {
-			priv[i] = SWAP256(priv[i]);
+	if (dev_generate_path[0] != 0) {
+		master_public[0] = 0x3a303a2f;
+		//m/0/x
+		for (int num_cld = 0; num_cld < dev_num_childs[0]; num_cld++) {
+			master_public[0] += 0x00000001;
+			sha256(master_public, 68, priv);
+			sha256(priv, 32, priv);
+			for (int i = 0; i < 32 / 4; i++) {
+				priv[i] = SWAP256(priv[i]);
+			}
+			add_privkeys(priv, master_private);	
+			pub_key[0] = 4;
+			calc_public((extended_private_key_t*)priv, (extended_public_key_t*)&pub_key[1]);
+			calc_hash160(pub_key, 65, hash);
+			find_hash_in_table(hash, tables[(uint8_t)hash[0]], words_ind, &ret->f[0], 0, num_cld);
 		}
-		add_privkeys(priv, master_private);
-		for (int i = 0; i < 32 / 4; i++) {
-			priv[i] = SWAP256(priv[i]);
-		}
-		uint8_t pub_key[68];
-		pub_key[0] = 4;
-		calc_public((extended_private_key_t*)priv, (extended_public_key_t*)&pub_key[1]);
-		calc_hash160(pub_key, 65, hash);
-		dev_search_hash160_in_tables(hash, tables, words_index, ret);
 	}
 	//______________________________________________________________________________________________________________________
 	//______________________________________________________________________________________________________________________
 	//______________________________________________________________________________________________________________________
 	//______________________________________________________________________________________________________________________
-	master_public[0] = 0x3a313a2f;
-	//m/1/x
-	for (int num_cld = 0; num_cld < NUM_CHILDS; num_cld++) {
-		master_public[0] += 0x00000001;
-		sha256(master_public, 68, priv);
-		sha256(priv, 32, priv);
-		for (int i = 0; i < 32 / 4; i++) {
-			priv[i] = SWAP256(priv[i]);
+	if (dev_generate_path[1] != 0) {
+		master_public[0] = 0x3a313a2f;
+		//m/1/x
+		for (int num_cld = 0; num_cld < dev_num_childs[0]; num_cld++) {
+			master_public[0] += 0x00000001;
+			sha256(master_public, 68, priv);
+			sha256(priv, 32, priv);
+			for (int i = 0; i < 32 / 4; i++) {
+				priv[i] = SWAP256(priv[i]);
+			}
+			add_privkeys(priv, master_private);
+			pub_key[0] = 4;
+			calc_public((extended_private_key_t*)priv, (extended_public_key_t*)&pub_key[1]);
+			calc_hash160(pub_key, 65, hash);
+			find_hash_in_table(hash, tables[(uint8_t)hash[0]], words_ind, &ret->f[0], 1, num_cld);
 		}
-		add_privkeys(priv, master_private);
-		for (int i = 0; i < 32 / 4; i++) {
-			priv[i] = SWAP256(priv[i]);
-		}
-		uint8_t pub_key[68];
-		pub_key[0] = 4;
-		calc_public((extended_private_key_t*)priv, (extended_public_key_t*)&pub_key[1]);
-		calc_hash160(pub_key, 65, hash);
-		dev_search_hash160_in_tables(hash, tables, words_index, ret);
 	}
 }
 
@@ -2811,57 +2890,91 @@ __device__ void key_to_hash160_for_save(
 	uint32_t* master_private,
 	uint32_t* master_public,
 	const tableStruct* tables,
-	const uint16_t* words_index,
+	const uint16_t* words_ind,
 	retStruct* ret,
 	uint32_t* hash
 )
 {
 	uint32_t priv[32 / 4];
+	uint8_t pub_key[68]; //65
 	//______________________________________________________________________________________________________________________
 	//______________________________________________________________________________________________________________________
 	//______________________________________________________________________________________________________________________
 	//______________________________________________________________________________________________________________________
-	master_public[0] = 0x3a303a2f;
-	//m/0/x
-	for (int num_cld = 0; num_cld < NUM_CHILDS; num_cld++) {
-		master_public[0] += 0x00000001;
-		sha256(master_public, 68, priv);
-		sha256(priv, 32, priv);
-		for (int i = 0; i < 32 / 4; i++) {
-			priv[i] = SWAP256(priv[i]);
+	if (dev_generate_path[0] != 0) {
+		master_public[0] = 0x3a303a2f;
+		//m/0/x
+		for (int num_cld = 0; num_cld < dev_num_childs[0]; num_cld++) {
+			master_public[0] += 0x00000001;
+			sha256(master_public, 68, priv);
+			sha256(priv, 32, priv);
+			for (int i = 0; i < 32 / 4; i++) {
+				priv[i] = SWAP256(priv[i]);
+			}
+			add_privkeys(priv, master_private);
+			pub_key[0] = 4;
+			calc_public((extended_private_key_t*)priv, (extended_public_key_t*)&pub_key[1]);
+			calc_hash160(pub_key, 65, &hash[(num_cld + dev_num_childs[0] * 0) * 5]);
+			find_hash_in_table(&hash[(num_cld + dev_num_childs[0] * 0) * 5], tables[(uint8_t)hash[0]], words_ind, &ret->f[0], 0, num_cld);
 		}
-		add_privkeys(priv, master_private);
-		for (int i = 0; i < 32 / 4; i++) {
-			priv[i] = SWAP256(priv[i]);
-		}
-		uint8_t pub_key[68]; //65
-		pub_key[0] = 4;
-		calc_public((extended_private_key_t*)priv, (extended_public_key_t*)&pub_key[1]);
-		calc_hash160(pub_key, 65, &hash[(num_cld + NUM_CHILDS * 0) * 5]);
-		dev_search_hash160_in_tables(&hash[(num_cld + NUM_CHILDS * 0) * 5], tables, words_index, ret);
 	}
 	//______________________________________________________________________________________________________________________
 	//______________________________________________________________________________________________________________________
 	//______________________________________________________________________________________________________________________
 	//______________________________________________________________________________________________________________________
-	master_public[0] = 0x3a313a2f;
-	//m/1/x
-	for (int num_cld = 0; num_cld < NUM_CHILDS; num_cld++) {
-		master_public[0] += 0x00000001;
-		sha256(master_public, 68, priv);
-		sha256(priv, 32, priv);
-		for (int i = 0; i < 32 / 4; i++) {
-			priv[i] = SWAP256(priv[i]);
+	if (dev_generate_path[1] != 0) {
+		master_public[0] = 0x3a313a2f;
+		//m/1/x
+		for (int num_cld = 0; num_cld < dev_num_childs[0]; num_cld++) {
+			master_public[0] += 0x00000001;
+			sha256(master_public, 68, priv);
+			sha256(priv, 32, priv);
+			for (int i = 0; i < 32 / 4; i++) {
+				priv[i] = SWAP256(priv[i]);
+			}
+			add_privkeys(priv, master_private);
+			pub_key[0] = 4;
+			calc_public((extended_private_key_t*)priv, (extended_public_key_t*)&pub_key[1]);
+			calc_hash160(pub_key, 65, &hash[(num_cld + dev_num_childs[0] * 1) * 5]);
+			find_hash_in_table(&hash[(num_cld + dev_num_childs[0] * 1) * 5], tables[(uint8_t)hash[0]], words_ind, &ret->f[0], 1, num_cld);
 		}
-		add_privkeys(priv, master_private);
-		for (int i = 0; i < 32 / 4; i++) {
-			priv[i] = SWAP256(priv[i]);
-		};
-		uint8_t pub_key[68]; //65
-		pub_key[0] = 4;
-		calc_public((extended_private_key_t*)priv, (extended_public_key_t*)&pub_key[1]);
-		calc_hash160(pub_key, 65, &hash[(num_cld + NUM_CHILDS * 1) * 5]);
-		dev_search_hash160_in_tables(&hash[(num_cld + NUM_CHILDS * 1) * 5], tables, words_index, ret);
+	}
+}
+__device__
+__inline__
+void calc_word_indexes(const uint16_t* words_index, uint16_t* words_index_out) {
+	int idx = blockIdx.x * blockDim.x + threadIdx.x;
+	uint16_t inc[4];
+	inc[3] = 0;
+	inc[2] = idx / (1626 * 1626);
+	inc[1] = idx / 1626;
+	inc[0] = idx % 1626;
+
+	for (int x = 0, pos = 0; x < NUM_WORDS_MNEMONIC; x++)
+	{
+		if (dev_static_words_indices[x] != -1)
+		{
+			words_index_out[x] = dev_static_words_indices[x];
+		}
+		else
+		{
+			if (pos < 3) {
+				words_index_out[x] = (words_index[x] + inc[pos]) % 1626;
+				if (words_index[0] + inc[pos] > 1626) {
+					uint16_t temp = 1626 - (words_index[x] + inc[pos]);
+					inc[pos + 1] += temp;
+				}
+				pos++;
+			}
+			else if (pos == 3) {
+				words_index_out[x] = (words_index[x] + inc[pos]) % 1626;
+				pos++;
+			}
+			else
+			{
+				words_index_out[x] = words_index[x];
+			}
+		}
 	}
 }
 
@@ -2876,23 +2989,18 @@ __global__ void gl_bruteforce_mnemonic(
 	uint32_t entropy[16 / 4];
 	uint32_t entropy_hex[32 / 4];
 	uint32_t seed[64 / 4];
-	uint16_t wds_num[12];
+	uint16_t wds_num[NUM_WORDS_MNEMONIC];
 	uint32_t master_public[68 / 4];
 
-	wds_num[0] = (words_index[0] + idx) % 1626;
-	wds_num[1] = (words_index[1] + idx / 1626) % 1626;
-	wds_num[2] = (words_index[2] + idx) % 1626;
-	wds_num[3] = (words_index[3] + idx / 1626) % 1626;
-	wds_num[4] = (words_index[4] + idx) % 1626;
-	wds_num[5] = (words_index[5] + idx / 1626) % 1626;
-	wds_num[6] = (words_index[6] + idx) % 1626;
-	wds_num[7] = (words_index[7] + idx / 1626) % 1626;
-	wds_num[8] = (words_index[8] + idx) % 1626;
-	wds_num[9] = (words_index[9] + idx / 1626) % 1626;
-	wds_num[10] = (words_index[10] + idx) % 1626;
-	wds_num[11] = (words_index[11] + idx / 1626) % 1626;
-
-
+	const uint16_t* words_idxs;
+	if (idx < NUM_WORDS_MNEMONIC_FRAME) {
+		words_idxs = &words_index[idx * SIZE16_WORDS_IDX_FRAME];
+	}
+	else
+	{
+		words_idxs = &words_index[(idx % NUM_WORDS_MNEMONIC_FRAME) * SIZE16_WORDS_IDX_FRAME];
+	}
+	calc_word_indexes(words_idxs, wds_num);
 	words_index_to_seed(wds_num, entropy);
 	entropy[0] = SWAP256(entropy[0]);
 	entropy[1] = SWAP256(entropy[1]);
@@ -2903,18 +3011,21 @@ __global__ void gl_bruteforce_mnemonic(
 		seed[x] = entropy_hex[x];
 		seed[x + 32 / 4] = entropy_hex[x];
 	}
+	for (int i = 0; i < 64 / 4; i++) {
+		seed[i] = SWAP256(seed[i]);
+	}
 	for (int x = 0; x < 100000; x++) {
-		sha256(seed, 64, seed);
+		sha256_swap_64(seed, seed);
 	}
 
 	calc_public((extended_private_key_t*)seed, (extended_public_key_t*)&master_public[1]);
-	for (int i = 0; i < 32 / 4; i++) {
-		seed[i] = SWAP256(seed[i]);
-	}
+
 
 	key_to_hash160(seed, master_public, tables, wds_num, ret);
 	//__syncthreads();
 }
+
+
 
 __global__ void gl_bruteforce_mnemonic_for_save(
 	const uint16_t* __restrict__ words_index,
@@ -2931,20 +3042,17 @@ __global__ void gl_bruteforce_mnemonic_for_save(
 	uint32_t entropy[16 / 4];
 	uint32_t entropy_hex[32 / 4];
 	uint32_t seed[64 / 4];
-	uint32_t hash[(20 / 4) * NUM_ALL_CHILDS];
 	uint16_t wds_num[12];
-	wds_num[0] = (words_index[0] + idx) % 1626;
-	wds_num[1] = (words_index[1] + idx / 1626) % 1626;
-	wds_num[2] = (words_index[2] + idx) % 1626;
-	wds_num[3] = (words_index[3] + idx / 1626) % 1626;
-	wds_num[4] = (words_index[4] + idx) % 1626;
-	wds_num[5] = (words_index[5] + idx / 1626) % 1626;
-	wds_num[6] = (words_index[6] + idx) % 1626;
-	wds_num[7] = (words_index[7] + idx / 1626) % 1626;
-	wds_num[8] = (words_index[8] + idx) % 1626;
-	wds_num[9] = (words_index[9] + idx / 1626) % 1626;
-	wds_num[10] = (words_index[10] + idx) % 1626;
-	wds_num[11] = (words_index[11] + idx / 1626) % 1626;
+	uint32_t master_public[68 / 4];
+	const uint16_t* words_idxs;
+	if (idx < NUM_WORDS_MNEMONIC_FRAME) {
+		words_idxs = &words_index[idx * SIZE16_WORDS_IDX_FRAME];
+	}
+	else
+	{
+		words_idxs = &words_index[(idx % NUM_WORDS_MNEMONIC_FRAME) * SIZE16_WORDS_IDX_FRAME];
+	}
+	calc_word_indexes(words_idxs, wds_num);
 	words_index_to_mnemonic(wds_num, mnemonic);
 	words_index_to_seed(wds_num, entropy);
 	entropy[0] = SWAP256(entropy[0]);
@@ -2956,20 +3064,15 @@ __global__ void gl_bruteforce_mnemonic_for_save(
 		seed[x] = entropy_hex[x];
 		seed[x + 32 / 4] = entropy_hex[x];
 	}
-	for (int x = 0; x < 100000; x++) {
-		sha256(seed, 64, seed);
-	}
-	uint32_t master_public[68 / 4] = { 0 };
-	calc_public((extended_private_key_t*)seed, (extended_public_key_t*)&master_public[1]);
-	for (int i = 0; i < 32 / 4; i++) {
+	for (int i = 0; i < 64 / 4; i++) {
 		seed[i] = SWAP256(seed[i]);
 	}
-	key_to_hash160_for_save(seed, master_public, tables, wds_num, ret, hash);
-
-	for (int i = 0; i < (NUM_ALL_CHILDS * 5); i++)
-	{
-		hash160_ret[idx * (NUM_ALL_CHILDS * 5) + i] = hash[i];
+	for (int x = 0; x < 100000; x++) {
+		sha256_swap_64(seed, seed);
 	}
+
+	calc_public((extended_private_key_t*)seed, (extended_public_key_t*)&master_public[1]);
+	key_to_hash160_for_save(seed, master_public, tables, wds_num, ret, &hash160_ret[idx * (dev_num_paths[0] * dev_num_childs[0] * 5)]);
 
 	for (int i = 0; i < SIZE_MNEMONIC_FRAME; i++)
 	{

@@ -1,8 +1,8 @@
 /**
   ******************************************************************************
   * @author		Anton Houzich
-  * @version	V1.0.0
-  * @date		20-March-2023
+  * @version	V2.0.0
+  * @date		9-May-2023
   * @mail		houzich_anton@mail.ru
   * discussion  https://t.me/BRUTE_FORCE_CRYPTO_WALLET
   ******************************************************************************

@@ -1,8 +1,8 @@
 /**
   ******************************************************************************
   * @author		Anton Houzich
-  * @version	V1.0.0
-  * @date		20-March-2023
+  * @version	V2.0.0
+  * @date		9-May-2023
   * @mail		houzich_anton@mail.ru
   * discussion  https://t.me/BRUTE_FORCE_CRYPTO_WALLET
   ******************************************************************************
@@ -41,7 +41,6 @@ public:
 	uint32_t* hash160 = NULL;
 
 	retStruct* ret = NULL;
-
 	uint64_t memory_size = 0;
 public:
 	host_buffers_class()
@@ -68,8 +67,8 @@ public:
 		memory_size = 0;
 		if (mallocHost((void**)&words_index, size_words_index_buf, &memory_size, "words_index") != 0) return -1;
 		if (alignedMalloc((void**)&mnemonic, size_mnemonic_buf, &memory_size, "mnemonic") != 0) return -1;
-		if (mallocHost((void**)&hash160, size_hash160_buf, &memory_size, "hash160") != 0) return -1;
-		if (mallocHost((void**)&ret, sizeof(retStruct), &memory_size, "ret") != 0) return -1;
+		if (alignedMalloc((void**)&hash160, size_hash160_buf, &memory_size, "hash160") != 0) return -1;
+		if (alignedMalloc((void**)&ret, sizeof(retStruct), &memory_size, "ret") != 0) return -1;
 		std::cout << "MALLOC ALL RAM MEMORY SIZE (HOST): " << std::to_string((float)memory_size / (1024.0f * 1024.0f)) << " MB\n";
 		return 0;
 	}
@@ -79,19 +78,17 @@ public:
 			{
 				free(tables[x].table);
 				tables[x].table = NULL;
-			}			
-		}	
+			}
+		}
 	}
 
 	~host_buffers_class()
 	{
 		freeTableBuffers();
 		cudaFreeHost(words_index);
-		cudaFreeHost(hash160);
-		cudaFreeHost(ret);
-		//for CPU
+		_aligned_free(ret);
 		_aligned_free(mnemonic);
-
+		_aligned_free(hash160);
 	}
 
 };
@@ -107,7 +104,6 @@ public:
 	uint32_t* hash160 = NULL;
 
 	retStruct* ret = NULL;
-
 	uint64_t memory_size = 0;
 public:
 	device_buffers_class()
@@ -124,13 +120,12 @@ public:
 	}
 	int malloc(size_t size_words_index_buf, size_t size_mnemonic_buf, size_t size_hash160_buf, size_t num_wallet)
 	{
-		memory_size = 0;	
+		memory_size = 0;
 		if (cudaMallocDevice((uint8_t**)&words_index, size_words_index_buf, &memory_size, "words_index") != 0) return -1;
 		if (cudaMallocDevice((uint8_t**)&mnemonic, size_mnemonic_buf, &memory_size, "mnemonic") != 0) return -1;
 		if (cudaMallocDevice((uint8_t**)&hash160, size_hash160_buf, &memory_size, "hash160") != 0) return -1;
 		if (cudaMallocDevice((uint8_t**)&dev_tables, sizeof(tableStruct) * 256, &memory_size, "dev_tables") != 0) return -1;
 		if (cudaMallocDevice((uint8_t**)&ret, sizeof(retStruct), &memory_size, "ret") != 0) return -1;
-
 		std::cout << "MALLOC ALL MEMORY SIZE (GPU): " << std::to_string((float)(memory_size) / (1024.0f * 1024.0f)) << " MB\n";
 		return 0;
 	}
@@ -138,7 +133,7 @@ public:
 	void freeTableBuffers(void) {
 		for (int x = 0; x < 256; x++) {
 			if (tables[x].table != NULL)
-				cudaFree((void *)tables[x].table);
+				cudaFree((void*)tables[x].table);
 		}
 		cudaFree(dev_tables);
 	}
@@ -162,6 +157,9 @@ public:
 	host_buffers_class host;
 
 	cudaStream_t stream1 = NULL;
+	size_t num_paths = 0;
+	size_t num_childs = 0;
+	size_t num_all_childs = 0;
 	size_t size_words_index_buf = 0;
 	size_t size_mnemonic_buf = 0;
 	size_t size_hash160_buf = 0;
@@ -172,12 +170,16 @@ public:
 
 	}
 
-	int malloc(size_t cuda_grid, size_t cuda_block, bool alloc_buff_for_save)
+	int malloc(size_t cuda_grid, size_t cuda_block, size_t num_paths, size_t num_childs, bool alloc_buff_for_save)
 	{
+		this->num_paths = num_paths;
+		this->num_childs = num_childs;
+		this->num_all_childs = num_paths * num_childs;
+
 		size_t num_wallet = cuda_grid * cuda_block;
-		size_t size_words_index_buf = SIZE_WORDS_IDX_FRAME;
+		size_t size_words_index_buf = SIZE_WORDS_IDX_BUFF;
 		size_t size_mnemonic_buf = SIZE_MNEMONIC_FRAME * num_wallet;
-		size_t size_hash160_buf = 20 * num_wallet * NUM_ALL_CHILDS;
+		size_t size_hash160_buf = 20 * num_wallet * this->num_all_childs;
 		if (!alloc_buff_for_save)
 		{
 			size_mnemonic_buf = 0;
