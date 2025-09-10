@@ -78,3 +78,4 @@ struct secp256k1_assumption_checker {
 };
 
 #endif /* SECP256K1_ASSUMPTIONS_H */
+

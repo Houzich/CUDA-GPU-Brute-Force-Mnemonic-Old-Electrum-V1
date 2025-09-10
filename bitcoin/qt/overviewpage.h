@@ -69,3 +69,4 @@ private Q_SLOTS:
 };
 
 #endif // BITCOIN_QT_OVERVIEWPAGE_H
+

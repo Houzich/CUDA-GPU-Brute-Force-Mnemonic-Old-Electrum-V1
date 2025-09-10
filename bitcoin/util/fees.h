@@ -16,3 +16,4 @@ std::string FeeModes(const std::string& delimiter);
 const std::string InvalidEstimateModeErrorMessage();
 
 #endif // BITCOIN_UTIL_FEES_H
+

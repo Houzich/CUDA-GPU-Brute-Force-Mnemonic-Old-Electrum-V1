@@ -39,3 +39,4 @@ void AES256_encrypt(const AES256_ctx* ctx, size_t blocks, unsigned char* cipher1
 void AES256_decrypt(const AES256_ctx* ctx, size_t blocks, unsigned char* plain16, const unsigned char* cipher16);
 
 #endif
+

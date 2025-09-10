@@ -42,3 +42,4 @@ FUZZ_TARGET(node_eviction)
         assert(std::any_of(eviction_candidates_copy.begin(), eviction_candidates_copy.end(), [&node_to_evict](const NodeEvictionCandidate& eviction_candidate) { return *node_to_evict == eviction_candidate.id; }));
     }
 }
+

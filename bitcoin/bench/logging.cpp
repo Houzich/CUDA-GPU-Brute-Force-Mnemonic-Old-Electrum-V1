@@ -46,3 +46,4 @@ BENCHMARK(LoggingNoThreadNames);
 BENCHMARK(LoggingYoCategory);
 BENCHMARK(LoggingNoCategory);
 BENCHMARK(LoggingNoFile);
+

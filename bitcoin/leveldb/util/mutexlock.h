@@ -37,3 +37,4 @@ class SCOPED_LOCKABLE MutexLock {
 }  // namespace leveldb
 
 #endif  // STORAGE_LEVELDB_UTIL_MUTEXLOCK_H_
+

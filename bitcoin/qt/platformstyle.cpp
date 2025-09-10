@@ -135,3 +135,4 @@ const PlatformStyle *PlatformStyle::instantiate(const QString &platformId)
     return nullptr;
 }
 
+

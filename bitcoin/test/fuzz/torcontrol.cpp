@@ -78,3 +78,4 @@ FUZZ_TARGET_INIT(torcontrol, initialize_torcontrol)
             });
     }
 }
+

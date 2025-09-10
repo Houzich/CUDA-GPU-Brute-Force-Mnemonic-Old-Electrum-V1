@@ -31,3 +31,4 @@ FUZZ_TARGET(parse_iso8601)
     const int64_t parsed_time_2 = ParseISO8601DateTime(random_string);
     assert(parsed_time_2 >= 0);
 }
+

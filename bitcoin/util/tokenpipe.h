@@ -125,3 +125,4 @@ public:
 #endif // WIN32
 
 #endif // BITCOIN_UTIL_TOKENPIPE_H
+

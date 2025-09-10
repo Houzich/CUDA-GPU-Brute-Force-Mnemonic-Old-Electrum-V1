@@ -362,3 +362,4 @@ FUZZ_TARGET_INIT(versionbits, initialize)
     }
 }
 } // namespace
+

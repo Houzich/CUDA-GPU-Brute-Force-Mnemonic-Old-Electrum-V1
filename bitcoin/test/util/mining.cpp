@@ -87,3 +87,4 @@ std::shared_ptr<CBlock> PrepareBlock(const NodeContext& node, const CScript& coi
 
     return block;
 }
+

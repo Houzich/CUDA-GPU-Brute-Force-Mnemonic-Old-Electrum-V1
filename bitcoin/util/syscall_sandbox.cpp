@@ -927,3 +927,4 @@ void SetSyscallSandboxPolicy(SyscallSandboxPolicy syscall_policy)
     LogPrint(BCLog::UTIL, "Syscall filter installed for thread \"%s\"\n", thread_name);
 #endif // defined(USE_SYSCALL_SANDBOX)
 }
+

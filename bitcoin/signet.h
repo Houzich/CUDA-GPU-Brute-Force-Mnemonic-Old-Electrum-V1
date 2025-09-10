@@ -35,3 +35,4 @@ public:
 };
 
 #endif // BITCOIN_SIGNET_H
+

@@ -147,3 +147,4 @@ public:
 };
 
 #endif // BITCOIN_SCHEDULER_H
+

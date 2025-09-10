@@ -174,3 +174,4 @@ void TrafficGraphWidget::clear()
     }
     timer->start();
 }
+

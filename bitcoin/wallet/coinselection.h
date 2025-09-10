@@ -293,3 +293,4 @@ std::optional<SelectionResult> KnapsackSolver(std::vector<OutputGroup>& groups, 
 } // namespace wallet
 
 #endif // BITCOIN_WALLET_COINSELECTION_H
+

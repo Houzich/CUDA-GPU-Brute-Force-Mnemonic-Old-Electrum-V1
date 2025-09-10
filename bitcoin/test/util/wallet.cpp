@@ -28,3 +28,4 @@ std::string getnewaddress(CWallet& w)
 }
 
 #endif // ENABLE_WALLET
+

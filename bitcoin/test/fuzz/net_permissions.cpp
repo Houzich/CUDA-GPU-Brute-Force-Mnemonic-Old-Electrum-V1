@@ -39,3 +39,4 @@ FUZZ_TARGET(net_permissions)
         (void)NetPermissions::ToStrings(net_whitelist_permissions.m_flags);
     }
 }
+

@@ -17,3 +17,4 @@ extern const std::vector<uint8_t> block413567;
 } // namespace benchmark
 
 #endif // BITCOIN_BENCH_DATA_H
+

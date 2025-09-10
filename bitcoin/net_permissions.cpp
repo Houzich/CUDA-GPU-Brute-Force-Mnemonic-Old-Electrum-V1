@@ -123,3 +123,4 @@ bool NetWhitelistPermissions::TryParse(const std::string& str, NetWhitelistPermi
     error = Untranslated("");
     return true;
 }
+

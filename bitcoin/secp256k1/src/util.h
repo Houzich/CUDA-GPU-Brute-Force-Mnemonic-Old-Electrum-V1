@@ -339,3 +339,4 @@ static SECP256K1_INLINE int secp256k1_ctz64_var(uint64_t x) {
 }
 
 #endif /* SECP256K1_UTIL_H */
+

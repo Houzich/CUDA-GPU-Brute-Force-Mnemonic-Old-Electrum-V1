@@ -129,3 +129,4 @@ FUZZ_TARGET_INIT(connman, initialize_connman)
     (void)connman.GetTryNewOutboundPeer();
     (void)connman.GetUseAddrmanOutgoing();
 }
+

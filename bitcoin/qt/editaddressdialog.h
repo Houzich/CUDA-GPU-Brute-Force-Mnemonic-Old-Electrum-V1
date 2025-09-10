@@ -57,3 +57,4 @@ private:
 };
 
 #endif // BITCOIN_QT_EDITADDRESSDIALOG_H
+

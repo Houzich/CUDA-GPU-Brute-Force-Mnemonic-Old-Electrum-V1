@@ -132,3 +132,4 @@ FUZZ_TARGET(str_printf)
     } catch (const tinyformat::format_error&) {
     }
 }
+

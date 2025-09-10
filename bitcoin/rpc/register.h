@@ -33,3 +33,4 @@ static inline void RegisterAllCoreRPCCommands(CRPCTable &t)
 }
 
 #endif // BITCOIN_RPC_REGISTER_H
+

@@ -48,3 +48,4 @@ static void AssembleBlock(benchmark::Bench& bench)
 }
 
 BENCHMARK(AssembleBlock);
+

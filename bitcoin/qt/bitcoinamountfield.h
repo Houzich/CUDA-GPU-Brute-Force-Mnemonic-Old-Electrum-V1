@@ -82,3 +82,4 @@ private Q_SLOTS:
 };
 
 #endif // BITCOIN_QT_BITCOINAMOUNTFIELD_H
+

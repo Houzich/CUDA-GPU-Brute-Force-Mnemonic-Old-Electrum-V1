@@ -77,3 +77,4 @@ FUZZ_TARGET_INIT(net, initialize_net)
     (void)node.HasPermission(net_permission_flags);
     (void)node.ConnectedThroughNetwork();
 }
+

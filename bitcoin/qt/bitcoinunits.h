@@ -112,3 +112,4 @@ private:
 typedef BitcoinUnits::Unit BitcoinUnit;
 
 #endif // BITCOIN_QT_BITCOINUNITS_H
+

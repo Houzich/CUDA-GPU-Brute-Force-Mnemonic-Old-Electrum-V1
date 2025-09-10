@@ -352,3 +352,4 @@ FUZZ_TARGET_INIT(tx_pool, initialize_tx_pool)
     Finish(fuzzed_data_provider, tx_pool, chainstate);
 }
 } // namespace
+

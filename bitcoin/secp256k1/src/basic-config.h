@@ -15,3 +15,4 @@
 #endif /* USE_BASIC_CONFIG */
 
 #endif /* SECP256K1_BASIC_CONFIG_H */
+

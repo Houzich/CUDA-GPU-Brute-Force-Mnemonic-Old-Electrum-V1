@@ -43,3 +43,4 @@
 
 
 #endif // BITCOIN_UTIL_TRACE_H
+

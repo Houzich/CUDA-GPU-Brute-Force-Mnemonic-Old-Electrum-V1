@@ -72,3 +72,4 @@ void BanMapFromJson(const UniValue& bans_json, banmap_t& bans)
         bans.insert_or_assign(subnet, CBanEntry{ban_entry_json});
     }
 }
+

@@ -519,3 +519,4 @@ BOOST_AUTO_TEST_CASE(rolling_bloom)
 }
 
 BOOST_AUTO_TEST_SUITE_END()
+

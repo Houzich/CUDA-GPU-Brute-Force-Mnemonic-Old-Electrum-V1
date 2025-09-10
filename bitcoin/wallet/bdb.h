@@ -233,3 +233,4 @@ std::unique_ptr<BerkeleyDatabase> MakeBerkeleyDatabase(const fs::path& path, con
 } // namespace wallet
 
 #endif // BITCOIN_WALLET_BDB_H
+

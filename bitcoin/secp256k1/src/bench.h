@@ -170,3 +170,4 @@ void print_output_table_header_row(void) {
 }
 
 #endif /* SECP256K1_BENCH_H */
+

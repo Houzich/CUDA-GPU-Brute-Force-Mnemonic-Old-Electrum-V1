@@ -140,3 +140,4 @@ void QRImageWidget::contextMenuEvent(QContextMenuEvent *event)
         return;
     contextMenu->exec(event->globalPos());
 }
+

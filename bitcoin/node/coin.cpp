@@ -24,3 +24,4 @@ void FindCoins(const NodeContext& node, std::map<COutPoint, Coin>& coins)
     }
 }
 } // namespace node
+

@@ -9,3 +9,4 @@ namespace leveldb {
 FilterPolicy::~FilterPolicy() {}
 
 }  // namespace leveldb
+

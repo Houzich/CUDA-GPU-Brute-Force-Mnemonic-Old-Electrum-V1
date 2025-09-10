@@ -60,3 +60,4 @@ void run_recovery_bench(int iters, int argc, char** argv) {
 }
 
 #endif /* SECP256K1_MODULE_RECOVERY_BENCH_H */
+

@@ -24,3 +24,4 @@ std::string getnewaddress(wallet::CWallet& w);
 
 
 #endif // BITCOIN_TEST_UTIL_WALLET_H
+

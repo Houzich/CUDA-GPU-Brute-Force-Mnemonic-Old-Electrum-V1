@@ -432,3 +432,4 @@ void ReadFromStream(FuzzedDataProvider& fuzzed_data_provider, Stream& stream) no
 }
 
 #endif // BITCOIN_TEST_FUZZ_UTIL_H
+

@@ -263,3 +263,4 @@ struct BlockTip {
 } // namespace interfaces
 
 #endif // BITCOIN_INTERFACES_NODE_H
+

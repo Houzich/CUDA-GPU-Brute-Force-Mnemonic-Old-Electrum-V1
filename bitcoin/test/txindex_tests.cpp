@@ -76,3 +76,4 @@ BOOST_FIXTURE_TEST_CASE(txindex_initial_sync, TestChain100Setup)
 }
 
 BOOST_AUTO_TEST_SUITE_END()
+

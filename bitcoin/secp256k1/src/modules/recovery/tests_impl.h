@@ -397,3 +397,4 @@ void run_recovery_tests(void) {
 }
 
 #endif /* SECP256K1_MODULE_RECOVERY_TESTS_H */
+

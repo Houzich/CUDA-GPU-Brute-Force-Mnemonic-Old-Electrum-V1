@@ -381,3 +381,4 @@ IndexSummary BaseIndex::GetSummary() const
     summary.best_block_height = m_best_block_index ? m_best_block_index.load()->nHeight : 0;
     return summary;
 }
+

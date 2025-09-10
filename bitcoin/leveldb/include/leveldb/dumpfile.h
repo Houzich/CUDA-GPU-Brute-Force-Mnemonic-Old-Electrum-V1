@@ -26,3 +26,4 @@ LEVELDB_EXPORT Status DumpFile(Env* env, const std::string& fname,
 }  // namespace leveldb
 
 #endif  // STORAGE_LEVELDB_INCLUDE_DUMPFILE_H_
+

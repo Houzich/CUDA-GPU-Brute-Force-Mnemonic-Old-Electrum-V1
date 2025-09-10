@@ -43,3 +43,4 @@ FUZZ_TARGET(blockfilter)
         gcs_filter.MatchAny(element_set);
     }
 }
+

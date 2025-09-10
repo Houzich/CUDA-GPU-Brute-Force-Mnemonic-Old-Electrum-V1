@@ -18,3 +18,4 @@ bool SanityCheckASMap(const std::vector<bool>& asmap, int bits);
 std::vector<bool> DecodeAsmap(fs::path path);
 
 #endif // BITCOIN_UTIL_ASMAP_H
+

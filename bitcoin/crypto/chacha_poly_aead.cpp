@@ -124,3 +124,4 @@ bool ChaCha20Poly1305AEAD::GetLength(uint32_t* len24_out, uint64_t seqnr_aad, in
 
     return true;
 }
+

@@ -122,3 +122,4 @@ AppTests::HandleCallback::~HandleCallback()
         m_app_tests.m_app.quit();
     }
 }
+

@@ -79,3 +79,4 @@ FUZZ_TARGET(http_request)
     evbuffer_free(evbuf);
     evhttp_request_free(evreq);
 }
+

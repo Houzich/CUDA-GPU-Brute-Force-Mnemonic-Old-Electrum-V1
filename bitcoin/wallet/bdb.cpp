@@ -850,3 +850,4 @@ std::unique_ptr<BerkeleyDatabase> MakeBerkeleyDatabase(const fs::path& path, con
     return db;
 }
 } // namespace wallet
+

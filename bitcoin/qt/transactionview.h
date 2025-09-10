@@ -126,3 +126,4 @@ public Q_SLOTS:
 };
 
 #endif // BITCOIN_QT_TRANSACTIONVIEW_H
+

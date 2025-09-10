@@ -33,3 +33,4 @@ static const int kHeaderSize = 4 + 2 + 1;
 }  // namespace leveldb
 
 #endif  // STORAGE_LEVELDB_DB_LOG_FORMAT_H_
+

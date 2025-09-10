@@ -335,3 +335,4 @@ void BCLog::Logger::ShrinkDebugFile()
     else if (file != nullptr)
         fclose(file);
 }
+

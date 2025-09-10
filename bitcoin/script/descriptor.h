@@ -183,3 +183,4 @@ std::string GetDescriptorChecksum(const std::string& descriptor);
 std::unique_ptr<Descriptor> InferDescriptor(const CScript& script, const SigningProvider& provider);
 
 #endif // BITCOIN_SCRIPT_DESCRIPTOR_H
+

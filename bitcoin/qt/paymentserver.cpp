@@ -271,3 +271,4 @@ void PaymentServer::setOptionsModel(OptionsModel *_optionsModel)
 {
     this->optionsModel = _optionsModel;
 }
+

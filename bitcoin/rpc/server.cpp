@@ -546,3 +546,4 @@ int RPCSerializationFlags()
 }
 
 CRPCTable tableRPC;
+

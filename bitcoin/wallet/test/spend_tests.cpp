@@ -116,3 +116,4 @@ BOOST_FIXTURE_TEST_CASE(FillInputToWeightTest, BasicTestingSetup)
 
 BOOST_AUTO_TEST_SUITE_END()
 } // namespace wallet
+

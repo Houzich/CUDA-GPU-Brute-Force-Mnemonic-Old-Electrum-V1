@@ -351,3 +351,4 @@ std::string Capitalize(std::string str);
 std::optional<uint64_t> ParseByteUnits(const std::string& str, ByteUnit default_multiplier);
 
 #endif // BITCOIN_UTIL_STRENCODINGS_H
+

@@ -74,3 +74,4 @@ script:
 - build/crc32c_capi_tests
 - build/crc32c_bench
 - cd build && cmake --build . --target install
+

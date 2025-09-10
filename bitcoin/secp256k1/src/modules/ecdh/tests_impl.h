@@ -130,3 +130,4 @@ void run_ecdh_tests(void) {
 }
 
 #endif /* SECP256K1_MODULE_ECDH_TESTS_H */
+

@@ -56,3 +56,4 @@ build-aux/compile
 build-aux/test-driver
 src/stamp-h1
 libsecp256k1.pc
+

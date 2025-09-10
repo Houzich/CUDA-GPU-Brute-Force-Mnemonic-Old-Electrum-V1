@@ -33,3 +33,4 @@ class ExternalSignerScriptPubKeyMan : public DescriptorScriptPubKeyMan
 };
 } // namespace wallet
 #endif // BITCOIN_WALLET_EXTERNAL_SIGNER_SCRIPTPUBKEYMAN_H
+

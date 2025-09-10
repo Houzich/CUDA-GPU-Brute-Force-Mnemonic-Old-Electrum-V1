@@ -38,3 +38,4 @@ AC_DEFUN([SECP_TRY_APPEND_CFLAGS], [
   unset flag_works
   AC_SUBST($2)
 ])
+

@@ -24,3 +24,4 @@ std::unique_ptr<Echo> MakeEcho();
 } // namespace interfaces
 
 #endif // BITCOIN_INTERFACES_ECHO_H
+

@@ -107,3 +107,4 @@ private:
 
 
 #endif // BITCOIN_LOGGING_TIMER_H
+

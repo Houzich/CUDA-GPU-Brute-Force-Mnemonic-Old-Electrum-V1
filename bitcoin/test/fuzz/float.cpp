@@ -60,3 +60,4 @@ FUZZ_TARGET(float)
         assert(std::isnan(d) || d == d_deserialized);
     }
 }
+

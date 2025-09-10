@@ -101,3 +101,4 @@ FUZZ_TARGET(netaddress)
     mutable_net_addr.SetIP(net_addr);
     assert(net_addr == mutable_net_addr);
 }
+

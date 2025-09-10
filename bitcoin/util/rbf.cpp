@@ -15,3 +15,4 @@ bool SignalsOptInRBF(const CTransaction &tx)
     }
     return false;
 }
+

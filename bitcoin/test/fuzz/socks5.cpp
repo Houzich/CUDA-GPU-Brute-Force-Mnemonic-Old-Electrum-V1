@@ -43,3 +43,4 @@ FUZZ_TARGET_INIT(socks5, initialize_socks5)
                  fuzzed_data_provider.ConsumeBool() ? &proxy_credentials : nullptr,
                  fuzzed_sock);
 }
+

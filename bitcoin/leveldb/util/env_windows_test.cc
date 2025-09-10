@@ -62,3 +62,4 @@ int main(int argc, char** argv) {
   leveldb::EnvWindowsTest::SetFileLimits(leveldb::kMMapLimit);
   return leveldb::test::RunAllTests();
 }
+

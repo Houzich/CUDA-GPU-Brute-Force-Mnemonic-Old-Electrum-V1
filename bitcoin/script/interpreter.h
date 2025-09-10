@@ -349,3 +349,4 @@ bool CheckMinimalPush(const std::vector<unsigned char>& data, opcodetype opcode)
 int FindAndDelete(CScript& script, const CScript& b);
 
 #endif // BITCOIN_SCRIPT_INTERPRETER_H
+

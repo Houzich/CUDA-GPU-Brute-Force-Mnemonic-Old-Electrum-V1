@@ -318,3 +318,4 @@ void Transform_4way(unsigned char* out, const unsigned char* in)
 }
 
 #endif
+

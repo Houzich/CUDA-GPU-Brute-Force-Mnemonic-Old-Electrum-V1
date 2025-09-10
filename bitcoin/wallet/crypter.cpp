@@ -138,3 +138,4 @@ bool DecryptKey(const CKeyingMaterial& vMasterKey, const std::vector<unsigned ch
     return key.VerifyPubKey(vchPubKey);
 }
 } // namespace wallet
+

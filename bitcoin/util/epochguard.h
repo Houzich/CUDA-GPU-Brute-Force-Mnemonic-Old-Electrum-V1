@@ -99,3 +99,4 @@ public:
 #define WITH_FRESH_EPOCH(epoch) const Epoch::Guard PASTE2(epoch_guard_, __COUNTER__)(epoch)
 
 #endif // BITCOIN_UTIL_EPOCHGUARD_H
+

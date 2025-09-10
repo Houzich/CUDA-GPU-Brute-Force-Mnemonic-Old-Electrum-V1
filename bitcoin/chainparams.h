@@ -166,3 +166,4 @@ const CChainParams &Params();
 void SelectParams(const std::string& chain);
 
 #endif // BITCOIN_CHAINPARAMS_H
+

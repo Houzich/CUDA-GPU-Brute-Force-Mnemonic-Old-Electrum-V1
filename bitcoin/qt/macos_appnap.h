@@ -22,3 +22,4 @@ private:
 };
 
 #endif // BITCOIN_QT_MACOS_APPNAP_H
+

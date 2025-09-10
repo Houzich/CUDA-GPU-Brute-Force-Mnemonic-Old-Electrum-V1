@@ -31,3 +31,4 @@ private:
 };
 
 #endif // BITCOIN_QT_NETWORKSTYLE_H
+

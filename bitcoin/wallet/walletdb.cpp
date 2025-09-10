@@ -1197,3 +1197,4 @@ std::unique_ptr<WalletDatabase> CreateMockWalletDatabase()
 #endif
 }
 } // namespace wallet
+

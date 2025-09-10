@@ -10,3 +10,4 @@
 void zmqError(const std::string& str);
 
 #endif // BITCOIN_ZMQ_ZMQUTIL_H
+

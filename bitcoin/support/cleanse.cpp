@@ -33,3 +33,4 @@ void memory_cleanse(void *ptr, size_t len)
     __asm__ __volatile__("" : : "r"(ptr) : "memory");
 #endif
 }
+

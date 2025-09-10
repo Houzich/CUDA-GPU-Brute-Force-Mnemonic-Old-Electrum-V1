@@ -1313,3 +1313,4 @@ struct NodeEvictionCandidate
 void ProtectEvictionCandidatesByRatio(std::vector<NodeEvictionCandidate>& vEvictionCandidates);
 
 #endif // BITCOIN_NET_H
+

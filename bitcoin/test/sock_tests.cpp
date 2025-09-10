@@ -178,3 +178,4 @@ BOOST_AUTO_TEST_CASE(recv_until_terminator_limit)
 #endif /* WIN32 */
 
 BOOST_AUTO_TEST_SUITE_END()
+

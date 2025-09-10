@@ -647,3 +647,4 @@ std::optional<std::vector<std::tuple<int, CScript, int>>> InferTaprootTree(const
 
     return ret;
 }
+

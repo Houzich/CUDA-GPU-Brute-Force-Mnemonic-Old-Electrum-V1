@@ -90,3 +90,4 @@ typedef enum ScriptError_t
 std::string ScriptErrorString(const ScriptError error);
 
 #endif // BITCOIN_SCRIPT_SCRIPT_ERROR_H
+

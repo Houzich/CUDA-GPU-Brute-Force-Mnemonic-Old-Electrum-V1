@@ -23,3 +23,4 @@ static int secp256k1_eckey_privkey_tweak_mul(secp256k1_scalar *key, const secp25
 static int secp256k1_eckey_pubkey_tweak_mul(secp256k1_ge *key, const secp256k1_scalar *tweak);
 
 #endif /* SECP256K1_ECKEY_H */
+

@@ -32,3 +32,4 @@ public:
 };
 
 #endif // BITCOIN_CRYPTO_CHACHA20_H
+

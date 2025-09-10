@@ -769,3 +769,4 @@ def modinv_var(M, Mi, x):
         d, e = update_de(d, e, t, M, Mi)
     return normalize(f, d, Mi)
 ```
+

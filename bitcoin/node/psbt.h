@@ -56,3 +56,4 @@ PSBTAnalysis AnalyzePSBT(PartiallySignedTransaction psbtx);
 } // namespace node
 
 #endif // BITCOIN_NODE_PSBT_H
+

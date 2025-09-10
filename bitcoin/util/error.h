@@ -43,3 +43,4 @@ bilingual_str AmountHighWarn(const std::string& optname);
 bilingual_str AmountErrMsg(const std::string& optname, const std::string& strValue);
 
 #endif // BITCOIN_UTIL_ERROR_H
+

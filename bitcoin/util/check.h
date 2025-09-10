@@ -73,3 +73,4 @@ T get_pure_r_value(T&& val)
 #endif
 
 #endif // BITCOIN_UTIL_CHECK_H
+

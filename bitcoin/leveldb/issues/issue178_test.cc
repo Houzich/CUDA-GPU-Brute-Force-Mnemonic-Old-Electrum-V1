@@ -86,3 +86,4 @@ TEST(Issue178, Test) {
 }  // anonymous namespace
 
 int main(int argc, char** argv) { return leveldb::test::RunAllTests(); }
+

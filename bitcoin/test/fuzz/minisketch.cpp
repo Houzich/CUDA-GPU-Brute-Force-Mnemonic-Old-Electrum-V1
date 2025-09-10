@@ -64,3 +64,4 @@ FUZZ_TARGET(minisketch)
         }
     }
 }
+

@@ -37,3 +37,4 @@ static void RollingBloomReset(benchmark::Bench& bench)
 
 BENCHMARK(RollingBloom);
 BENCHMARK(RollingBloomReset);
+

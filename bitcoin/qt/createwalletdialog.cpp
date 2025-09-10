@@ -163,3 +163,4 @@ bool CreateWalletDialog::isExternalSignerChecked() const
 {
     return ui->external_signer_checkbox->isChecked();
 }
+

@@ -69,3 +69,4 @@ static void CCheckQueueSpeedPrevectorJob(benchmark::Bench& bench)
     ECC_Stop();
 }
 BENCHMARK(CCheckQueueSpeedPrevectorJob);
+

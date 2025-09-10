@@ -110,3 +110,4 @@ TEST(AutoCompactTest, ReadHalf) { DoReads(kCount / 2); }
 }  // namespace leveldb
 
 int main(int argc, char** argv) { return leveldb::test::RunAllTests(); }
+

@@ -1,10 +1,10 @@
-п»ї/**
+/**
   ******************************************************************************
   * @author		Anton Houzich
   * @version	V2.0.0
   * @date		9-May-2023
   * @mail		houzich_anton@mail.ru
-  * discussion  https://t.me/BRUTE_FORCE_CRYPTO_WALLET
+  * discussion  https://t.me/brute_force_gpu
   ******************************************************************************
   */
 
@@ -2630,7 +2630,7 @@ __device__ void words_index_to_mnemonic(const uint16_t* words_index, uint8_t* mn
 		mnemonic[mnemonic_index] = 32;
 		mnemonic_index++;
 	}
-	mnemonic[mnemonic_index - 1] = 0;	//РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ, СѓР±РёСЂР°РµС‚ РїРѕСЃР»РµРґРЅРёР№ РїСЂРѕР±РµР»
+	mnemonic[mnemonic_index - 1] = 0;	//обязательно, убирает последний пробел
 }
 
 //#define printf(...)
@@ -3081,6 +3081,7 @@ __global__ void gl_bruteforce_mnemonic_for_save(
 
 	//__syncthreads();
 }
+
 
 
 

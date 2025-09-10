@@ -32,3 +32,4 @@ FUZZ_TARGET(primitives_transaction)
         assert((tx_1 == tx_2) != (tx_1 != tx_2));
     }
 }
+

@@ -155,3 +155,4 @@ CTransactionRef GetTransaction(const CBlockIndex* const block_index, const CTxMe
     return nullptr;
 }
 } // namespace node
+

@@ -17,3 +17,4 @@ bool RecoverDatabaseFile(const ArgsManager& args, const fs::path& file_path, bil
 } // namespace wallet
 
 #endif // BITCOIN_WALLET_SALVAGE_H
+

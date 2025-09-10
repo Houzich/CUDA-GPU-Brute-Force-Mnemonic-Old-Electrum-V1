@@ -59,3 +59,4 @@ UniValue CreateUTXOSnapshot(
     const fs::path& tmppath);
 
 #endif // BITCOIN_RPC_BLOCKCHAIN_H
+

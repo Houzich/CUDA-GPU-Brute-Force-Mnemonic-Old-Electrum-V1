@@ -124,3 +124,4 @@ bool CachingTransactionSignatureChecker::VerifySchnorrSignature(Span<const unsig
     if (store) signatureCache.Set(entry);
     return true;
 }
+

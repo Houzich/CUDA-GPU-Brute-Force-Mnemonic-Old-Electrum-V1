@@ -30,3 +30,4 @@ std::shared_ptr<CBlock> PrepareBlock(const node::NodeContext&, const CScript& co
 CTxIn generatetoaddress(const node::NodeContext&, const std::string& address);
 
 #endif // BITCOIN_TEST_UTIL_MINING_H
+

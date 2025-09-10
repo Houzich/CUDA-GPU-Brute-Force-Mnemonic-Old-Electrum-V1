@@ -50,3 +50,4 @@ struct WalletContext {
 } // namespace wallet
 
 #endif // BITCOIN_WALLET_CONTEXT_H
+

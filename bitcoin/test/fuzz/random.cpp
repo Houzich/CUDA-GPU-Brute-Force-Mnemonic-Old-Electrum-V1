@@ -29,3 +29,4 @@ FUZZ_TARGET(random)
     Shuffle(integrals.begin(), integrals.end(), fast_random_context);
     std::shuffle(integrals.begin(), integrals.end(), fast_random_context);
 }
+

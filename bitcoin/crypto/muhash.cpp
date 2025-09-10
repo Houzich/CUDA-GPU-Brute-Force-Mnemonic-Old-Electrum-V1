@@ -344,3 +344,4 @@ MuHash3072& MuHash3072::Remove(Span<const unsigned char> in) noexcept {
     m_denominator.Multiply(ToNum3072(in));
     return *this;
 }
+

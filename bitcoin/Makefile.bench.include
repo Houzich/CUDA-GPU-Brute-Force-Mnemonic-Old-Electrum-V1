@@ -101,3 +101,4 @@ bitcoin_bench_clean : FORCE
 	 echo "};"; \
 	} > "$@.new" && mv -f "$@.new" "$@"
 	@echo "Generated $@"
+

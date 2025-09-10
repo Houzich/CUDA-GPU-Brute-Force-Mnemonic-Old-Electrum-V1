@@ -97,3 +97,4 @@ bool FlatFileSeq::Flush(const FlatFilePos& pos, bool finalize)
     fclose(file);
     return true;
 }
+

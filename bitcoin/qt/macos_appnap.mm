@@ -69,3 +69,4 @@ void CAppNapInhibitor::enableAppNap()
 {
     impl->enableAppNap();
 }
+

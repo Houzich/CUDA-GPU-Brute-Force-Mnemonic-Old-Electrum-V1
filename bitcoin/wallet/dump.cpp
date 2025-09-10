@@ -295,3 +295,4 @@ bool CreateFromDump(const ArgsManager& args, const std::string& name, const fs::
     return ret;
 }
 } // namespace wallet
+

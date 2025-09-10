@@ -100,3 +100,4 @@ void run_schnorrsig_bench(int iters, int argc, char** argv) {
 }
 
 #endif
+

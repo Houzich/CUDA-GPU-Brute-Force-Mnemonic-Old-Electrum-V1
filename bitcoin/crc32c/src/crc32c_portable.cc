@@ -349,3 +349,4 @@ uint32_t ExtendPortable(uint32_t crc, const uint8_t* data, size_t size) {
 }
 
 }  // namespace crc32c
+

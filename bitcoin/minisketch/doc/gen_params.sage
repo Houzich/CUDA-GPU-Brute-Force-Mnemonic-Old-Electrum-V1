@@ -331,3 +331,4 @@ for bits in range(2, 65):
 
 for bits in range(2, 65):
     print_result(bits, MD)
+

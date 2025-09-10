@@ -44,3 +44,4 @@ namespace tao::json::ubjson::internal
 }  // namespace tao::json::ubjson::internal
 
 #endif
+

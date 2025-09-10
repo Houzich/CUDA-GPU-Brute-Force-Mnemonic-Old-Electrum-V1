@@ -33,3 +33,4 @@ static inline int64_t GetVirtualTransactionSize(const CTransaction& tx, int64_t 
 }
 
 #endif // BITCOIN_POLICY_SETTINGS_H
+

@@ -110,3 +110,4 @@ Sketch* ConstructGeneric1Byte(int bits, int implementation)
     default: return nullptr;
     }
 }
+

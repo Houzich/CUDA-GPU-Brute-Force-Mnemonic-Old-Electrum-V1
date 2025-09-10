@@ -23,3 +23,4 @@ FUZZ_TARGET(crypto_hkdf_hmac_sha256_l32)
         hkdf_hmac_sha256_l32.Expand32(fuzzed_data_provider.ConsumeRandomLengthString(128), out.data());
     }
 }
+

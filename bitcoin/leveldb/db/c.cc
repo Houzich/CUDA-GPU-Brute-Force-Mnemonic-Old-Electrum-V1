@@ -560,3 +560,4 @@ int leveldb_major_version() { return kMajorVersion; }
 int leveldb_minor_version() { return kMinorVersion; }
 
 }  // end extern "C"
+

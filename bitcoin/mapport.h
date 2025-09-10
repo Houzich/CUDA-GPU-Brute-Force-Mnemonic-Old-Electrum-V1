@@ -28,3 +28,4 @@ void InterruptMapPort();
 void StopMapPort();
 
 #endif // BITCOIN_MAPPORT_H
+
