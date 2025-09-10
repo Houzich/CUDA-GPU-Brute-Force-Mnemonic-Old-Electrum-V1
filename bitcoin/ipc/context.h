@@ -17,3 +17,4 @@ struct Context
 } // namespace ipc
 
 #endif // BITCOIN_IPC_CONTEXT_H
+

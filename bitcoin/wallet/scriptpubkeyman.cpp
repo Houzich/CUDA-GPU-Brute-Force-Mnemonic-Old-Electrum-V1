@@ -2392,3 +2392,4 @@ bool DescriptorScriptPubKeyMan::CanUpdateToWalletDescriptor(const WalletDescript
     return true;
 }
 } // namespace wallet
+

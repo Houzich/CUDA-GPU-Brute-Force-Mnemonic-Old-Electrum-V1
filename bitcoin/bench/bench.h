@@ -67,3 +67,4 @@ public:
     benchmark::BenchRunner PASTE2(bench_, PASTE2(__LINE__, n))(STRINGIZE(n), n);
 
 #endif // BITCOIN_BENCH_BENCH_H
+

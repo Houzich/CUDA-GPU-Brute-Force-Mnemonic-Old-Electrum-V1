@@ -70,3 +70,4 @@ namespace TAO_PEGTL_NAMESPACE::internal
 }  // namespace TAO_PEGTL_NAMESPACE::internal
 
 #endif
+

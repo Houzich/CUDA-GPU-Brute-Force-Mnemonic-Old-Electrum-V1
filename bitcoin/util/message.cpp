@@ -90,3 +90,4 @@ std::string SigningResultString(const SigningResult res)
     }
     assert(false);
 }
+

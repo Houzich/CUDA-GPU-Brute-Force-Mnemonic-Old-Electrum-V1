@@ -578,3 +578,4 @@ static void secp256k1_fe_inv_var(secp256k1_fe *r, const secp256k1_fe *x) {
 }
 
 #endif /* SECP256K1_FIELD_REPR_IMPL_H */
+

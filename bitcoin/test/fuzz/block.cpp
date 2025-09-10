@@ -70,3 +70,4 @@ FUZZ_TARGET_INIT(block, initialize_block)
     const bool is_null = block_copy.IsNull();
     assert(is_null);
 }
+

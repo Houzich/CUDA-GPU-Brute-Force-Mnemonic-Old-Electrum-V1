@@ -68,3 +68,4 @@ RPCHelpMan signmessage()
     };
 }
 } // namespace wallet
+

@@ -72,3 +72,4 @@ namespace tao::json::binding
 #define TAO_JSON_FACTORY_BIND1( ... ) tao::json::binding::internal::factory_temp< tao::json::binding::internal::use_default_key, __VA_ARGS__ >
 
 #endif
+

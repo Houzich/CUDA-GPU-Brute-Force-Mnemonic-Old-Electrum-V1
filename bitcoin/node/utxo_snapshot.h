@@ -36,3 +36,4 @@ public:
 } // namespace node
 
 #endif // BITCOIN_NODE_UTXO_SNAPSHOT_H
+

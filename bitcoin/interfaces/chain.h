@@ -320,3 +320,4 @@ std::unique_ptr<Chain> MakeChain(node::NodeContext& node);
 } // namespace interfaces
 
 #endif // BITCOIN_INTERFACES_CHAIN_H
+

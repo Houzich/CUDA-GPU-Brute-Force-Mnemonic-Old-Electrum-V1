@@ -106,3 +106,4 @@ auto FindKey(Map&& map, Key&& key) -> decltype(&map.at(key))
 } // namespace util
 
 #endif // BITCOIN_UTIL_SETTINGS_H
+

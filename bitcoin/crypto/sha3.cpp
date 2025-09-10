@@ -159,3 +159,4 @@ SHA3_256& SHA3_256::Reset()
     std::fill(std::begin(m_state), std::end(m_state), 0);
     return *this;
 }
+

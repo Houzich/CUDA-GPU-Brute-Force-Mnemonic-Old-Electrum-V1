@@ -43,3 +43,4 @@ FUZZ_TARGET(crypto_chacha20)
             });
     }
 }
+

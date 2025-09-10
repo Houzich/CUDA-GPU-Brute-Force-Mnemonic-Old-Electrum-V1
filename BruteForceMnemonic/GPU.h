@@ -4,7 +4,7 @@
   * @version	V2.0.0
   * @date		9-May-2023
   * @mail		houzich_anton@mail.ru
-  * discussion  https://t.me/BRUTE_FORCE_CRYPTO_WALLET
+  * discussion  https://t.me/brute_force_gpu
   ******************************************************************************
   */
 #pragma once
@@ -34,3 +34,4 @@ extern __constant__ uint32_t dev_generate_path[];
 extern __constant__ uint32_t dev_num_childs[];
 extern __constant__ uint32_t dev_num_paths[];
 extern __constant__ int16_t dev_static_words_indices[];
+

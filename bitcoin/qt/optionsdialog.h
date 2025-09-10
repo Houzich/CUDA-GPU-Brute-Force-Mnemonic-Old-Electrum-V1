@@ -77,3 +77,4 @@ private:
 };
 
 #endif // BITCOIN_QT_OPTIONSDIALOG_H
+

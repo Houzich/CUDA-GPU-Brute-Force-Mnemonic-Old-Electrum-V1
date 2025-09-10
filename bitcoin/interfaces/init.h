@@ -52,3 +52,4 @@ std::unique_ptr<Init> MakeGuiInit(int argc, char* argv[]);
 } // namespace interfaces
 
 #endif // BITCOIN_INTERFACES_INIT_H
+

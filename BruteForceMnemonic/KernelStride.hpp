@@ -4,7 +4,7 @@
   * @version	V2.0.0
   * @date		9-May-2023
   * @mail		houzich_anton@mail.ru
-  * discussion  https://t.me/BRUTE_FORCE_CRYPTO_WALLET
+  * discussion  https://t.me/brute_force_gpu
   ******************************************************************************
   */
 #pragma once
@@ -41,4 +41,5 @@ public:
 	int start_for_save(uint64_t grid, uint64_t block);
 	int end_for_save();
 };
+
 

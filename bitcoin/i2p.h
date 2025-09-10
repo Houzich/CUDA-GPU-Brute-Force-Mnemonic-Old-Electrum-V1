@@ -268,3 +268,4 @@ private:
 } // namespace i2p
 
 #endif // BITCOIN_I2P_H
+

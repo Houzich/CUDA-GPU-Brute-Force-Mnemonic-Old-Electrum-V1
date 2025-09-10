@@ -66,3 +66,4 @@ static void test_exhaustive_extrakeys(const secp256k1_context *ctx, const secp25
 }
 
 #endif
+

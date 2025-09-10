@@ -1012,3 +1012,4 @@ bool LoadMempool(CTxMemPool& pool, CChainState& active_chainstate, FopenFn mocka
 const AssumeutxoData* ExpectedAssumeutxo(const int height, const CChainParams& params);
 
 #endif // BITCOIN_VALIDATION_H
+

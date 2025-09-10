@@ -46,3 +46,4 @@ FUZZ_TARGET(rbf)
         (void)IsRBFOptIn(tx, pool);
     }
 }
+

@@ -64,3 +64,4 @@ public:
 };
 
 #endif // BITCOIN_EXTERNAL_SIGNER_H
+

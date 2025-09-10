@@ -40,3 +40,4 @@ FUZZ_TARGET(script_descriptor_cache)
         (void)descriptor_cache.GetCachedDerivedExtPubKeys();
     }
 }
+

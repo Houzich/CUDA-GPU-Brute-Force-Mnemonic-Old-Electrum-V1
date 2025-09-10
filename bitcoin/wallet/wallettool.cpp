@@ -224,3 +224,4 @@ bool ExecuteWalletToolFunc(const ArgsManager& args, const std::string& command)
 }
 } // namespace WalletTool
 } // namespace wallet
+

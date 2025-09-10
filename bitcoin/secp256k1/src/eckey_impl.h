@@ -94,3 +94,4 @@ static int secp256k1_eckey_pubkey_tweak_mul(secp256k1_ge *key, const secp256k1_s
 }
 
 #endif /* SECP256K1_ECKEY_IMPL_H */
+

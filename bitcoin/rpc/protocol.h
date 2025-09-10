@@ -90,3 +90,4 @@ enum RPCErrorCode
 };
 
 #endif // BITCOIN_RPC_PROTOCOL_H
+

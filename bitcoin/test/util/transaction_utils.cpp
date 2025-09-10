@@ -69,3 +69,4 @@ std::vector<CMutableTransaction> SetupDummyInputs(FillableSigningProvider& keyst
 
     return dummyTransactions;
 }
+

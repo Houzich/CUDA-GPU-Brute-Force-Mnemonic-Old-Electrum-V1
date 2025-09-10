@@ -481,3 +481,4 @@ void DestroyAllBlockFilterIndexes()
 {
     g_filter_indexes.clear();
 }
+

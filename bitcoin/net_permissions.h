@@ -87,3 +87,4 @@ public:
 };
 
 #endif // BITCOIN_NET_PERMISSIONS_H
+

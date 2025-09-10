@@ -26,3 +26,4 @@ namespace tao::json::cbor::internal
 }  // namespace tao::json::cbor::internal
 
 #endif
+

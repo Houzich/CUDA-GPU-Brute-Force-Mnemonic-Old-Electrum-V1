@@ -242,3 +242,4 @@ void SplashScreen::closeEvent(QCloseEvent *event)
     shutdown(); // allows an "emergency" shutdown during startup
     event->ignore();
 }
+

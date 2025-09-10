@@ -164,3 +164,4 @@ void EditAddressDialog::setAddress(const QString &_address)
     this->address = _address;
     ui->addressEdit->setText(_address);
 }
+

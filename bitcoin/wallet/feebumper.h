@@ -59,3 +59,4 @@ Result CommitTransaction(CWallet& wallet,
 } // namespace wallet
 
 #endif // BITCOIN_WALLET_FEEBUMPER_H
+

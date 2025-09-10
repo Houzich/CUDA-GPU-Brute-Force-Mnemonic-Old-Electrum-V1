@@ -103,3 +103,4 @@ static void secp256k1_scalar_mul_shift_var(secp256k1_scalar *r, const secp256k1_
 static void secp256k1_scalar_cmov(secp256k1_scalar *r, const secp256k1_scalar *a, int flag);
 
 #endif /* SECP256K1_SCALAR_H */
+

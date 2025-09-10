@@ -168,3 +168,4 @@ FUZZ_TARGET_INIT(script, initialize_script)
         }
     }
 }
+

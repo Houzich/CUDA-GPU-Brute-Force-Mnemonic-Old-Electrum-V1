@@ -107,3 +107,4 @@ public:
 } // namespace wallet
 
 #endif // BITCOIN_WALLET_WALLETUTIL_H
+

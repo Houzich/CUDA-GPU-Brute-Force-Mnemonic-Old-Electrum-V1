@@ -18,3 +18,4 @@ public:
 } // namespace ipc
 
 #endif // BITCOIN_IPC_EXCEPTION_H
+

@@ -71,3 +71,4 @@ bool AppInitMain(node::NodeContext& node, interfaces::BlockAndHeaderTipInfo* tip
 void SetupServerArgs(ArgsManager& argsman);
 
 #endif // BITCOIN_INIT_H
+

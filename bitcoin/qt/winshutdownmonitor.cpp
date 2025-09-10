@@ -55,3 +55,4 @@ void WinShutdownMonitor::registerShutdownBlockReason(const QString& strReason, c
         qWarning() << "registerShutdownBlockReason: Failed to register: " + strReason;
 }
 #endif
+

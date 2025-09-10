@@ -38,3 +38,4 @@ static void RpcMempool(benchmark::Bench& bench)
 }
 
 BENCHMARK(RpcMempool);
+

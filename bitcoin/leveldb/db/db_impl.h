@@ -215,3 +215,4 @@ Options SanitizeOptions(const std::string& db,
 }  // namespace leveldb
 
 #endif  // STORAGE_LEVELDB_DB_DB_IMPL_H_
+

@@ -39,3 +39,4 @@ public:
 #define ASSERT_DEBUG_LOG(message) DebugLogHelper PASTE2(debugloghelper, __COUNTER__)(message)
 
 #endif // BITCOIN_TEST_UTIL_LOGGING_H
+

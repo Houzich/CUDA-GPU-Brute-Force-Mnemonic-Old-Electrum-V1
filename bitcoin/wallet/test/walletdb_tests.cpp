@@ -29,3 +29,4 @@ BOOST_AUTO_TEST_CASE(walletdb_readkeyvalue)
 
 BOOST_AUTO_TEST_SUITE_END()
 } // namespace wallet
+

@@ -25,3 +25,4 @@ void util::TraceThread(const char* thread_name, std::function<void()> thread_fun
         throw;
     }
 }
+

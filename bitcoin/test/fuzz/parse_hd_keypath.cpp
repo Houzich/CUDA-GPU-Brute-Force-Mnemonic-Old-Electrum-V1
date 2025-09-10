@@ -21,3 +21,4 @@ FUZZ_TARGET(parse_hd_keypath)
     (void)FormatHDKeypath(random_keypath);
     (void)WriteHDKeypath(random_keypath);
 }
+

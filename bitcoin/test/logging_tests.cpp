@@ -31,3 +31,4 @@ BOOST_AUTO_TEST_CASE(logging_timer)
 }
 
 BOOST_AUTO_TEST_SUITE_END()
+

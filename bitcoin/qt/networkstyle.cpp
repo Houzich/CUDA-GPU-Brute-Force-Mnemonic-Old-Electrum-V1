@@ -91,3 +91,4 @@ const NetworkStyle* NetworkStyle::instantiate(const std::string& networkId)
     }
     return nullptr;
 }
+

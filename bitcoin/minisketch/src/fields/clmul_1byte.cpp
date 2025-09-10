@@ -117,3 +117,4 @@ Sketch* ConstructClMulTri1Byte(int bits, int implementation) {
     }
     return nullptr;
 }
+

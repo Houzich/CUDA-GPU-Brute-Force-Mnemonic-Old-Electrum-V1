@@ -278,3 +278,4 @@ bool Random_SanityCheck();
 void RandomInit();
 
 #endif // BITCOIN_RANDOM_H
+

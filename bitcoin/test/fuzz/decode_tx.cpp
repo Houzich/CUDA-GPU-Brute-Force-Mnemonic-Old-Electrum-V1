@@ -30,3 +30,4 @@ FUZZ_TARGET(decode_tx)
         assert(result_try_witness_and_maybe_no_witness);
     }
 }
+

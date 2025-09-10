@@ -25,3 +25,4 @@ struct InitWalletDirTestingSetup: public BasicTestingSetup {
 
 #endif // BITCOIN_WALLET_TEST_INIT_TEST_FIXTURE_H
 } // namespace wallet
+

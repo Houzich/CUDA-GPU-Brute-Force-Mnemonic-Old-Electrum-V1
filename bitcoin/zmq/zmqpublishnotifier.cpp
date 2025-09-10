@@ -297,3 +297,4 @@ bool CZMQPublishSequenceNotifier::NotifyTransactionRemoval(const CTransaction &t
     LogPrint(BCLog::ZMQ, "zmq: Publish hashtx mempool removal %s to %s\n", hash.GetHex(), this->address);
     return SendSequenceMsg(*this, hash, /* Mempool (R)emoval */ 'R', mempool_sequence);
 }
+

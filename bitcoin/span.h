@@ -285,3 +285,4 @@ template <typename T> constexpr auto UCharSpanCast(Span<T> s) -> Span<typename s
 template <typename V> constexpr auto MakeUCharSpan(V&& v) -> decltype(UCharSpanCast(Span{std::forward<V>(v)})) { return UCharSpanCast(Span{std::forward<V>(v)}); }
 
 #endif // BITCOIN_SPAN_H
+

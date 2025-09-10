@@ -26,3 +26,4 @@ void noui_test_redirect();
 void noui_reconnect();
 
 #endif // BITCOIN_NOUI_H
+

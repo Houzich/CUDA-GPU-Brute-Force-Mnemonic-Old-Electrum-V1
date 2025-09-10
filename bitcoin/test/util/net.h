@@ -168,3 +168,4 @@ private:
 std::vector<NodeEvictionCandidate> GetRandomNodeEvictionCandidates(int n_candidates, FastRandomContext& random_context);
 
 #endif // BITCOIN_TEST_UTIL_NET_H
+

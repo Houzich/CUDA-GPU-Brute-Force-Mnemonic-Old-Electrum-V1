@@ -163,3 +163,4 @@ bool DecodeBase58Check(const std::string& str, std::vector<unsigned char>& vchRe
     }
     return DecodeBase58Check(str.c_str(), vchRet, max_ret);
 }
+

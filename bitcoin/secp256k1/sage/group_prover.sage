@@ -325,3 +325,4 @@ def concrete_verify(c):
     if k == 0:
       return (False, c.nonzero[k])
   return (True, None)
+

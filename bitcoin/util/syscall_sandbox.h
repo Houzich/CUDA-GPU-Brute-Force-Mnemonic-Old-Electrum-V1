@@ -55,3 +55,4 @@ void TestDisallowedSandboxCall();
 #endif // defined(USE_SYSCALL_SANDBOX)
 
 #endif // BITCOIN_UTIL_SYSCALL_SANDBOX_H
+

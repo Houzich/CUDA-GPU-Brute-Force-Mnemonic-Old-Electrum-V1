@@ -23,3 +23,4 @@ protected:
 };
 
 #endif // BITCOIN_QT_PEERTABLESORTPROXY_H
+

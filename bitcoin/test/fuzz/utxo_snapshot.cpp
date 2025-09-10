@@ -89,3 +89,4 @@ FUZZ_TARGET_INIT(utxo_snapshot, initialize_chain)
     Assert(!ActivateFuzzedSnapshot());
 }
 } // namespace
+

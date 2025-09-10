@@ -62,3 +62,4 @@ uint64_t EncodeDouble(double f) noexcept {
         return sign | (((uint64_t)(1022 + exp)) << 52) | (man & 0xFFFFFFFFFFFFF);
     }
 }
+

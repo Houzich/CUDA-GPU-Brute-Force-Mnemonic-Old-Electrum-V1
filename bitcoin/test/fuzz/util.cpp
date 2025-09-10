@@ -605,3 +605,4 @@ int FuzzedFileProvider::close(void* cookie)
     SetFuzzedErrNo(fuzzed_file->m_fuzzed_data_provider);
     return fuzzed_file->m_fuzzed_data_provider.ConsumeIntegralInRange<int>(-1, 0);
 }
+

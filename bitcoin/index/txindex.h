@@ -47,3 +47,4 @@ public:
 extern std::unique_ptr<TxIndex> g_txindex;
 
 #endif // BITCOIN_INDEX_TXINDEX_H
+

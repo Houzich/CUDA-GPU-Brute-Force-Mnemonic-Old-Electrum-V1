@@ -174,3 +174,4 @@ std::optional<std::string> PaysForRBF(CAmount original_fees,
     }
     return std::nullopt;
 }
+

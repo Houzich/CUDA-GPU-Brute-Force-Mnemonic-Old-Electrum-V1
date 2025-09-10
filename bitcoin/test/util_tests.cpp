@@ -2640,3 +2640,4 @@ BOOST_AUTO_TEST_CASE(util_WriteBinaryFile)
     BOOST_CHECK_EQUAL(actual_text, expected_text);
 }
 BOOST_AUTO_TEST_SUITE_END()
+

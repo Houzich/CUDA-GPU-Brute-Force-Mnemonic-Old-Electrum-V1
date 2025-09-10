@@ -37,3 +37,4 @@ assert LAMBDA^3 == Z(1)
 assert LAMBDA^2 + LAMBDA + 1 == 0
 
 assert Integer(LAMBDA)*G == C(BETA*G[0], G[1])
+

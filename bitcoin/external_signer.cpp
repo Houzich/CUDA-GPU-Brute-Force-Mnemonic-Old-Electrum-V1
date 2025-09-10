@@ -114,3 +114,4 @@ bool ExternalSigner::SignTransaction(PartiallySignedTransaction& psbtx, std::str
 
     return true;
 }
+

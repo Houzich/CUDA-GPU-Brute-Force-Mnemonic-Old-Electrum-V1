@@ -50,3 +50,4 @@ void InitWalletDirTestingSetup::SetWalletDir(const fs::path& walletdir_path)
     m_args.ForceSetArg("-walletdir", fs::PathToString(walletdir_path));
 }
 } // namespace wallet
+

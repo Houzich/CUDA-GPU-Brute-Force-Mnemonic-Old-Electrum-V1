@@ -62,3 +62,4 @@ LEVELDB_EXPORT const Comparator* BytewiseComparator();
 }  // namespace leveldb
 
 #endif  // STORAGE_LEVELDB_INCLUDE_COMPARATOR_H_
+

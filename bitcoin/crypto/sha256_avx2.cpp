@@ -326,3 +326,4 @@ void Transform_8way(unsigned char* out, const unsigned char* in)
 }
 
 #endif
+

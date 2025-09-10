@@ -46,3 +46,4 @@ FUZZ_TARGET(cuckoocache)
     }
     fuzzed_data_provider_ptr = nullptr;
 }
+

@@ -257,3 +257,4 @@ bool Socks5(const std::string& strDest, uint16_t port, const ProxyCredentials* a
 bool IsBadPort(uint16_t port);
 
 #endif // BITCOIN_NETBASE_H
+

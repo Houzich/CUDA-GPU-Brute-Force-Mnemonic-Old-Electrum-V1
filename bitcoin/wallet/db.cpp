@@ -148,3 +148,4 @@ void ReadDatabaseArgs(const ArgsManager& args, DatabaseOptions& options)
 }
 
 } // namespace wallet
+

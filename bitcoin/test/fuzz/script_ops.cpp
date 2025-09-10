@@ -65,3 +65,4 @@ FUZZ_TARGET(script_ops)
         (void)script.IsWitnessProgram(version, program);
     }
 }
+

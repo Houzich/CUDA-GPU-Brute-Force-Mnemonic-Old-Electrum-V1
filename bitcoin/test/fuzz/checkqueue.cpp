@@ -62,3 +62,4 @@ FUZZ_TARGET(checkqueue)
         (void)check_queue_control.Wait();
     }
 }
+

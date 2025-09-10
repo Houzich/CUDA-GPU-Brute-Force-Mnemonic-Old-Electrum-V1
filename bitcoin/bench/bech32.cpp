@@ -34,3 +34,4 @@ static void Bech32Decode(benchmark::Bench& bench)
 
 BENCHMARK(Bech32Encode);
 BENCHMARK(Bech32Decode);
+

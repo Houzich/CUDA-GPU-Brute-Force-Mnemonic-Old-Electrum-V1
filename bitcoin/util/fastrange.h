@@ -49,3 +49,4 @@ static inline uint64_t FastRange64(uint64_t x, uint64_t n)
 }
 
 #endif // BITCOIN_UTIL_FASTRANGE_H
+

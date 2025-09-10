@@ -12,3 +12,4 @@ UrlDecodeFn urlDecode;
 extern UrlDecodeFn* const URL_DECODE;
 
 #endif // BITCOIN_UTIL_URL_H
+

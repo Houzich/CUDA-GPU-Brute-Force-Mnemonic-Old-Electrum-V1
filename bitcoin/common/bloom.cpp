@@ -244,3 +244,4 @@ void CRollingBloomFilter::reset()
     nGeneration = 1;
     std::fill(data.begin(), data.end(), 0);
 }
+

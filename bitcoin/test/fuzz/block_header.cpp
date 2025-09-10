@@ -47,3 +47,4 @@ FUZZ_TARGET(block_header)
         }
     }
 }
+

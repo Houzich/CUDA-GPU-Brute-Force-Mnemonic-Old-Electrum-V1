@@ -125,3 +125,4 @@ FUZZ_TARGET(crypto)
         KeccakF(state);
     }
 }
+

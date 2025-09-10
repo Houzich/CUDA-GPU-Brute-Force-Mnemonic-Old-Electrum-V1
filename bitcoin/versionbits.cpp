@@ -244,3 +244,4 @@ void VersionBitsCache::Clear()
         m_caches[d].clear();
     }
 }
+

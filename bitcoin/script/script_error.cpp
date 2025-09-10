@@ -121,3 +121,4 @@ std::string ScriptErrorString(const ScriptError serror)
     }
     return "unknown error";
 }
+

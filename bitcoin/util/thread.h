@@ -16,3 +16,4 @@ void TraceThread(const char* thread_name, std::function<void()> thread_func);
 } // namespace util
 
 #endif // BITCOIN_UTIL_THREAD_H
+

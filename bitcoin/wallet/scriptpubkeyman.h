@@ -636,3 +636,4 @@ public:
 } // namespace wallet
 
 #endif // BITCOIN_WALLET_SCRIPTPUBKEYMAN_H
+

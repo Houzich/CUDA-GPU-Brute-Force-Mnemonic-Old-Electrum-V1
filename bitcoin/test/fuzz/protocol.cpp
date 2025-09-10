@@ -30,3 +30,4 @@ FUZZ_TARGET(protocol)
     }
     (void)(*inv < *another_inv);
 }
+

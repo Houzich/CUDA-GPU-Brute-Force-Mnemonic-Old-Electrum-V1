@@ -900,3 +900,4 @@ void run_schnorrsig_tests(void) {
 }
 
 #endif
+

@@ -40,3 +40,4 @@ static void secp256k1_modinv32_var(secp256k1_modinv32_signed30 *x, const secp256
 static void secp256k1_modinv32(secp256k1_modinv32_signed30 *x, const secp256k1_modinv32_modinfo *modinfo);
 
 #endif /* SECP256K1_MODINV32_H */
+

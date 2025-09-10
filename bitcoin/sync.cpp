@@ -324,3 +324,4 @@ bool LockStackEmpty()
 bool g_debug_lockorder_abort = true;
 
 #endif /* DEBUG_LOCKORDER */
+

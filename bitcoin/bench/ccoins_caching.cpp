@@ -52,3 +52,4 @@ static void CCoinsCaching(benchmark::Bench& bench)
 }
 
 BENCHMARK(CCoinsCaching);
+

@@ -26,3 +26,4 @@ TransactionDescDialog::~TransactionDescDialog()
 {
     delete ui;
 }
+

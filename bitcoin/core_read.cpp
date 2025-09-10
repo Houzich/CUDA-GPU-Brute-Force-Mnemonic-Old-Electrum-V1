@@ -279,3 +279,4 @@ int ParseSighashString(const UniValue& sighash)
     }
     return hash_type;
 }
+

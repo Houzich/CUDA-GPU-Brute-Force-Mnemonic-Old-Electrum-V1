@@ -90,3 +90,4 @@ struct timeval MillisToTimeval(std::chrono::milliseconds ms);
 bool ChronoSanityCheck();
 
 #endif // BITCOIN_UTIL_TIME_H
+

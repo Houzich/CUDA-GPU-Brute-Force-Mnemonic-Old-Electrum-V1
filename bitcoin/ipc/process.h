@@ -40,3 +40,4 @@ std::unique_ptr<Process> MakeProcess();
 } // namespace ipc
 
 #endif // BITCOIN_IPC_PROCESS_H
+

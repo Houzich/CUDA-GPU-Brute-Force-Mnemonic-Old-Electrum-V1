@@ -16,3 +16,4 @@ bool StdinTerminal();
 bool StdinReady();
 
 #endif // BITCOIN_COMPAT_STDIN_H
+

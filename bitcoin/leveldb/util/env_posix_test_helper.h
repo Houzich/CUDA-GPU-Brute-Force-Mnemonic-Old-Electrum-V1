@@ -26,3 +26,4 @@ class EnvPosixTestHelper {
 }  // namespace leveldb
 
 #endif  // STORAGE_LEVELDB_UTIL_ENV_POSIX_TEST_HELPER_H_
+

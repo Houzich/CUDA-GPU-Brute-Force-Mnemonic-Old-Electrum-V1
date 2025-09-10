@@ -156,3 +156,4 @@ Sketch* ConstructClMulTri4Bytes(int bits, int implementation) {
     }
     return nullptr;
 }
+

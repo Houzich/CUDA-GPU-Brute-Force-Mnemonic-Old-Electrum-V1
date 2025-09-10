@@ -100,3 +100,4 @@ bool DestroyBlockFilterIndex(BlockFilterType filter_type);
 void DestroyAllBlockFilterIndexes();
 
 #endif // BITCOIN_INDEX_BLOCKFILTERINDEX_H
+

@@ -139,3 +139,4 @@ poly1305_donna_finish:
     WriteLE32(&out[ 8], f2); f3 += (f2 >> 32);
     WriteLE32(&out[12], f3);
 }
+

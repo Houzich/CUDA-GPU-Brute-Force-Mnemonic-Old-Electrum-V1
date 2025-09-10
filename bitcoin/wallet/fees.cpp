@@ -92,3 +92,4 @@ CFeeRate GetDiscardRate(const CWallet& wallet)
     return discard_rate;
 }
 } // namespace wallet
+

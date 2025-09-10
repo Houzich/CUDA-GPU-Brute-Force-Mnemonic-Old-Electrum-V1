@@ -349,3 +349,4 @@ BOOST_AUTO_TEST_CASE(merkle_test_BlockWitness)
     BOOST_CHECK_EQUAL(merkleRootofHashes, blockWitness);
 }
 BOOST_AUTO_TEST_SUITE_END()
+

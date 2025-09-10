@@ -42,3 +42,4 @@ class Histogram {
 }  // namespace leveldb
 
 #endif  // STORAGE_LEVELDB_UTIL_HISTOGRAM_H_
+

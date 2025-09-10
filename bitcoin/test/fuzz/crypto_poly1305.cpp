@@ -20,3 +20,4 @@ FUZZ_TARGET(crypto_poly1305)
     std::vector<uint8_t> tag_out(POLY1305_TAGLEN);
     poly1305_auth(tag_out.data(), in.data(), in.size(), key.data());
 }
+

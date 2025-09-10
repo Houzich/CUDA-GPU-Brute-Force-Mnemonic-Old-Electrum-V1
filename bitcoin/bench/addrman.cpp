@@ -136,3 +136,4 @@ BENCHMARK(AddrManAdd);
 BENCHMARK(AddrManSelect);
 BENCHMARK(AddrManGetAddr);
 BENCHMARK(AddrManAddThenGood);
+

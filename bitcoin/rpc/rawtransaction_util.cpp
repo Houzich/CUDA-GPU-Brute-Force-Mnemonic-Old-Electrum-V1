@@ -309,3 +309,4 @@ void SignTransactionResultToJSON(CMutableTransaction& mtx, bool complete, const 
         result.pushKV("errors", vErrors);
     }
 }
+

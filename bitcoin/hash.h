@@ -213,3 +213,4 @@ void BIP32Hash(const ChainCode &chainCode, unsigned int nChild, unsigned char he
 CHashWriter TaggedHash(const std::string& tag);
 
 #endif // BITCOIN_HASH_H
+

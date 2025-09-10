@@ -339,3 +339,4 @@ bool IsOpSuccess(const opcodetype& opcode)
            (opcode >= 141 && opcode <= 142) || (opcode >= 149 && opcode <= 153) ||
            (opcode >= 187 && opcode <= 254);
 }
+

@@ -14,3 +14,4 @@ FUZZ_TARGET(parse_script)
     } catch (const std::runtime_error&) {
     }
 }
+

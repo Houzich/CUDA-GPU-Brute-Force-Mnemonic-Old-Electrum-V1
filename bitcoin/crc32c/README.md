@@ -123,3 +123,4 @@ adb shell chmod +x /data/local/tmp/crc32c_tests
 adb shell 'cd /data/local/tmp && ./crc32c_tests'
 adb shell rm /data/local/tmp/crc32c_tests
 ```
+

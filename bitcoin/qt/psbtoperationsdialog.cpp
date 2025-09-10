@@ -289,3 +289,4 @@ void PSBTOperationsDialog::showTransactionStatus(const PartiallySignedTransactio
         }
     }
 }
+

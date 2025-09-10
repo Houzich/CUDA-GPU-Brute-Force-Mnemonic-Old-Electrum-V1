@@ -141,3 +141,4 @@ private:
 } // namespace wallet
 
 #endif // BITCOIN_WALLET_COINCONTROL_H
+

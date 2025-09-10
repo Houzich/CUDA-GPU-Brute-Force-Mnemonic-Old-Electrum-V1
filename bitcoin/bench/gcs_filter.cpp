@@ -41,3 +41,4 @@ static void MatchGCSFilter(benchmark::Bench& bench)
 
 BENCHMARK(ConstructGCSFilter);
 BENCHMARK(MatchGCSFilter);
+

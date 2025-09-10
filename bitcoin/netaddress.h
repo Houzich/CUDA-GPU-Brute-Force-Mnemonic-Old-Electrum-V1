@@ -584,3 +584,4 @@ private:
 };
 
 #endif // BITCOIN_NETADDRESS_H
+

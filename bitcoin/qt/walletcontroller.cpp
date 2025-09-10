@@ -372,3 +372,4 @@ void LoadWalletsActivity::load()
         QTimer::singleShot(0, this, [this] { Q_EMIT finished(); });
     });
 }
+

@@ -20,3 +20,4 @@ QT_END_NAMESPACE
 void ConfirmMessage(QString* text, std::chrono::milliseconds msec);
 
 #endif // BITCOIN_QT_TEST_UTIL_H
+

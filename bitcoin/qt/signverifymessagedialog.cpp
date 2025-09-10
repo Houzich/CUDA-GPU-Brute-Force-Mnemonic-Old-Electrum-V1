@@ -299,3 +299,4 @@ void SignVerifyMessageDialog::changeEvent(QEvent* e)
 
     QDialog::changeEvent(e);
 }
+

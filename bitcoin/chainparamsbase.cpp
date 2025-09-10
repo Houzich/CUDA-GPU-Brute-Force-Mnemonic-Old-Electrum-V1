@@ -59,3 +59,4 @@ void SelectBaseParams(const std::string& chain)
     globalChainBaseParams = CreateBaseChainParams(chain);
     gArgs.SelectConfigNetwork(chain);
 }
+

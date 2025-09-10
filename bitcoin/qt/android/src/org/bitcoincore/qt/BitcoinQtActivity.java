@@ -21,3 +21,4 @@ public class BitcoinQtActivity extends QtActivity
         super.onCreate(savedInstanceState);
     }
 }
+
