@@ -120,3 +120,4 @@ FUZZ_TARGET_INIT(system, initialize_system)
     (void)HelpRequested(args_manager);
 }
 } // namespace
+

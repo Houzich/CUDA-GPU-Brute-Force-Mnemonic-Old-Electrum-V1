@@ -52,3 +52,4 @@ private Q_SLOTS:
 };
 
 #endif // BITCOIN_QT_SIGNVERIFYMESSAGEDIALOG_H
+

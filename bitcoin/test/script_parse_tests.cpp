@@ -53,3 +53,4 @@ BOOST_AUTO_TEST_CASE(parse_script)
     BOOST_CHECK_EXCEPTION(ParseScript("OP_CHECKSIGADD"), std::runtime_error, HasReason("script parse error: unknown opcode"));
 }
 BOOST_AUTO_TEST_SUITE_END()
+

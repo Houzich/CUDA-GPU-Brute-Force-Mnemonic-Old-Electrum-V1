@@ -116,3 +116,4 @@ struct TxOutCompression
 };
 
 #endif // BITCOIN_COMPRESSOR_H
+

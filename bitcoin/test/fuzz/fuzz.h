@@ -45,3 +45,4 @@ inline void FuzzFrameworkEmptyInitFun() {}
     void name##_fuzz_target(FuzzBufferType buffer)
 
 #endif // BITCOIN_TEST_FUZZ_FUZZ_H
+

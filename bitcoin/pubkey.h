@@ -345,3 +345,4 @@ typedef struct secp256k1_context_struct secp256k1_context;
 const secp256k1_context* GetVerifyContext();
 
 #endif // BITCOIN_PUBKEY_H
+

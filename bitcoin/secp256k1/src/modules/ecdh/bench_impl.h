@@ -55,3 +55,4 @@ void run_ecdh_bench(int iters, int argc, char** argv) {
 }
 
 #endif /* SECP256K1_MODULE_ECDH_BENCH_H */
+

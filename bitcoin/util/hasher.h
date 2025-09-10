@@ -93,3 +93,4 @@ public:
 };
 
 #endif // BITCOIN_UTIL_HASHER_H
+

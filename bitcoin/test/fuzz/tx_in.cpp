@@ -31,3 +31,4 @@ FUZZ_TARGET(tx_in)
 
     (void)tx_in.ToString();
 }
+

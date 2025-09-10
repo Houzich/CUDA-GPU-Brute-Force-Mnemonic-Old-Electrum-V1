@@ -394,3 +394,4 @@ class LEVELDB_EXPORT EnvWrapper : public Env {
 #endif  // defined(_WIN32) && defined(LEVELDB_DELETEFILE_UNDEFINED)
 
 #endif  // STORAGE_LEVELDB_INCLUDE_ENV_H_
+

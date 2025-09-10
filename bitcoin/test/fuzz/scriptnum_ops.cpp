@@ -126,3 +126,4 @@ FUZZ_TARGET(scriptnum_ops)
         (void)script_num.getvch();
     }
 }
+

@@ -25,3 +25,4 @@ int64_t CWalletTx::GetTxTime() const
     return n ? n : nTimeReceived;
 }
 } // namespace wallet
+

@@ -109,3 +109,4 @@ bool DecryptKey(const CKeyingMaterial& vMasterKey, const std::vector<unsigned ch
 } // namespace wallet
 
 #endif // BITCOIN_WALLET_CRYPTER_H
+

@@ -75,3 +75,4 @@ FUZZ_TARGET_INIT(policy_estimator, initialize_policy_estimator)
         block_policy_estimator.Read(fuzzed_auto_file);
     }
 }
+

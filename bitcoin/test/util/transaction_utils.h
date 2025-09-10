@@ -27,3 +27,4 @@ CMutableTransaction BuildSpendingTransaction(const CScript& scriptSig, const CSc
 std::vector<CMutableTransaction> SetupDummyInputs(FillableSigningProvider& keystoreRet, CCoinsViewCache& coinsRet, const std::array<CAmount,4>& nValues);
 
 #endif // BITCOIN_TEST_UTIL_TRANSACTION_UTILS_H
+

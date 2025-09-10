@@ -358,3 +358,4 @@ private:
 };
 
 #endif // BITCOIN_COINS_H
+

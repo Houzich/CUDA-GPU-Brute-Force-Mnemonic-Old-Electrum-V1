@@ -77,3 +77,4 @@ bool IsChildWithParents(const Package& package)
     return std::all_of(package.cbegin(), package.cend() - 1,
                        [&input_txids](const auto& ptx) { return input_txids.count(ptx->GetHash()) > 0; });
 }
+

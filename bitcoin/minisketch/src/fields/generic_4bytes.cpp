@@ -122,3 +122,4 @@ Sketch* ConstructGeneric4Bytes(int bits, int implementation)
     default: return nullptr;
     }
 }
+

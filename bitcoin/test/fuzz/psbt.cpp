@@ -95,3 +95,4 @@ FUZZ_TARGET_INIT(psbt, initialize_psbt)
     }
     psbt_mut.unknown.insert(psbt_merge.unknown.begin(), psbt_merge.unknown.end());
 }
+

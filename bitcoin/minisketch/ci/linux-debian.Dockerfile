@@ -15,3 +15,4 @@ RUN apt-get install --no-install-recommends --no-upgrade -y \
 
 # Run a dummy command in wine to make it set up configuration
 RUN wine true || true
+

@@ -116,3 +116,4 @@ bool static inline IsSelectableSocket(const SOCKET& s) {
 #endif
 
 #endif // BITCOIN_COMPAT_H
+

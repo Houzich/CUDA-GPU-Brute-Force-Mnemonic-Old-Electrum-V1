@@ -34,3 +34,4 @@
 #cmakedefine01 CRC32C_TESTS_BUILT_WITH_GLOG
 
 #endif  // CRC32C_CRC32C_CONFIG_H_
+

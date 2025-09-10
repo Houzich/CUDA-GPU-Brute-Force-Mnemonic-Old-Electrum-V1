@@ -197,3 +197,4 @@ static inline void LogPrintf_(const std::string& logging_function, const std::st
     } while (0)
 
 #endif // BITCOIN_LOGGING_H
+

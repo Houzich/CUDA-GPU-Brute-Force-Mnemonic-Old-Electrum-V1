@@ -28,3 +28,4 @@ public:
 extern const WalletInitInterface& g_wallet_init_interface;
 
 #endif // BITCOIN_WALLETINITINTERFACE_H
+

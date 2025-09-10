@@ -62,3 +62,4 @@ CTransactionRef GetTransaction(const CBlockIndex* const block_index, const CTxMe
 } // namespace node
 
 #endif // BITCOIN_NODE_TRANSACTION_H
+

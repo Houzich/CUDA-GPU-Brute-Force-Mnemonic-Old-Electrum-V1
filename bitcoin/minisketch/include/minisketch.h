@@ -365,3 +365,4 @@ public:
 #endif // __cplusplus
 
 #endif  // _MINISKETCH_H_
+

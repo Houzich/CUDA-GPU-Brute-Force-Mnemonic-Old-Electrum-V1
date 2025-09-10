@@ -324,3 +324,4 @@ void StopHTTPRPC()
         httpRPCTimerInterface.reset();
     }
 }
+

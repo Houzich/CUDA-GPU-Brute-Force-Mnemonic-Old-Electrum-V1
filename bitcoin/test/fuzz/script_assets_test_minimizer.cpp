@@ -201,3 +201,4 @@ FUZZ_TARGET_INIT_HIDDEN(script_assets_test_minimizer, test_init, /*hidden=*/true
 }
 
 } // namespace
+

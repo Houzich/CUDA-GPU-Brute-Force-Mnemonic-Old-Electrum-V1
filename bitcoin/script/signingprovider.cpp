@@ -220,3 +220,4 @@ CKeyID GetKeyForDestination(const SigningProvider& store, const CTxDestination& 
     }
     return CKeyID();
 }
+

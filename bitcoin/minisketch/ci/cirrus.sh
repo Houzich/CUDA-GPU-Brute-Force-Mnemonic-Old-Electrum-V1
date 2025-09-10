@@ -39,3 +39,4 @@ fi
 if [ "$BENCH" = "yes" ]; then
     $EXEC_CMD ./bench
 fi
+

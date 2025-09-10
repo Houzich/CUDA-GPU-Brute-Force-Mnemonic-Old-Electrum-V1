@@ -118,3 +118,4 @@ void TestOnlyResetTimeData()
     g_time_offsets = CMedianFilter<int64_t>{BITCOIN_TIMEDATA_MAX_SAMPLES, 0};
     g_warning_emitted = false;
 }
+

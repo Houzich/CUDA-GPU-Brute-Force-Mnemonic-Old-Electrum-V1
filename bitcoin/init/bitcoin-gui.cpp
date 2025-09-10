@@ -45,3 +45,4 @@ std::unique_ptr<Init> MakeGuiInit(int argc, char* argv[])
     return std::make_unique<init::BitcoinGuiInit>(argc > 0 ? argv[0] : "");
 }
 } // namespace interfaces
+

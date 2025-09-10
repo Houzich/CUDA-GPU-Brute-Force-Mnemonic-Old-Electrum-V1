@@ -245,3 +245,4 @@ bool RecentRequestEntryLessThan::operator()(const RecentRequestEntry& left, cons
         return pLeft->id < pRight->id;
     }
 }
+

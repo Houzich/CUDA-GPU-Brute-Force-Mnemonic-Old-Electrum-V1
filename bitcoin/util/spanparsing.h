@@ -48,3 +48,4 @@ std::vector<Span<const char>> Split(const Span<const char>& sp, char sep);
 } // namespace spanparsing
 
 #endif // BITCOIN_UTIL_SPANPARSING_H
+

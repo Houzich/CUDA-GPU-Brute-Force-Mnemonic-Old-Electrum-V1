@@ -22,3 +22,4 @@ static const CScript P2WSH_OP_TRUE{
 bool IsValidFlagCombination(unsigned flags);
 
 #endif // BITCOIN_TEST_UTIL_SCRIPT_H
+

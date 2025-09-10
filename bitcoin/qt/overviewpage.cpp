@@ -345,3 +345,4 @@ void OverviewPage::setMonospacedFont(bool use_embedded_font)
     ui->labelWatchImmature->setFont(f);
     ui->labelWatchTotal->setFont(f);
 }
+

@@ -22,3 +22,4 @@ INSTANTIATE_TYPED_TEST_SUITE_P(Arm64, ExtendTest, Arm64TestTraits);
 #endif  // HAVE_ARM64_CRC32C
 
 }  // namespace crc32c
+

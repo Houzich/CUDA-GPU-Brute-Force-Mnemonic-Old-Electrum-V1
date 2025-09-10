@@ -32,3 +32,4 @@ FUZZ_TARGET(crypto_aes256cbc)
         assert(decrypted_plaintext == plaintext || (!pad && plaintext.size() % AES_BLOCKSIZE != 0 && encrypt_ret == 0 && decrypt_ret == 0));
     }
 }
+

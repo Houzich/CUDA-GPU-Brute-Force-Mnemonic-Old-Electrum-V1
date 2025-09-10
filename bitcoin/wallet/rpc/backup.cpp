@@ -1905,3 +1905,4 @@ RPCHelpMan restorewallet()
     };
 }
 } // namespace wallet
+

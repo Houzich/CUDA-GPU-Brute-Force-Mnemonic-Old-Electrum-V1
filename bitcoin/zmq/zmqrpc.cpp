@@ -65,3 +65,4 @@ void RegisterZMQRPCCommands(CRPCTable& t)
         t.appendCommand(c.name, &c);
     }
 }
+

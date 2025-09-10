@@ -722,3 +722,4 @@ public:
 };
 
 #endif // BITCOIN_STREAMS_H
+

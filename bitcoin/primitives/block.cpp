@@ -28,3 +28,4 @@ std::string CBlock::ToString() const
     }
     return s.str();
 }
+

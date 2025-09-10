@@ -6,3 +6,4 @@ int main (int argc, char *argv[])
     UniValue val;
     return val.read(buf + 3, 7) ? 0 : 1;
 }
+

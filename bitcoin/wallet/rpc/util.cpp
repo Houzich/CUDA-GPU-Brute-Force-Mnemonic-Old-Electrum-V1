@@ -150,3 +150,4 @@ void HandleWalletError(const std::shared_ptr<CWallet> wallet, DatabaseStatus& st
     }
 }
 } // namespace wallet
+

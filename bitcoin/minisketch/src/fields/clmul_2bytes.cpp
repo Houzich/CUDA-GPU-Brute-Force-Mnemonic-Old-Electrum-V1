@@ -152,3 +152,4 @@ Sketch* ConstructClMulTri2Bytes(int bits, int implementation) {
     }
     return nullptr;
 }
+

@@ -565,3 +565,4 @@ std::string SQLiteDatabaseVersion()
     return std::string(sqlite3_libversion());
 }
 } // namespace wallet
+

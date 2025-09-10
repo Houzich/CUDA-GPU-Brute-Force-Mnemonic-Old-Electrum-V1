@@ -41,3 +41,4 @@ public:
 };
 
 #endif // BITCOIN_RPC_REQUEST_H
+

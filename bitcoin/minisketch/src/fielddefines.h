@@ -558,3 +558,4 @@ Default: All fields enabled
 #define ENABLE_FIELD_BYTES_INT_8
 #endif
 #endif // _MINISKETCH_FIELDDEFINES_H_
+

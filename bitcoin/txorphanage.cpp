@@ -200,3 +200,4 @@ void TxOrphanage::EraseForBlock(const CBlock& block)
         LogPrint(BCLog::MEMPOOL, "Erased %d orphan tx included or conflicted by block\n", nErased);
     }
 }
+

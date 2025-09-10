@@ -23,3 +23,4 @@ void ConfirmMessage(QString* text, std::chrono::milliseconds msec)
         }
     });
 }
+

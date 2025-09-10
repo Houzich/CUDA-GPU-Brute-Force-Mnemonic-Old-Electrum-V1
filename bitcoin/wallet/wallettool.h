@@ -18,3 +18,4 @@ bool ExecuteWalletToolFunc(const ArgsManager& args, const std::string& command);
 } // namespace wallet
 
 #endif // BITCOIN_WALLET_WALLETTOOL_H
+

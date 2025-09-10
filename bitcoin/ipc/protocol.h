@@ -42,3 +42,4 @@ public:
 } // namespace ipc
 
 #endif // BITCOIN_IPC_PROTOCOL_H
+

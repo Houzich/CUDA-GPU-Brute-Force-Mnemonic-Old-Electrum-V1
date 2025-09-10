@@ -177,3 +177,4 @@ BOOST_AUTO_TEST_CASE(create_directories)
 #endif // __MINGW64__
 
 BOOST_AUTO_TEST_SUITE_END()
+

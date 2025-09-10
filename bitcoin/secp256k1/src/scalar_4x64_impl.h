@@ -866,3 +866,4 @@ SECP256K1_INLINE static int secp256k1_scalar_is_even(const secp256k1_scalar *a) 
 }
 
 #endif /* SECP256K1_SCALAR_REPR_IMPL_H */
+

@@ -53,3 +53,4 @@ CreateAndActivateUTXOSnapshot(node::NodeContext& node, const fs::path root, F ma
 
 
 #endif // BITCOIN_TEST_UTIL_CHAINSTATE_H
+

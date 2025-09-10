@@ -192,3 +192,4 @@ BOOST_AUTO_TEST_CASE(blockfilter_type_names)
 }
 
 BOOST_AUTO_TEST_SUITE_END()
+

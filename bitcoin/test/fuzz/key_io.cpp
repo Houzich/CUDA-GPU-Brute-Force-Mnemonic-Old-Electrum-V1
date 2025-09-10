@@ -37,3 +37,4 @@ FUZZ_TARGET_INIT(key_io, initialize_key_io)
         assert(ext_pub_key == DecodeExtPubKey(EncodeExtPubKey(ext_pub_key)));
     }
 }
+

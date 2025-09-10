@@ -42,3 +42,4 @@ FUZZ_TARGET_INIT(hex, initialize_hex)
     CBlock block;
     (void)DecodeHexBlk(block, random_hex_string);
 }
+

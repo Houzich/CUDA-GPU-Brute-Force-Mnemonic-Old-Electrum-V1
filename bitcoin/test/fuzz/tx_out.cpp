@@ -33,3 +33,4 @@ FUZZ_TARGET(tx_out)
     tx_out.SetNull();
     assert(tx_out.IsNull());
 }
+

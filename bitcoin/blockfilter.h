@@ -169,3 +169,4 @@ public:
 };
 
 #endif // BITCOIN_BLOCKFILTER_H
+

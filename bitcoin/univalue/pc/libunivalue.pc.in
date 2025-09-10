@@ -8,3 +8,4 @@ Description: libunivalue, C++ universal value object and JSON library
 Version: @VERSION@
 Libs: -L${libdir} -lunivalue
 Cflags: -I${includedir}
+

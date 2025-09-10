@@ -90,3 +90,4 @@ class IteratorWrapper {
 }  // namespace leveldb
 
 #endif  // STORAGE_LEVELDB_TABLE_ITERATOR_WRAPPER_H_
+

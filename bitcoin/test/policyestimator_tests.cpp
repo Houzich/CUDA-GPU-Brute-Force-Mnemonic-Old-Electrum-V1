@@ -181,3 +181,4 @@ BOOST_AUTO_TEST_CASE(BlockPolicyEstimates)
 }
 
 BOOST_AUTO_TEST_SUITE_END()
+

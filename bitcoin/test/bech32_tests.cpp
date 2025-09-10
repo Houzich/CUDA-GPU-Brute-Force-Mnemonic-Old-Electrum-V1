@@ -157,3 +157,4 @@ BOOST_AUTO_TEST_CASE(bech32m_testvectors_invalid)
 }
 
 BOOST_AUTO_TEST_SUITE_END()
+

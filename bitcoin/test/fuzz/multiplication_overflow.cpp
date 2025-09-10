@@ -49,3 +49,4 @@ FUZZ_TARGET(multiplication_overflow)
     TestMultiplicationOverflow<unsigned char>(fuzzed_data_provider);
     TestMultiplicationOverflow<signed char>(fuzzed_data_provider);
 }
+

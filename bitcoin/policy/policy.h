@@ -133,3 +133,4 @@ static inline int64_t GetVirtualTransactionInputSize(const CTxIn& tx)
 }
 
 #endif // BITCOIN_POLICY_POLICY_H
+

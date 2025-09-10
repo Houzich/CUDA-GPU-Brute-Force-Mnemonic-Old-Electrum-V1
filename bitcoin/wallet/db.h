@@ -243,3 +243,4 @@ bool IsSQLiteFile(const fs::path& path);
 } // namespace wallet
 
 #endif // BITCOIN_WALLET_DB_H
+

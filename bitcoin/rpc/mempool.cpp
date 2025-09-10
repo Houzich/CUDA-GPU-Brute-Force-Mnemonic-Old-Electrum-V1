@@ -687,3 +687,4 @@ void RegisterMempoolRPCCommands(CRPCTable& t)
         t.appendCommand(c.name, &c);
     }
 }
+

@@ -617,3 +617,4 @@ std::unique_ptr<WalletLoader> MakeWalletLoader(Chain& chain, ArgsManager& args)
     return std::make_unique<wallet::WalletLoaderImpl>(chain, args);
 }
 } // namespace interfaces
+

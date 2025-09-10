@@ -37,3 +37,4 @@ FUZZ_TARGET_INIT(validation_load_mempool, initialize_validation_load_mempool)
     (void)LoadMempool(pool, g_setup->m_node.chainman->ActiveChainstate(), fuzzed_fopen);
     (void)DumpMempool(pool, fuzzed_fopen, true);
 }
+

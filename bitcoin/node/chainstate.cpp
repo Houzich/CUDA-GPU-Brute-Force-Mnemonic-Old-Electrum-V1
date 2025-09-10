@@ -158,3 +158,4 @@ std::optional<ChainstateLoadVerifyError> VerifyLoadedChainstate(ChainstateManage
     return std::nullopt;
 }
 } // namespace node
+

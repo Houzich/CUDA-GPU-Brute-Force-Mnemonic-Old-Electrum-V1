@@ -96,3 +96,4 @@ FUZZ_TARGET(golomb_rice)
         }
     }
 }
+

@@ -57,3 +57,4 @@ FUZZ_TARGET(kitchen_sink)
     const std::vector<uint8_t> bytes_decoded = BitsToBytes(bits);
     assert(bytes == bytes_decoded);
 }
+

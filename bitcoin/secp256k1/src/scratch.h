@@ -40,3 +40,4 @@ static size_t secp256k1_scratch_max_allocation(const secp256k1_callback* error_c
 static void *secp256k1_scratch_alloc(const secp256k1_callback* error_callback, secp256k1_scratch* scratch, size_t n);
 
 #endif
+

@@ -122,3 +122,4 @@ Sketch* ConstructGeneric3Bytes(int bits, int implementation)
     default: return nullptr;
     }
 }
+

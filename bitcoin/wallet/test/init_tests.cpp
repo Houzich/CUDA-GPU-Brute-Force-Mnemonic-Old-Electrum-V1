@@ -85,3 +85,4 @@ BOOST_AUTO_TEST_CASE(walletinit_verify_walletdir_no_trailing2)
 
 BOOST_AUTO_TEST_SUITE_END()
 } // namespace wallet
+

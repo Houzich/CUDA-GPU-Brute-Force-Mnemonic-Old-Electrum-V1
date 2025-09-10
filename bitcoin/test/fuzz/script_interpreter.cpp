@@ -39,3 +39,4 @@ FUZZ_TARGET(script_interpreter)
         (void)CastToBool(ConsumeRandomLengthByteVector(fuzzed_data_provider));
     }
 }
+

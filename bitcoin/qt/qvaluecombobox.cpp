@@ -29,3 +29,4 @@ void QValueComboBox::handleSelectionChanged(int idx)
 {
     Q_EMIT valueChanged();
 }
+

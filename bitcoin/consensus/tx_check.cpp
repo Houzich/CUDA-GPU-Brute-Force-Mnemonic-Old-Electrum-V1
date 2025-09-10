@@ -57,3 +57,4 @@ bool CheckTransaction(const CTransaction& tx, TxValidationState& state)
 
     return true;
 }
+

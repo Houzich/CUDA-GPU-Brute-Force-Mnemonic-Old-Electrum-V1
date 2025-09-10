@@ -46,3 +46,4 @@ BOOST_AUTO_TEST_CASE(base64_testvectors)
 }
 
 BOOST_AUTO_TEST_SUITE_END()
+

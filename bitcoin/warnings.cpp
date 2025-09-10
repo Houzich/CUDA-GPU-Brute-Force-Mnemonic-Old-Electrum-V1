@@ -58,3 +58,4 @@ bilingual_str GetWarnings(bool verbose)
 
     return warnings_concise;
 }
+

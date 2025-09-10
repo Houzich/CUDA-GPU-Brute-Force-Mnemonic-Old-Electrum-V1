@@ -498,3 +498,4 @@ bool CoinStatsIndex::ReverseBlock(const CBlock& block, const CBlockIndex* pindex
 
     return true;
 }
+

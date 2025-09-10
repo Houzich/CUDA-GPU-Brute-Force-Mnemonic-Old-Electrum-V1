@@ -71,3 +71,4 @@ CAmount WalletModelTransaction::getTotalTransactionAmount() const
     }
     return totalTransactionAmount;
 }
+

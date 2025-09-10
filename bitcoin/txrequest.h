@@ -209,3 +209,4 @@ public:
 };
 
 #endif // BITCOIN_TXREQUEST_H
+

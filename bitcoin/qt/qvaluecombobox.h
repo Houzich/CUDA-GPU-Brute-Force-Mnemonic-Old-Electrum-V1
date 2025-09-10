@@ -35,3 +35,4 @@ private Q_SLOTS:
 };
 
 #endif // BITCOIN_QT_QVALUECOMBOBOX_H
+

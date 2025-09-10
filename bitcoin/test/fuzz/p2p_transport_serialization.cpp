@@ -81,3 +81,4 @@ FUZZ_TARGET_INIT(p2p_transport_serialization, initialize_p2p_transport_serializa
         }
     }
 }
+

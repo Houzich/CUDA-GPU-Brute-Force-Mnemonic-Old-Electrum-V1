@@ -233,3 +233,4 @@ std::vector<CAddress> ReadAnchors(const fs::path& anchors_db_path)
     fs::remove(anchors_db_path);
     return anchors;
 }
+

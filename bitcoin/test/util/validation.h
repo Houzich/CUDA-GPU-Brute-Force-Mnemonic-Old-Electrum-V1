@@ -23,3 +23,4 @@ public:
 };
 
 #endif // BITCOIN_TEST_UTIL_VALIDATION_H
+

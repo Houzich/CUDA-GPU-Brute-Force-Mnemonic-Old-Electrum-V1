@@ -188,3 +188,4 @@ BOOST_AUTO_TEST_CASE(findearliestatleast_edge_test)
 }
 
 BOOST_AUTO_TEST_SUITE_END()
+

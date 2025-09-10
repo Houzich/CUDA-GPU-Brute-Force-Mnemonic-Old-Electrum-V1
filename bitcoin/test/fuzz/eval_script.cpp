@@ -34,3 +34,4 @@ FUZZ_TARGET_INIT(eval_script, initialize_eval_script)
         (void)EvalScript(stack, script, flags, BaseSignatureChecker(), sig_version, nullptr);
     }
 }
+

@@ -409,3 +409,4 @@ void LockedPoolManager::CreateInstance()
     static LockedPoolManager instance(std::move(allocator));
     LockedPoolManager::_instance = &instance;
 }
+

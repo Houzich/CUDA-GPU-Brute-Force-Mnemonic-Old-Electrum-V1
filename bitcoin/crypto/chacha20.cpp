@@ -308,3 +308,4 @@ void ChaCha20::Crypt(const unsigned char* m, unsigned char* c, size_t bytes)
         m += 64;
     }
 }
+

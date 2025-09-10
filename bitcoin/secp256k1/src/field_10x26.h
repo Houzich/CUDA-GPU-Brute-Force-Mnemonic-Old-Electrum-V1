@@ -48,3 +48,4 @@ typedef struct {
 #define SECP256K1_FE_STORAGE_CONST_GET(d) d.n[7], d.n[6], d.n[5], d.n[4],d.n[3], d.n[2], d.n[1], d.n[0]
 
 #endif /* SECP256K1_FIELD_REPR_H */
+

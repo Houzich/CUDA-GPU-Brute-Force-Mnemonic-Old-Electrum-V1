@@ -28,3 +28,4 @@ FUZZ_TARGET_INIT(descriptor_parse, initialize_descriptor_parse)
         }
     }
 }
+

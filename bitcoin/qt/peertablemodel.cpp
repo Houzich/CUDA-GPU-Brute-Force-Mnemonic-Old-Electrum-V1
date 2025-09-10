@@ -189,3 +189,4 @@ void PeerTableModel::refresh()
     const auto bottom_right = index(rowCount() - 1, columnCount() - 1);
     Q_EMIT dataChanged(top_left, bottom_right);
 }
+

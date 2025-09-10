@@ -327,3 +327,4 @@ public:
 std::optional<std::vector<std::tuple<int, CScript, int>>> InferTaprootTree(const TaprootSpendData& spenddata, const XOnlyPubKey& output);
 
 #endif // BITCOIN_SCRIPT_STANDARD_H
+

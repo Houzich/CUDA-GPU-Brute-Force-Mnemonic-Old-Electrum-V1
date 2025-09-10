@@ -324,3 +324,4 @@ FUZZ_TARGET_INIT(addrman_serdeser, initialize_addrman)
     data_stream >> addr_man2;
     assert(addr_man1 == addr_man2);
 }
+

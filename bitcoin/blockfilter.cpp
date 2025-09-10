@@ -275,3 +275,4 @@ uint256 BlockFilter::ComputeHeader(const uint256& prev_header) const
         .Finalize(result);
     return result;
 }
+

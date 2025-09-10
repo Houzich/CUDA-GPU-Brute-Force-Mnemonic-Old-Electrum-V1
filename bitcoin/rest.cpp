@@ -958,3 +958,4 @@ void StopREST()
         UnregisterHTTPHandler(up.prefix, false);
     }
 }
+

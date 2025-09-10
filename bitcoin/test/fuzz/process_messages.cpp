@@ -79,3 +79,4 @@ FUZZ_TARGET_INIT(process_messages, initialize_process_messages)
     SyncWithValidationInterfaceQueue();
     g_setup->m_node.connman->StopNodes();
 }
+

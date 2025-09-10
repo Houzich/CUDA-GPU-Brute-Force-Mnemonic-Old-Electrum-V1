@@ -47,3 +47,4 @@ FUZZ_TARGET(asmap_direct)
         (void)Interpret(asmap, addr);
     }
 }
+

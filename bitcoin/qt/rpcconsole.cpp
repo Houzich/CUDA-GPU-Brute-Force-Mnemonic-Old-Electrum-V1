@@ -1368,3 +1368,4 @@ void RPCConsole::updateAlerts(const QString& warnings)
     this->ui->label_alerts->setVisible(!warnings.isEmpty());
     this->ui->label_alerts->setText(warnings);
 }
+

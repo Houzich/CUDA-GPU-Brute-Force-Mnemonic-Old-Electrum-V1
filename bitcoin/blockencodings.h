@@ -138,3 +138,4 @@ public:
 };
 
 #endif // BITCOIN_BLOCKENCODINGS_H
+

@@ -29,3 +29,4 @@ void DebugLogHelper::check_found()
         throw std::runtime_error(strprintf("'%s' not found in debug log\n", m_message));
     }
 }
+

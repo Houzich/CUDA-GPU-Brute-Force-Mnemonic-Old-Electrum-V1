@@ -478,3 +478,4 @@ public:
 } // namespace CuckooCache
 
 #endif // BITCOIN_CUCKOOCACHE_H
+

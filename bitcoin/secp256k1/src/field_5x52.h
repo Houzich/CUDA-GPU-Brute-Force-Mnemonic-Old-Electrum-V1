@@ -53,3 +53,4 @@ typedef struct {
     (uint32_t)(d.n[0] >> 32), (uint32_t)d.n[0]
 
 #endif /* SECP256K1_FIELD_REPR_H */
+

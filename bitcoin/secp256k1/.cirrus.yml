@@ -338,3 +338,4 @@ task:
   test_script:
     - ./ci/cirrus.sh
   << : *CAT_LOGS
+

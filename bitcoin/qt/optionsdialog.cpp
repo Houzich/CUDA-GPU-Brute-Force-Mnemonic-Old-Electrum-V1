@@ -431,3 +431,4 @@ QValidator::State ProxyAddressValidator::validate(QString &input, int &pos) cons
 
     return QValidator::Invalid;
 }
+

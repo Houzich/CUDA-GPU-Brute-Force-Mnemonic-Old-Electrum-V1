@@ -306,3 +306,4 @@ FUZZ_TARGET_INIT(key, initialize_key)
         }
     }
 }
+
