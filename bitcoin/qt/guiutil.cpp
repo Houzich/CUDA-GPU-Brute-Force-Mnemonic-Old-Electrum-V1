@@ -984,3 +984,4 @@ void ShowModalDialogAsynchronously(QDialog* dialog)
 }
 
 } // namespace GUIUtil
+

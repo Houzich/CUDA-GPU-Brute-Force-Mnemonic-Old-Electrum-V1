@@ -250,3 +250,4 @@ void Notificator::notify(Class cls, const QString &title, const QString &text, c
         break;
     }
 }
+

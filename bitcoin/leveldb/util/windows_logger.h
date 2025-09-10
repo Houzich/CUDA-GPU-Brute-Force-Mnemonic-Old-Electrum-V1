@@ -122,3 +122,4 @@ class WindowsLogger final : public Logger {
 }  // namespace leveldb
 
 #endif  // STORAGE_LEVELDB_UTIL_WINDOWS_LOGGER_H_
+

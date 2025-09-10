@@ -34,3 +34,4 @@ namespace TAO_PEGTL_NAMESPACE::uint8
 }  // namespace TAO_PEGTL_NAMESPACE::uint8
 
 #endif
+

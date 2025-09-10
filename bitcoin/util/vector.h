@@ -49,3 +49,4 @@ inline V Cat(V v1, const V& v2)
 }
 
 #endif // BITCOIN_UTIL_VECTOR_H
+

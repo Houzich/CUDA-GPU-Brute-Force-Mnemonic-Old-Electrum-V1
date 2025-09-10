@@ -308,3 +308,4 @@ BOOST_FIXTURE_TEST_CASE(blockfilter_index_init_destroy, BasicTestingSetup)
 }
 
 BOOST_AUTO_TEST_SUITE_END()
+

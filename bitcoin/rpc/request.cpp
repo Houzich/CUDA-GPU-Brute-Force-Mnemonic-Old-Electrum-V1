@@ -187,3 +187,4 @@ void JSONRPCRequest::parse(const UniValue& valRequest)
     else
         throw JSONRPCError(RPC_INVALID_REQUEST, "Params must be an array or object");
 }
+

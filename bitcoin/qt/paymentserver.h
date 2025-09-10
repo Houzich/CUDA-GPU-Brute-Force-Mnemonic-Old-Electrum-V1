@@ -107,3 +107,4 @@ private:
 };
 
 #endif // BITCOIN_QT_PAYMENTSERVER_H
+

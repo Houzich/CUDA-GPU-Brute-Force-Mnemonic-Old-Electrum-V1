@@ -174,3 +174,4 @@ void AddressBookTests::addressBookTests()
 #endif
     TestAddAddressesToSendBook(m_node);
 }
+

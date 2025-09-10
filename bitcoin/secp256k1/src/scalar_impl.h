@@ -295,3 +295,4 @@ static void secp256k1_scalar_split_lambda_verify(const secp256k1_scalar *r1, con
 #endif /* !defined(EXHAUSTIVE_TEST_ORDER) */
 
 #endif /* SECP256K1_SCALAR_IMPL_H */
+

@@ -70,3 +70,4 @@ public:
 };
 
 #endif // BITCOIN_UTIL_HASH_TYPE_H
+

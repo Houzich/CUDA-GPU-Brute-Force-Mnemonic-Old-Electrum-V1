@@ -117,3 +117,4 @@ private Q_SLOTS:
 };
 
 #endif // BITCOIN_QT_COINCONTROLDIALOG_H
+

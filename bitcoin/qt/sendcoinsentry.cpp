@@ -266,3 +266,4 @@ bool SendCoinsEntry::updateLabel(const QString &address)
 
     return false;
 }
+

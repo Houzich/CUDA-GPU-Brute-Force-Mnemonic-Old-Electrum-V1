@@ -37,3 +37,4 @@ std::unique_ptr<Handler> MakeHandler(std::function<void()> cleanup);
 } // namespace interfaces
 
 #endif // BITCOIN_INTERFACES_HANDLER_H
+

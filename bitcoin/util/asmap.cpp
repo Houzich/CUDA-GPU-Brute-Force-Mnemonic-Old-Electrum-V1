@@ -218,3 +218,4 @@ std::vector<bool> DecodeAsmap(fs::path path)
     return bits;
 }
 
+

@@ -56,3 +56,4 @@ FUZZ_TARGET(muhash)
         });
     assert(out == out2);
 }
+

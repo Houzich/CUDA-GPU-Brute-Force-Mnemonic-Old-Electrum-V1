@@ -203,3 +203,4 @@ void ThreadImport(ChainstateManager& chainman, std::vector<fs::path> vImportFile
 } // namespace node
 
 #endif // BITCOIN_NODE_BLOCKSTORAGE_H
+

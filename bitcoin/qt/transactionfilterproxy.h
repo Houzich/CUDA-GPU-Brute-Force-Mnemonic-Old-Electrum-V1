@@ -65,3 +65,4 @@ private:
 };
 
 #endif // BITCOIN_QT_TRANSACTIONFILTERPROXY_H
+

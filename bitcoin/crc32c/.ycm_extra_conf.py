@@ -140,3 +140,4 @@ def FlagsForFile(filename, **kwargs):
   final_flags = MakeRelativePathsInFlagsAbsolute(flags, build_root)
 
   return {'flags': final_flags}
+

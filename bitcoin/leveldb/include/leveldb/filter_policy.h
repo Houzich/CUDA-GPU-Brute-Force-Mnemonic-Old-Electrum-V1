@@ -70,3 +70,4 @@ LEVELDB_EXPORT const FilterPolicy* NewBloomFilterPolicy(int bits_per_key);
 }  // namespace leveldb
 
 #endif  // STORAGE_LEVELDB_INCLUDE_FILTER_POLICY_H_
+

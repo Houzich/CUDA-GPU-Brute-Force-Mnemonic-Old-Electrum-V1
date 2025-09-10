@@ -165,3 +165,4 @@ void LogPackageVersion()
     LogPrintf(PACKAGE_NAME " version %s\n", version_string);
 }
 } // namespace init
+

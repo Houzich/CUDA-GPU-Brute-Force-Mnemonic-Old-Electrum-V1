@@ -44,3 +44,4 @@ struct zero_after_free_allocator : public std::allocator<T> {
 using SerializeData = std::vector<std::byte, zero_after_free_allocator<std::byte>>;
 
 #endif // BITCOIN_SUPPORT_ALLOCATORS_ZEROAFTERFREE_H
+

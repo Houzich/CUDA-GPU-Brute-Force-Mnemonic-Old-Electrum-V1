@@ -831,3 +831,4 @@ static const CRPCCommand commands[] =
         t.appendCommand(c.name, &c);
     }
 }
+

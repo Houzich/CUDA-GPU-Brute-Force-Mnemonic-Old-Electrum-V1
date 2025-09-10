@@ -81,3 +81,4 @@ void AddTimeData(const CNetAddr& ip, int64_t nTime);
 void TestOnlyResetTimeData();
 
 #endif // BITCOIN_TIMEDATA_H
+

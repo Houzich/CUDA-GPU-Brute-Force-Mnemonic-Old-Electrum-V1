@@ -31,3 +31,4 @@ uint32_t ExtendSse42(uint32_t crc, const uint8_t* data, size_t count);
 #endif  // HAVE_SSE42 && (defined(_M_X64) || defined(__x86_64__))
 
 #endif  // CRC32C_CRC32C_SSE42_H_
+

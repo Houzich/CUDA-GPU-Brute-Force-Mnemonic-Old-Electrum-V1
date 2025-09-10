@@ -32,3 +32,4 @@ void InterruptREST();
 void StopREST();
 
 #endif // BITCOIN_HTTPRPC_H
+

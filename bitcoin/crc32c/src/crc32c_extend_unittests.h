@@ -110,3 +110,4 @@ REGISTER_TYPED_TEST_SUITE_P(ExtendTest,
 }  // namespace crc32c
 
 #endif  // CRC32C_CRC32C_EXTEND_UNITTESTS_H_
+

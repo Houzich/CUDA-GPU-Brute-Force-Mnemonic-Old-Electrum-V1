@@ -1052,3 +1052,4 @@ bool FundTransaction(CWallet& wallet, CMutableTransaction& tx, CAmount& nFeeRet,
     return true;
 }
 } // namespace wallet
+

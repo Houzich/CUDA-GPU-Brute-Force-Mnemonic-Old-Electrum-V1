@@ -17,3 +17,4 @@ std::string WriteHDKeypath(const std::vector<uint32_t>& keypath);
 std::string FormatHDKeypath(const std::vector<uint32_t>& path);
 
 #endif // BITCOIN_UTIL_BIP32_H
+

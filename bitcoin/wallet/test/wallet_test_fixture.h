@@ -29,3 +29,4 @@ struct WalletTestingSetup : public TestingSetup {
 } // namespace wallet
 
 #endif // BITCOIN_WALLET_TEST_WALLET_TEST_FIXTURE_H
+

@@ -29,3 +29,4 @@ FUZZ_TARGET(timedata)
         median_filter.input(fuzzed_data_provider.ConsumeIntegral<int64_t>() / 2);
     }
 }
+

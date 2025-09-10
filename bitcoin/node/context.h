@@ -66,3 +66,4 @@ struct NodeContext {
 } // namespace node
 
 #endif // BITCOIN_NODE_CONTEXT_H
+

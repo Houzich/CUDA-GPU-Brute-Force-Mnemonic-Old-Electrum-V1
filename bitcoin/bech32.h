@@ -51,3 +51,4 @@ std::pair<std::string, std::vector<int>> LocateErrors(const std::string& str);
 } // namespace bech32
 
 #endif // BITCOIN_BECH32_H
+

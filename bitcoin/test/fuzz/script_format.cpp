@@ -33,3 +33,4 @@ FUZZ_TARGET_INIT(script_format, initialize_script_format)
     UniValue o3(UniValue::VOBJ);
     ScriptToUniv(script, o3);
 }
+

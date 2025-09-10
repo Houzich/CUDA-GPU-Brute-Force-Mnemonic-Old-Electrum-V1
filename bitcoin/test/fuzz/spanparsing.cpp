@@ -28,3 +28,4 @@ FUZZ_TARGET(spanparsing)
         (void)spanparsing::Split(mut_span, query.front());
     }
 }
+

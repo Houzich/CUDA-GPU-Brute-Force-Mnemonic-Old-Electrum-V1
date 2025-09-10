@@ -345,3 +345,4 @@ BOOST_AUTO_TEST_CASE(bip340_test_vectors)
 }
 
 BOOST_AUTO_TEST_SUITE_END()
+

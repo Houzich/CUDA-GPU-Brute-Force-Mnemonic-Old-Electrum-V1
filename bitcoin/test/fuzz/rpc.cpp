@@ -369,3 +369,4 @@ FUZZ_TARGET_INIT(rpc, initialize_rpc)
         }
     }
 }
+

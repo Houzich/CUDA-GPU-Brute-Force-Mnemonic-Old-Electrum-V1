@@ -72,3 +72,4 @@ enum	cl_mem_fence_flags
 
 
 #endif //__CLION_DEFINES
+

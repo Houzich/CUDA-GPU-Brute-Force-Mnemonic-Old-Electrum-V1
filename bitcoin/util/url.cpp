@@ -19,3 +19,4 @@ std::string urlDecode(const std::string &urlEncoded) {
     }
     return res;
 }
+

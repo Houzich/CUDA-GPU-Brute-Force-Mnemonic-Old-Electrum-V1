@@ -822,3 +822,4 @@ SECP256K1_API SECP256K1_WARN_UNUSED_RESULT int secp256k1_tagged_sha256(
 #endif
 
 #endif /* SECP256K1_H */
+

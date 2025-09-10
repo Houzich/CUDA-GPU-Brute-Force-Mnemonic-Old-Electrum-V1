@@ -21,3 +21,4 @@ WalletTestingSetup::~WalletTestingSetup()
     if (m_node.scheduler) m_node.scheduler->stop();
 }
 } // namespace wallet
+

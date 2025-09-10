@@ -64,3 +64,4 @@ fi
 # Check that no repo files have been modified by the build.
 # (This fails for example if the precomp files need to be updated in the repo.)
 git diff --exit-code
+

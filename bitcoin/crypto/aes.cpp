@@ -150,3 +150,4 @@ AES256CBCDecrypt::~AES256CBCDecrypt()
 {
     memset(iv, 0, sizeof(iv));
 }
+

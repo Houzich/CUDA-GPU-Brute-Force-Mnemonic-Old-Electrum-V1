@@ -168,3 +168,4 @@ bool RecoverDatabaseFile(const ArgsManager& args, const fs::path& file_path, bil
     return fSuccess;
 }
 } // namespace wallet
+

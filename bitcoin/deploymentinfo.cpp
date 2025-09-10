@@ -34,3 +34,4 @@ std::string DeploymentName(Consensus::BuriedDeployment dep)
     } // no default case, so the compiler can warn about missing cases
     return "";
 }
+

@@ -23,3 +23,4 @@ std::string FormatMoney(const CAmount n);
 std::optional<CAmount> ParseMoney(const std::string& str);
 
 #endif // BITCOIN_UTIL_MONEYSTR_H
+

@@ -55,3 +55,4 @@ FUZZ_TARGET_INIT(base_encode_decode, initialize_base_encode_decode)
     std::string error;
     (void)DecodeBase64PSBT(psbt, random_encoded_string, error);
 }
+

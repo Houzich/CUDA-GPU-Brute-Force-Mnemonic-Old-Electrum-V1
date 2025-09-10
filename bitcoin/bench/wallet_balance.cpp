@@ -61,3 +61,4 @@ BENCHMARK(WalletBalanceDirty);
 BENCHMARK(WalletBalanceClean);
 BENCHMARK(WalletBalanceMine);
 BENCHMARK(WalletBalanceWatch);
+

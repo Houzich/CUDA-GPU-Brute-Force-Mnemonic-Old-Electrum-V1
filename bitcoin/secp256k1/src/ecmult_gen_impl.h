@@ -130,3 +130,4 @@ static void secp256k1_ecmult_gen_blind(secp256k1_ecmult_gen_context *ctx, const 
 }
 
 #endif /* SECP256K1_ECMULT_GEN_IMPL_H */
+

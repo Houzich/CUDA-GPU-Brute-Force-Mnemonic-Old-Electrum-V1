@@ -738,3 +738,4 @@ static const CRPCCommand commands[] =
     return commands;
 }
 } // namespace wallet
+

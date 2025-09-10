@@ -115,3 +115,4 @@ In other words, we can find the inverses of the roots of *L* by instead factorin
 
 * <a name="myfootnote1">[1]</a> For those familiar with coding theory: PinSketch communicates a set difference by encoding the set members as errors in a binary [BCH](https://en.wikipedia.org/wiki/BCH_code) codeword 2<sup>bits</sup> in size and sends the syndromes.
   The linearity of the syndromes provides all the properties needed for a sketch. Sketch decoding is simply finding the error locations. Decode is much faster than an ordinary BCH decoder for such a large codeword because the need to take a discrete log is avoided by storing the set in the roots directly instead of in an exponent (logically permuting the bits of the codeword).
+

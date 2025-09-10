@@ -58,3 +58,4 @@ void ScriptToUniv(const CScript& script, UniValue& out);
 void TxToUniv(const CTransaction& tx, const uint256& hashBlock, UniValue& entry, bool include_hex = true, int serialize_flags = 0, const CTxUndo* txundo = nullptr, TxVerbosity verbosity = TxVerbosity::SHOW_DETAILS);
 
 #endif // BITCOIN_CORE_IO_H
+

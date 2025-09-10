@@ -33,3 +33,4 @@ private:
 };
 
 #endif // BITCOIN_QT_TRANSACTIONDESC_H
+

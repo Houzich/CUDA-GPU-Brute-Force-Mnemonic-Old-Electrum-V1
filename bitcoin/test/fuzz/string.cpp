@@ -288,3 +288,4 @@ FUZZ_TARGET(string)
         assert(atoi64_result == locale_independent_atoi_result);
     }
 }
+

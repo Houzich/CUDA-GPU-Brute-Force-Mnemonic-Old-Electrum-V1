@@ -61,3 +61,4 @@ class Random {
 }  // namespace leveldb
 
 #endif  // STORAGE_LEVELDB_UTIL_RANDOM_H_
+

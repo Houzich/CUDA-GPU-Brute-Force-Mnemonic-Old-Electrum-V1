@@ -79,3 +79,4 @@ EXPORT_SYMBOL unsigned int bitcoinconsensus_version();
 #undef EXPORT_SYMBOL
 
 #endif // BITCOIN_SCRIPT_BITCOINCONSENSUS_H
+

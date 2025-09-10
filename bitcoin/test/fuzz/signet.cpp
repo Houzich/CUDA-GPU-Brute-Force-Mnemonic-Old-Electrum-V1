@@ -31,3 +31,4 @@ FUZZ_TARGET_INIT(signet, initialize_signet)
     (void)CheckSignetBlockSolution(*block, Params().GetConsensus());
     (void)SignetTxs::Create(*block, ConsumeScript(fuzzed_data_provider));
 }
+

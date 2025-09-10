@@ -48,3 +48,4 @@ private:
 };
 
 #endif // BITCOIN_QT_TEST_APPTESTS_H
+

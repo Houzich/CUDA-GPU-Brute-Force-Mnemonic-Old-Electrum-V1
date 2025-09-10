@@ -599,3 +599,4 @@ uint256 WalletModel::getLastBlockProcessed() const
 {
     return m_client_model ? m_client_model->getBestBlockHash() : uint256{};
 }
+

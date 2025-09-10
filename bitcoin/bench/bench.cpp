@@ -96,3 +96,4 @@ void benchmark::BenchRunner::RunAll(const Args& args)
                                                                "{{/result}}");
     GenerateTemplateResults(benchmarkResults, args.output_json, ankerl::nanobench::templates::json());
 }
+

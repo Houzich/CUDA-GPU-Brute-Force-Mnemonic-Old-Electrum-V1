@@ -15,3 +15,4 @@ interface Echo $Proxy.wrap("interfaces::Echo") {
     destroy @0 (context :Proxy.Context) -> ();
     echo @1 (context :Proxy.Context, echo: Text) -> (result :Text);
 }
+

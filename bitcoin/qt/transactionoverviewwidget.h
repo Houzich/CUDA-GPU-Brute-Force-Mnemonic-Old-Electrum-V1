@@ -39,3 +39,4 @@ protected:
 };
 
 #endif // BITCOIN_QT_TRANSACTIONOVERVIEWWIDGET_H
+

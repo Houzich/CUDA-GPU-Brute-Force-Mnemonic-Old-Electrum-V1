@@ -48,3 +48,4 @@ inline bool CanUseSse42() {
 #endif  // HAVE_SSE42 && (defined(_M_X64) || defined(__x86_64__))
 
 #endif  // CRC32C_CRC32C_SSE42_CHECK_H_
+

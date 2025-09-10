@@ -119,3 +119,4 @@ namespace TAO_PEGTL_NAMESPACE::peg
 }  // namespace TAO_PEGTL_NAMESPACE::peg
 
 #endif  // TAO_PEGTL_CONTRIB_PEG_HPP
+

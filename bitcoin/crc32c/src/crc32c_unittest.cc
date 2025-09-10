@@ -127,3 +127,4 @@ TEST(CRC32CTest, Crc32cStdStringView) {
 #define TESTED_EXTEND Extend
 #include "./crc32c_extend_unittests.h"
 #undef TESTED_EXTEND
+

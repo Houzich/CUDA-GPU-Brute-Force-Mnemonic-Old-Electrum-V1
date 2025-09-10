@@ -38,3 +38,4 @@ FUZZ_TARGET(fee_rate)
         assert(fee_rate != larger_fee_rate);
     }
 }
+

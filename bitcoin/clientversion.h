@@ -49,3 +49,4 @@ std::string LicenseInfo();
 #endif // WINDRES_PREPROC
 
 #endif // BITCOIN_CLIENTVERSION_H
+

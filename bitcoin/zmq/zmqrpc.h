@@ -10,3 +10,4 @@ class CRPCTable;
 void RegisterZMQRPCCommands(CRPCTable& t);
 
 #endif // BITCOIN_ZMQ_ZMQRPC_H
+

@@ -16,3 +16,4 @@
 #define DO_STRINGIZE(X) #X
 
 #endif // BITCOIN_UTIL_MACROS_H
+

@@ -360,3 +360,4 @@ QString TransactionDesc::toHTML(interfaces::Node& node, interfaces::Wallet& wall
     strHTML += "</font></html>";
     return strHTML;
 }
+

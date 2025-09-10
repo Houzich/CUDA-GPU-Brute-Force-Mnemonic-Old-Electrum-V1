@@ -84,3 +84,4 @@ TransactionError ExternalSignerScriptPubKeyMan::FillPSBT(PartiallySignedTransact
     return TransactionError::OK;
 }
 } // namespace wallet
+

@@ -45,3 +45,4 @@ static void RegularPadded(benchmark::Bench& bench)
 }
 
 BENCHMARK(RegularPadded);
+

@@ -122,3 +122,4 @@ std::string SQLiteDatabaseVersion();
 } // namespace wallet
 
 #endif // BITCOIN_WALLET_SQLITE_H
+

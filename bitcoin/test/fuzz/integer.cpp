@@ -262,3 +262,4 @@ FUZZ_TARGET_INIT(integer, initialize_integer)
     } catch (const NonFatalCheckError&) {
     }
 }
+

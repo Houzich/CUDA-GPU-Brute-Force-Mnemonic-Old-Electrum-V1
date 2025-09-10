@@ -25,3 +25,4 @@ public:
 
 
 #endif // BITCOIN_QT_MACNOTIFICATIONHANDLER_H
+

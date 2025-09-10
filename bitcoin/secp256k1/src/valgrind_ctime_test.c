@@ -171,3 +171,4 @@ void run_tests(secp256k1_context *ctx, unsigned char *key) {
     CHECK(ret == 1);
 #endif
 }
+

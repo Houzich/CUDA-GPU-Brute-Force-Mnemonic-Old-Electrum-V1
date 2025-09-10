@@ -61,3 +61,4 @@ const CBaseChainParams& BaseParams();
 void SelectBaseParams(const std::string& chain);
 
 #endif // BITCOIN_CHAINPARAMSBASE_H
+

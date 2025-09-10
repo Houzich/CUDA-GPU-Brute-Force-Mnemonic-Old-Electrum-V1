@@ -63,3 +63,4 @@ FUZZ_TARGET(autofile)
         }
     }
 }
+

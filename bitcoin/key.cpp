@@ -413,3 +413,4 @@ void ECC_Stop() {
         secp256k1_context_destroy(ctx);
     }
 }
+

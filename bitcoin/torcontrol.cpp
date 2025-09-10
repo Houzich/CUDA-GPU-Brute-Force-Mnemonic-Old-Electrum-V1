@@ -705,3 +705,4 @@ CService DefaultOnionServiceTarget()
     onion_service_target.s_addr = htonl(INADDR_LOOPBACK);
     return {onion_service_target, BaseParams().OnionServiceTargetPort()};
 }
+

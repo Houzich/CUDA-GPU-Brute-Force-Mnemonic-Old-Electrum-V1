@@ -71,3 +71,4 @@ struct CachableAmount
 } // namespace wallet
 
 #endif // BITCOIN_WALLET_ISMINE_H
+

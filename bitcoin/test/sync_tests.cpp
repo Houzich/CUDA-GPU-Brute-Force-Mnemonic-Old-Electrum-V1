@@ -141,3 +141,4 @@ BOOST_AUTO_TEST_CASE(inconsistent_lock_order_detected)
 }
 
 BOOST_AUTO_TEST_SUITE_END()
+

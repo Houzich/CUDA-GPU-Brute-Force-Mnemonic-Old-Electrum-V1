@@ -207,3 +207,4 @@ void BanMan::SetBannedSetDirty(bool dirty)
     LOCK(m_cs_banned); //reuse m_banned lock for the m_is_dirty flag
     m_is_dirty = dirty;
 }
+

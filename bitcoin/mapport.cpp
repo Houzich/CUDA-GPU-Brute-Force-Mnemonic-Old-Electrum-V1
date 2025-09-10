@@ -337,3 +337,4 @@ void StopMapPort()
     // Intentionally left blank.
 }
 #endif // #if defined(USE_NATPMP) || defined(USE_UPNP)
+

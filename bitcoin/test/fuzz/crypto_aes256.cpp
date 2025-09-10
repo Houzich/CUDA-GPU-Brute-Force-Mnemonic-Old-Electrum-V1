@@ -28,3 +28,4 @@ FUZZ_TARGET(crypto_aes256)
         assert(decrypted_plaintext == plaintext);
     }
 }
+

@@ -621,3 +621,4 @@ void OptionsModel::checkAndMigrate()
         settings.setValue("addrSeparateProxyTor", GetDefaultProxyAddress());
     }
 }
+

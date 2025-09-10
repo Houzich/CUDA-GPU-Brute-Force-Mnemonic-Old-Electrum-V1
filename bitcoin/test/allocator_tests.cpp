@@ -236,3 +236,4 @@ BOOST_AUTO_TEST_CASE(lockedpool_tests_live)
 }
 
 BOOST_AUTO_TEST_SUITE_END()
+

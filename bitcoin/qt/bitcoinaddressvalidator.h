@@ -33,3 +33,4 @@ public:
 };
 
 #endif // BITCOIN_QT_BITCOINADDRESSVALIDATOR_H
+

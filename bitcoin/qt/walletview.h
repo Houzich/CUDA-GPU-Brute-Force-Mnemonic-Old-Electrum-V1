@@ -121,3 +121,4 @@ Q_SIGNALS:
 };
 
 #endif // BITCOIN_QT_WALLETVIEW_H
+

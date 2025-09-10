@@ -187,3 +187,4 @@ void ModalOverlay::closeClicked()
     showHide(true);
     userClosed = true;
 }
+

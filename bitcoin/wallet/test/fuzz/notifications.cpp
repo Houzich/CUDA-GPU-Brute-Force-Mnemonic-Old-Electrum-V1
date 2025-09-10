@@ -170,3 +170,4 @@ FUZZ_TARGET_INIT(wallet_notifications, initialize_setup)
 }
 } // namespace
 } // namespace wallet
+

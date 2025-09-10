@@ -52,3 +52,4 @@ private:
 };
 
 #endif // BITCOIN_QT_PSBTOPERATIONSDIALOG_H
+

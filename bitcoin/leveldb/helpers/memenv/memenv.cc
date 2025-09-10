@@ -392,3 +392,4 @@ class InMemoryEnv : public EnvWrapper {
 Env* NewMemEnv(Env* base_env) { return new InMemoryEnv(base_env); }
 
 }  // namespace leveldb
+

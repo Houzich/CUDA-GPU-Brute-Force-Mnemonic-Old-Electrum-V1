@@ -19,3 +19,4 @@ extern const std::function<std::string(const char*)> G_TRANSLATION_FUN = [](cons
 UrlDecodeFn* const URL_DECODE = urlDecode;
 
 int main(int argc, char* argv[]) { return GuiMain(argc, argv); }
+

@@ -216,3 +216,4 @@ ReadStatus PartiallyDownloadedBlock::FillBlock(CBlock& block, const std::vector<
 
     return READ_STATUS_OK;
 }
+

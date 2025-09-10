@@ -431,3 +431,4 @@ std::unique_ptr<WalletLoader> MakeWalletLoader(Chain& chain, ArgsManager& args);
 } // namespace interfaces
 
 #endif // BITCOIN_INTERFACES_WALLET_H
+

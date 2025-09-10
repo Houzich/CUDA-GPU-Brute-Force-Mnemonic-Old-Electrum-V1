@@ -109,3 +109,4 @@ class LEVELDB_EXPORT Cache {
 }  // namespace leveldb
 
 #endif  // STORAGE_LEVELDB_INCLUDE_CACHE_H_
+

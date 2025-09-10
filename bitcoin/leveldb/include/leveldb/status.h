@@ -120,3 +120,4 @@ inline Status& Status::operator=(Status&& rhs) noexcept {
 }  // namespace leveldb
 
 #endif  // STORAGE_LEVELDB_INCLUDE_STATUS_H_
+

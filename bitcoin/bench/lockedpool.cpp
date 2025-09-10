@@ -40,3 +40,4 @@ static void BenchLockedPool(benchmark::Bench& bench)
 }
 
 BENCHMARK(BenchLockedPool);
+

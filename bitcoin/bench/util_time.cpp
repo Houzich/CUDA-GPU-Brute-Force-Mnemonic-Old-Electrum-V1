@@ -40,3 +40,4 @@ BENCHMARK(BenchTimeDeprecated);
 BENCHMARK(BenchTimeMillis);
 BENCHMARK(BenchTimeMillisSys);
 BENCHMARK(BenchTimeMock);
+

@@ -1596,3 +1596,4 @@ const ExtPubKeyMap DescriptorCache::GetCachedLastHardenedExtPubKeys() const
 {
     return m_last_hardened_xpubs;
 }
+

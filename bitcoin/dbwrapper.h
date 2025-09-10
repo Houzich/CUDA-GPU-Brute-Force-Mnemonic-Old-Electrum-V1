@@ -337,3 +337,4 @@ public:
 };
 
 #endif // BITCOIN_DBWRAPPER_H
+

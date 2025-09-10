@@ -82,3 +82,4 @@ TEST(CRC32CRoundUpTest, RoundUpPointer) {
 }
 
 }  // namespace crc32c
+

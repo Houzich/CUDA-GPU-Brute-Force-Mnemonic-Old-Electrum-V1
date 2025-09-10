@@ -59,3 +59,4 @@ public:
 
 std::unique_ptr<Process> MakeProcess() { return std::make_unique<ProcessImpl>(); }
 } // namespace ipc
+

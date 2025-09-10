@@ -122,3 +122,4 @@ Sketch* ConstructGeneric6Bytes(int bits, int implementation)
     default: return nullptr;
     }
 }
+

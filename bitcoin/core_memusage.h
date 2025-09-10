@@ -69,3 +69,4 @@ static inline size_t RecursiveDynamicUsage(const std::shared_ptr<X>& p) {
 }
 
 #endif // BITCOIN_CORE_MEMUSAGE_H
+

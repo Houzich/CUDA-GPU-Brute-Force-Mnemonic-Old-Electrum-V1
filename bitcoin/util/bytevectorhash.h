@@ -24,3 +24,4 @@ public:
 };
 
 #endif // BITCOIN_UTIL_BYTEVECTORHASH_H
+

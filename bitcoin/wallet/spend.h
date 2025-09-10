@@ -97,3 +97,4 @@ bool FundTransaction(CWallet& wallet, CMutableTransaction& tx, CAmount& nFeeRet,
 } // namespace wallet
 
 #endif // BITCOIN_WALLET_SPEND_H
+

@@ -14,3 +14,4 @@ uint64_t EncodeDouble(double f) noexcept;
 double DecodeDouble(uint64_t v) noexcept;
 
 #endif // BITCOIN_UTIL_SERFLOAT_H
+

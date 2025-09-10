@@ -85,3 +85,4 @@ std::optional<ChainstateLoadVerifyError> VerifyLoadedChainstate(ChainstateManage
 } // namespace node
 
 #endif // BITCOIN_NODE_CHAINSTATE_H
+

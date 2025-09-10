@@ -170,3 +170,4 @@ So maybe even the sharding is not necessary on modern filesystems?
 of recovery. It finds the names of all files in the database. It deletes all log
 files that are not the current log file. It deletes all table files that are not
 referenced from some level and are not the output of an active compaction.
+

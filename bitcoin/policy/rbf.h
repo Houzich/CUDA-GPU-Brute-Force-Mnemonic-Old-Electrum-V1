@@ -100,3 +100,4 @@ std::optional<std::string> PaysForRBF(CAmount original_fees,
                                       const uint256& txid);
 
 #endif // BITCOIN_POLICY_RBF_H
+

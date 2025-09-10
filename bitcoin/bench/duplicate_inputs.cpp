@@ -63,3 +63,4 @@ static void DuplicateInputs(benchmark::Bench& bench)
 }
 
 BENCHMARK(DuplicateInputs);
+

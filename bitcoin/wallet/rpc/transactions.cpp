@@ -962,3 +962,4 @@ RPCHelpMan abortrescan()
     };
 }
 } // namespace wallet
+

@@ -65,3 +65,4 @@ FUZZ_TARGET(bloom_filter)
         (void)bloom_filter.IsWithinSizeConstraints();
     }
 }
+
