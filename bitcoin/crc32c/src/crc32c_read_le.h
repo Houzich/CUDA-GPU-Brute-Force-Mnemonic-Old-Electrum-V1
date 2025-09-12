@@ -52,3 +52,4 @@ inline uint64_t ReadUint64LE(const uint8_t* buffer) {
 
 #endif  // CRC32C_CRC32C_READ_LE_H_
 
+

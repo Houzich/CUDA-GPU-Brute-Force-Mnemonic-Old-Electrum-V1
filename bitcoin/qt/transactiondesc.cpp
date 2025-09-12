@@ -361,3 +361,4 @@ QString TransactionDesc::toHTML(interfaces::Node& node, interfaces::Wallet& wall
     return strHTML;
 }
 
+

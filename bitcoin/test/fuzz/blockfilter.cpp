@@ -44,3 +44,4 @@ FUZZ_TARGET(blockfilter)
     }
 }
 
+

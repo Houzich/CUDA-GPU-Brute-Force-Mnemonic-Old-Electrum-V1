@@ -78,3 +78,4 @@ private Q_SLOTS:
 
 #endif // BITCOIN_QT_RECEIVECOINSDIALOG_H
 
+

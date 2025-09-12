@@ -90,3 +90,4 @@ FUZZ_TARGET_INIT(utxo_snapshot, initialize_chain)
 }
 } // namespace
 
+

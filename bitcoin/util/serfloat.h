@@ -15,3 +15,4 @@ double DecodeDouble(uint64_t v) noexcept;
 
 #endif // BITCOIN_UTIL_SERFLOAT_H
 
+

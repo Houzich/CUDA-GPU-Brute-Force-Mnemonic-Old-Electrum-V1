@@ -64,3 +64,4 @@ FUZZ_TARGET(addition_overflow)
     TestAdditionOverflow<signed char>(fuzzed_data_provider);
 }
 
+

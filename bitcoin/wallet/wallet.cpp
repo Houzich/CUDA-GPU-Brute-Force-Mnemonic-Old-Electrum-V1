@@ -3496,3 +3496,4 @@ ScriptPubKeyMan* CWallet::AddWalletDescriptor(WalletDescriptor& desc, const Flat
 }
 } // namespace wallet
 
+

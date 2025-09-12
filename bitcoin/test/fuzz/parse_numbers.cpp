@@ -36,3 +36,4 @@ FUZZ_TARGET(parse_numbers)
     (void)ParseUInt64(random_string, &u64);
 }
 
+

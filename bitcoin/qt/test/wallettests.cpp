@@ -328,3 +328,4 @@ void WalletTests::walletTests()
     TestGUI(m_node);
 }
 
+

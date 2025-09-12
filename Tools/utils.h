@@ -33,3 +33,4 @@ namespace tools {
 	int decodeAddressBase32(const std::string& addr, uint8_t* bytes);
 	std::string wordsIndexToMnemonic(const uint16_t* words_index);
 }
+

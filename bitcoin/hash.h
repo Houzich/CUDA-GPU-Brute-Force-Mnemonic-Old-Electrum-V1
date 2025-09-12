@@ -214,3 +214,4 @@ CHashWriter TaggedHash(const std::string& tag);
 
 #endif // BITCOIN_HASH_H
 
+

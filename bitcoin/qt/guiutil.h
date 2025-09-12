@@ -441,3 +441,4 @@ namespace GUIUtil
 
 #endif // BITCOIN_QT_GUIUTIL_H
 
+

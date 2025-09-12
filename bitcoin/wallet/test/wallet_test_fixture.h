@@ -30,3 +30,4 @@ struct WalletTestingSetup : public TestingSetup {
 
 #endif // BITCOIN_WALLET_TEST_WALLET_TEST_FIXTURE_H
 
+

@@ -60,3 +60,4 @@ typedef std::basic_string<char, std::char_traits<char>, secure_allocator<char> >
 
 #endif // BITCOIN_SUPPORT_ALLOCATORS_SECURE_H
 
+

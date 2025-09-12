@@ -857,3 +857,4 @@ BOOST_FIXTURE_TEST_CASE(ZapSelectTx, TestChain100Setup)
 BOOST_AUTO_TEST_SUITE_END()
 } // namespace wallet
 
+

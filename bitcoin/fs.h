@@ -225,3 +225,4 @@ template<> inline void formatValue(std::ostream&, const char*, const char*, int,
 
 #endif // BITCOIN_FS_H
 
+

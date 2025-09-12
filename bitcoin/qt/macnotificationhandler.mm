@@ -61,3 +61,4 @@ MacNotificationHandler *MacNotificationHandler::instance()
     return s_instance;
 }
 
+

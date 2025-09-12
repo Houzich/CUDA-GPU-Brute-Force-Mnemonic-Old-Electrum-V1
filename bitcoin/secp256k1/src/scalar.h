@@ -104,3 +104,4 @@ static void secp256k1_scalar_cmov(secp256k1_scalar *r, const secp256k1_scalar *a
 
 #endif /* SECP256K1_SCALAR_H */
 
+

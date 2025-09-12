@@ -432,3 +432,4 @@ std::unique_ptr<WalletLoader> MakeWalletLoader(Chain& chain, ArgsManager& args);
 
 #endif // BITCOIN_INTERFACES_WALLET_H
 
+

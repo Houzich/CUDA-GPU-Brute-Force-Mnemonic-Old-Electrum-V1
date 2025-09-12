@@ -348,3 +348,4 @@ private Q_SLOTS:
 
 #endif // BITCOIN_QT_BITCOINGUI_H
 
+

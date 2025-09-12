@@ -44,3 +44,4 @@ std::string CFeeRate::ToString(const FeeEstimateMode& fee_estimate_mode) const
     }
 }
 
+

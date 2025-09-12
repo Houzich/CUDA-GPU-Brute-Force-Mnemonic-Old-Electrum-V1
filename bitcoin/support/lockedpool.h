@@ -239,3 +239,4 @@ private:
 
 #endif // BITCOIN_SUPPORT_LOCKEDPOOL_H
 
+

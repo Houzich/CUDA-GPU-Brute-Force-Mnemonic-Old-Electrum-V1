@@ -26,3 +26,4 @@ private Q_SLOTS:
 
 #endif // BITCOIN_QT_TEST_ADDRESSBOOKTESTS_H
 
+

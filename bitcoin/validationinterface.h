@@ -212,3 +212,4 @@ CMainSignals& GetMainSignals();
 
 #endif // BITCOIN_VALIDATIONINTERFACE_H
 
+

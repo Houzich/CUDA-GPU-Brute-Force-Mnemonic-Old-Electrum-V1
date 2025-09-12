@@ -25,3 +25,4 @@ BOOST_AUTO_TEST_CASE(roundtrip)
 BOOST_AUTO_TEST_SUITE_END()
 } // namespace wallet
 
+

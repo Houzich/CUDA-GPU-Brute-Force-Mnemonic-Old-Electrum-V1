@@ -144,3 +144,4 @@ struct Params {
 
 #endif // BITCOIN_CONSENSUS_PARAMS_H
 
+

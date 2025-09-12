@@ -75,3 +75,4 @@ std::string SigningResultString(const SigningResult res);
 
 #endif // BITCOIN_UTIL_MESSAGE_H
 
+

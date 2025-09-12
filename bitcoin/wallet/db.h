@@ -244,3 +244,4 @@ bool IsSQLiteFile(const fs::path& path);
 
 #endif // BITCOIN_WALLET_DB_H
 
+

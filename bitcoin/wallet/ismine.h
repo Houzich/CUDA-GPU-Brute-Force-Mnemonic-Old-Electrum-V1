@@ -72,3 +72,4 @@ struct CachableAmount
 
 #endif // BITCOIN_WALLET_ISMINE_H
 
+

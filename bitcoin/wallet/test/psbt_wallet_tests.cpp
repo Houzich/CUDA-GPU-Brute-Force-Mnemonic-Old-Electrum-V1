@@ -147,3 +147,4 @@ BOOST_AUTO_TEST_CASE(parse_hd_keypath)
 BOOST_AUTO_TEST_SUITE_END()
 } // namespace wallet
 
+

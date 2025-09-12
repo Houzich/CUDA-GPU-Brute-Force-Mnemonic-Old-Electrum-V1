@@ -206,3 +206,4 @@ CSHA512& CSHA512::Reset()
     return *this;
 }
 
+

@@ -324,3 +324,4 @@ void AddressBookPage::selectNewAddress(const QModelIndex &parent, int begin, int
     }
 }
 
+

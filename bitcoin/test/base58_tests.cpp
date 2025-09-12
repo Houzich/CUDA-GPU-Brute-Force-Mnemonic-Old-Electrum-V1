@@ -99,3 +99,4 @@ BOOST_AUTO_TEST_CASE(base58_random_encode_decode)
 
 BOOST_AUTO_TEST_SUITE_END()
 
+

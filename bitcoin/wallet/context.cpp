@@ -9,3 +9,4 @@ WalletContext::WalletContext() {}
 WalletContext::~WalletContext() {}
 } // namespace wallet
 
+

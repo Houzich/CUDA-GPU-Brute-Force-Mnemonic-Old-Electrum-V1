@@ -24,3 +24,4 @@ private:
 
 #endif // BITCOIN_QT_TEST_OPTIONTESTS_H
 
+

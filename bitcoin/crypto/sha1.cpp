@@ -198,3 +198,4 @@ CSHA1& CSHA1::Reset()
     return *this;
 }
 
+

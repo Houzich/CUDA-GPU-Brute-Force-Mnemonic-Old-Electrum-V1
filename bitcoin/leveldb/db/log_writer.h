@@ -53,3 +53,4 @@ class Writer {
 
 #endif  // STORAGE_LEVELDB_DB_LOG_WRITER_H_
 
+

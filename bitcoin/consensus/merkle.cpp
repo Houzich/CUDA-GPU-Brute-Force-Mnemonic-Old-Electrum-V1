@@ -84,3 +84,4 @@ uint256 BlockWitnessMerkleRoot(const CBlock& block, bool* mutated)
 }
 
 
+

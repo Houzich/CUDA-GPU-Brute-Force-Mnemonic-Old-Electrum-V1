@@ -169,3 +169,4 @@ using FieldTri = GenField<I, B, I(1) + (I(1) << POS), MulTrinomial<I, B, POS>, F
 
 #endif
 
+

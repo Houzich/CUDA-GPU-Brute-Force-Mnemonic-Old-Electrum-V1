@@ -21,3 +21,4 @@ UniValue ParseNonRFCJSONValue(const std::string& strVal);
 
 #endif // BITCOIN_RPC_CLIENT_H
 
+

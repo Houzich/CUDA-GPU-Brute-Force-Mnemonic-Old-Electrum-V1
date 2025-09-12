@@ -22,3 +22,4 @@ static constexpr const uint32_t kCRC32Xor = static_cast<uint32_t>(0xffffffffU);
 
 #endif  // CRC32C_CRC32C_INTERNAL_H_
 
+

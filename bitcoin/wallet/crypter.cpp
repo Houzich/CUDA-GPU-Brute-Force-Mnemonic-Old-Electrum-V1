@@ -139,3 +139,4 @@ bool DecryptKey(const CKeyingMaterial& vMasterKey, const std::vector<unsigned ch
 }
 } // namespace wallet
 
+

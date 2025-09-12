@@ -28,3 +28,4 @@ inline bool MoneyRange(const CAmount& nValue) { return (nValue >= 0 && nValue <=
 
 #endif // BITCOIN_CONSENSUS_AMOUNT_H
 
+

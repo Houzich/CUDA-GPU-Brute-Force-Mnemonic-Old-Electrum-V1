@@ -382,3 +382,4 @@ IndexSummary BaseIndex::GetSummary() const
     return summary;
 }
 
+

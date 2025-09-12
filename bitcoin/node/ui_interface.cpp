@@ -67,3 +67,4 @@ void InitWarning(const bilingual_str& str)
     uiInterface.ThreadSafeMessageBox(str, "", CClientUIInterface::MSG_WARNING);
 }
 
+

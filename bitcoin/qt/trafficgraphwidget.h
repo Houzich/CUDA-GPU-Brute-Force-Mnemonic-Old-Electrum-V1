@@ -49,3 +49,4 @@ private:
 
 #endif // BITCOIN_QT_TRAFFICGRAPHWIDGET_H
 
+

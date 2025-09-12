@@ -51,3 +51,4 @@ BOOST_FIXTURE_TEST_CASE(tx_mempool_reject_coinbase, TestChain100Setup)
 }
 BOOST_AUTO_TEST_SUITE_END()
 
+

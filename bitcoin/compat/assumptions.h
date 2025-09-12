@@ -56,3 +56,4 @@ static_assert(sizeof(size_t) == sizeof(void*), "Sizes of size_t and void* assume
 
 #endif // BITCOIN_COMPAT_ASSUMPTIONS_H
 
+

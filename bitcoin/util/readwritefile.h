@@ -27,3 +27,4 @@ bool WriteBinaryFile(const fs::path &filename, const std::string &data);
 
 #endif // BITCOIN_UTIL_READWRITEFILE_H
 
+

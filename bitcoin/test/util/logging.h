@@ -40,3 +40,4 @@ public:
 
 #endif // BITCOIN_TEST_UTIL_LOGGING_H
 
+

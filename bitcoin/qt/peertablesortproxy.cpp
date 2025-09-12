@@ -44,3 +44,4 @@ bool PeerTableSortProxy::lessThan(const QModelIndex& left_index, const QModelInd
     assert(false);
 }
 
+

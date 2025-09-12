@@ -23,3 +23,4 @@ INSTANTIATE_TYPED_TEST_SUITE_P(Sse42, ExtendTest, Sse42TestTraits);
 
 }  // namespace crc32c
 
+

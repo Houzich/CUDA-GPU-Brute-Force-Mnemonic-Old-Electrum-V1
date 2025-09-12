@@ -45,3 +45,4 @@ void HandleWalletError(const std::shared_ptr<CWallet> wallet, DatabaseStatus& st
 
 #endif // BITCOIN_WALLET_RPC_UTIL_H
 
+

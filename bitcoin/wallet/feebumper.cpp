@@ -279,3 +279,4 @@ Result CommitTransaction(CWallet& wallet, const uint256& txid, CMutableTransacti
 } // namespace feebumper
 } // namespace wallet
 
+

@@ -46,3 +46,4 @@ bool WriteBinaryFile(const fs::path &filename, const std::string &data)
     return true;
 }
 
+

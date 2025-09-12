@@ -31,3 +31,4 @@ CTxIn generatetoaddress(const node::NodeContext&, const std::string& address);
 
 #endif // BITCOIN_TEST_UTIL_MINING_H
 
+

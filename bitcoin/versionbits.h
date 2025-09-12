@@ -106,3 +106,4 @@ public:
 
 #endif // BITCOIN_VERSIONBITS_H
 
+

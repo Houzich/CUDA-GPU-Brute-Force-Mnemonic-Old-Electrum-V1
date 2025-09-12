@@ -122,3 +122,4 @@ extern CClientUIInterface uiInterface;
 
 #endif // BITCOIN_NODE_UI_INTERFACE_H
 
+

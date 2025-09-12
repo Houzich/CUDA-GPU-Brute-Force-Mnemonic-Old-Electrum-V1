@@ -286,3 +286,4 @@ template <typename V> constexpr auto MakeUCharSpan(V&& v) -> decltype(UCharSpanC
 
 #endif // BITCOIN_SPAN_H
 
+

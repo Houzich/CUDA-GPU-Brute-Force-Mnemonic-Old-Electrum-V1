@@ -22,3 +22,4 @@ bool CheckProofOfWork(uint256 hash, unsigned int nBits, const Consensus::Params&
 
 #endif // BITCOIN_POW_H
 
+

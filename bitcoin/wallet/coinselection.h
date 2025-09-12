@@ -294,3 +294,4 @@ std::optional<SelectionResult> KnapsackSolver(std::vector<OutputGroup>& groups, 
 
 #endif // BITCOIN_WALLET_COINSELECTION_H
 
+

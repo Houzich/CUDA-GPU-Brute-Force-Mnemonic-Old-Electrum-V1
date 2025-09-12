@@ -84,3 +84,4 @@ for K in range(1, 10000):
         print("Formula: (%i*(2*x+1)*floor(%i*log2(x)) - %i*x + %i) / %i; log(max_ratio)=%f" % (A, K, B, C, D, RR(-log(worst_ratio))))
         print("LOG2K_TABLE: %r" % LOG2_TABLE)
 
+

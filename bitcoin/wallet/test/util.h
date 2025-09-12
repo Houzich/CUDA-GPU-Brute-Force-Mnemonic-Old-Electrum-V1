@@ -22,3 +22,4 @@ std::unique_ptr<CWallet> CreateSyncedWallet(interfaces::Chain& chain, CChain& cc
 
 #endif // BITCOIN_WALLET_TEST_UTIL_H
 
+

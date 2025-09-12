@@ -4307,3 +4307,4 @@ Přejděte do Soubor &gt; Otevřít peněženku pro načtení peněženky.
     </message>
 </context>
 </TS>
+

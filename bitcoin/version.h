@@ -43,3 +43,4 @@ static const int WTXID_RELAY_VERSION = 70016;
 
 #endif // BITCOIN_VERSION_H
 
+

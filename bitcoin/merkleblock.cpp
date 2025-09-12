@@ -179,3 +179,4 @@ uint256 CPartialMerkleTree::ExtractMatches(std::vector<uint256> &vMatch, std::ve
     return hashMerkleRoot;
 }
 
+

@@ -181,3 +181,4 @@ inline int GetWitnessCommitmentIndex(const CBlock& block)
 
 #endif // BITCOIN_CONSENSUS_VALIDATION_H
 
+

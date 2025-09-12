@@ -30,3 +30,4 @@ private:
 
 #endif // BITCOIN_QT_TRANSACTIONDESCDIALOG_H
 
+

@@ -16,3 +16,4 @@ typedef uint32_t secp256k1_scalar;
 
 #endif /* SECP256K1_SCALAR_REPR_H */
 
+

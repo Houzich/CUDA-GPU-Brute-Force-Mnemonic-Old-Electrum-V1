@@ -44,3 +44,4 @@ uint64_t GolombRiceDecode(BitStreamReader<IStream>& bitreader, uint8_t P)
 
 #endif // BITCOIN_UTIL_GOLOMBRICE_H
 
+

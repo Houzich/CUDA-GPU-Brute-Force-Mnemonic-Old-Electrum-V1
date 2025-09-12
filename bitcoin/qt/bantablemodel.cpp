@@ -182,3 +182,4 @@ bool BanTableModel::shouldShow()
     return priv->size() > 0;
 }
 
+

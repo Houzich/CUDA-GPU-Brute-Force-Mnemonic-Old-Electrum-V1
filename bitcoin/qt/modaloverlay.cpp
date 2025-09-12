@@ -188,3 +188,4 @@ void ModalOverlay::closeClicked()
     userClosed = true;
 }
 
+

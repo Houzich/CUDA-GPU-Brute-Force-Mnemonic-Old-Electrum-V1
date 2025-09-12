@@ -21,3 +21,4 @@ namespace tools {
 	int checkResult(retStruct* ret);
 	int stringToWordIndices(std::string str, int16_t* gen_words_indices);
 }
+

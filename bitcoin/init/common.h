@@ -27,3 +27,4 @@ void LogPackageVersion();
 
 #endif // BITCOIN_INIT_COMMON_H
 
+

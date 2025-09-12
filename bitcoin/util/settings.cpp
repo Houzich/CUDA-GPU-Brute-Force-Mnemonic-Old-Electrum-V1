@@ -251,3 +251,4 @@ size_t SettingsSpan::negated() const
 
 } // namespace util
 
+

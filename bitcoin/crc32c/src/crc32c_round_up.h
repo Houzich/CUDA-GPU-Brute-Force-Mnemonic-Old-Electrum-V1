@@ -33,3 +33,4 @@ constexpr inline const uint8_t* RoundUp(const uint8_t* pointer) {
 
 #endif  // CRC32C_CRC32C_ROUND_UP_H_
 
+

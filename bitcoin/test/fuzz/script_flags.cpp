@@ -78,3 +78,4 @@ FUZZ_TARGET_INIT(script_flags, initialize_script_flags)
     }
 }
 
+

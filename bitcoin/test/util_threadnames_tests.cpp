@@ -71,3 +71,4 @@ BOOST_AUTO_TEST_CASE(util_threadnames_test_rename_threaded)
 
 BOOST_AUTO_TEST_SUITE_END()
 
+

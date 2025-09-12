@@ -73,3 +73,4 @@ crc32c_libcrc32c_arm_crc_a_CXXFLAGS = $(crc32c_libcrc32c_a_CXXFLAGS) $(ARM_CRC_C
 crc32c_libcrc32c_arm_crc_a_SOURCES = crc32c/src/crc32c_arm64.cc
 endif
 
+

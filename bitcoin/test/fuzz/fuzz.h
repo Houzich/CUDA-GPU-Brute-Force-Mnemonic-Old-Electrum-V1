@@ -46,3 +46,4 @@ inline void FuzzFrameworkEmptyInitFun() {}
 
 #endif // BITCOIN_TEST_FUZZ_FUZZ_H
 
+

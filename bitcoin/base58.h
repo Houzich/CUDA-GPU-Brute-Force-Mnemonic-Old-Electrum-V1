@@ -44,3 +44,4 @@ std::string EncodeBase58Check(Span<const unsigned char> input);
 
 #endif // BITCOIN_BASE58_H
 
+

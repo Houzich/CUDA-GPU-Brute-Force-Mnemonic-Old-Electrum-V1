@@ -43,3 +43,4 @@ extern CZMQNotificationInterface* g_zmq_notification_interface;
 
 #endif // BITCOIN_ZMQ_ZMQNOTIFICATIONINTERFACE_H
 
+

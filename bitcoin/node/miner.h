@@ -210,3 +210,4 @@ void RegenerateCommitments(CBlock& block, ChainstateManager& chainman);
 
 #endif // BITCOIN_NODE_MINER_H
 
+

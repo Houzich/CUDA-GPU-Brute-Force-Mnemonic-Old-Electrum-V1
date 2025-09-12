@@ -130,3 +130,4 @@ FUZZ_TARGET_INIT(connman, initialize_connman)
     (void)connman.GetUseAddrmanOutgoing();
 }
 
+

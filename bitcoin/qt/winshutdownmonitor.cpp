@@ -56,3 +56,4 @@ void WinShutdownMonitor::registerShutdownBlockReason(const QString& strReason, c
 }
 #endif
 
+

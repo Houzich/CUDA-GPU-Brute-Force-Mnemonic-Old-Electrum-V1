@@ -12,3 +12,4 @@ bool IsValidFlagCombination(unsigned flags)
     return true;
 }
 
+

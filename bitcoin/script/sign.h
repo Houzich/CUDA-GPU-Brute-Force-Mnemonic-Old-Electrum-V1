@@ -107,3 +107,4 @@ bool SignTransaction(CMutableTransaction& mtx, const SigningProvider* provider, 
 
 #endif // BITCOIN_SCRIPT_SIGN_H
 
+

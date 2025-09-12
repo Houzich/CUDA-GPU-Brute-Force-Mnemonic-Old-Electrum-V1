@@ -157,3 +157,4 @@ public:
 
 #endif // BITCOIN_QT_WALLETCONTROLLER_H
 
+

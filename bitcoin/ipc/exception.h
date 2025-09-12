@@ -19,3 +19,4 @@ public:
 
 #endif // BITCOIN_IPC_EXCEPTION_H
 
+

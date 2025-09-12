@@ -145,3 +145,4 @@ public:
 
 #endif // BITCOIN_CRYPTO_CHACHA_POLY_AEAD_H
 
+

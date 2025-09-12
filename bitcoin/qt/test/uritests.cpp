@@ -65,3 +65,4 @@ void URITests::uriTests()
     QVERIFY(!GUIUtil::parseBitcoinURI(uri, &rv));
 }
 
+

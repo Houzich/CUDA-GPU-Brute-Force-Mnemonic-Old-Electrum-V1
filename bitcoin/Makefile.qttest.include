@@ -73,3 +73,4 @@ test_bitcoin_qt_check : qt/test/test_bitcoin-qt$(EXEEXT) FORCE
 test_bitcoin_qt_clean: FORCE
 	rm -f $(CLEAN_BITCOIN_QT_TEST) $(qt_test_test_bitcoin_qt_OBJECTS)
 
+

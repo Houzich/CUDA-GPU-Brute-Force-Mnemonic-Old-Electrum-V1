@@ -350,3 +350,4 @@ int FindAndDelete(CScript& script, const CScript& b);
 
 #endif // BITCOIN_SCRIPT_INTERPRETER_H
 
+

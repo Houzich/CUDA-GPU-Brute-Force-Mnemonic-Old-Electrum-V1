@@ -101,3 +101,4 @@ bool TxIndex::FindTx(const uint256& tx_hash, uint256& block_hash, CTransactionRe
     return true;
 }
 
+

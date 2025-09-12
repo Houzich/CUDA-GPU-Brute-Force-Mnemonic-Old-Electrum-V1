@@ -22,3 +22,4 @@ WalletTestingSetup::~WalletTestingSetup()
 }
 } // namespace wallet
 
+

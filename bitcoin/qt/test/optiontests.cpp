@@ -30,3 +30,4 @@ void OptionTests::optionTests()
     gArgs.WriteSettingsFile();
 }
 
+

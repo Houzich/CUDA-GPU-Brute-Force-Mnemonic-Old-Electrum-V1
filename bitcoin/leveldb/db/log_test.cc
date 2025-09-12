@@ -561,3 +561,4 @@ TEST(LogTest, ReadPastEnd) { CheckOffsetPastEndReturnsNoRecords(5); }
 
 int main(int argc, char** argv) { return leveldb::test::RunAllTests(); }
 
+

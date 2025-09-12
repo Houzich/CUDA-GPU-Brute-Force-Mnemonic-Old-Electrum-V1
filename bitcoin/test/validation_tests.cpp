@@ -146,3 +146,4 @@ BOOST_AUTO_TEST_CASE(test_assumeutxo)
 
 BOOST_AUTO_TEST_SUITE_END()
 
+

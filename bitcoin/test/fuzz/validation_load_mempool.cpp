@@ -38,3 +38,4 @@ FUZZ_TARGET_INIT(validation_load_mempool, initialize_validation_load_mempool)
     (void)DumpMempool(pool, fuzzed_fopen, true);
 }
 
+

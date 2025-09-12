@@ -152,3 +152,4 @@ If exist "config.cfg" copy "config.cfg" "$(OutDir)\"</Command>
     <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 12.0.targets" />
   </ImportGroup>
 </Project>
+

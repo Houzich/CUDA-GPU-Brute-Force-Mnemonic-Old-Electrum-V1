@@ -26,3 +26,4 @@ uint256 BlockWitnessMerkleRoot(const CBlock& block, bool* mutated = nullptr);
 
 #endif // BITCOIN_CONSENSUS_MERKLE_H
 
+

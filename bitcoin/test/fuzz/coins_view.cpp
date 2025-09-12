@@ -285,3 +285,4 @@ FUZZ_TARGET_INIT(coins_view, initialize_coins_view)
     }
 }
 
+

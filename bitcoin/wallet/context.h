@@ -51,3 +51,4 @@ struct WalletContext {
 
 #endif // BITCOIN_WALLET_CONTEXT_H
 
+

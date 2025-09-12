@@ -38,3 +38,4 @@ FUZZ_TARGET_INIT(key_io, initialize_key_io)
     }
 }
 
+

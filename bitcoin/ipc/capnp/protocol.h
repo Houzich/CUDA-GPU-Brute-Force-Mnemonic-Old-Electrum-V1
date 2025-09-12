@@ -16,3 +16,4 @@ std::unique_ptr<Protocol> MakeCapnpProtocol();
 
 #endif // BITCOIN_IPC_CAPNP_PROTOCOL_H
 
+

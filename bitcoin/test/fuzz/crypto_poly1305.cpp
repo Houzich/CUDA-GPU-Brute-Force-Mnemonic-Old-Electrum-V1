@@ -21,3 +21,4 @@ FUZZ_TARGET(crypto_poly1305)
     poly1305_auth(tag_out.data(), in.data(), in.size(), key.data());
 }
 
+

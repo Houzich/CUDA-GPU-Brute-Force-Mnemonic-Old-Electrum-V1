@@ -121,3 +121,4 @@ inline Status& Status::operator=(Status&& rhs) noexcept {
 
 #endif  // STORAGE_LEVELDB_INCLUDE_STATUS_H_
 
+

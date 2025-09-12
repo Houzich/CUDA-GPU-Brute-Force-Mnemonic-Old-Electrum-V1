@@ -18,3 +18,4 @@ extern const std::vector<uint8_t> block413567;
 
 #endif // BITCOIN_BENCH_DATA_H
 
+

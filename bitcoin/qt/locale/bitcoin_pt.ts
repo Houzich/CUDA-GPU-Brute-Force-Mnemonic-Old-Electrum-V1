@@ -4218,3 +4218,4 @@ Ir para o arquivo &gt; Abrir carteira para carregar a carteira
     </message>
 </context>
 </TS>
+

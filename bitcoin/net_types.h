@@ -59,3 +59,4 @@ void BanMapFromJson(const UniValue& bans_json, banmap_t& bans);
 
 #endif // BITCOIN_NET_TYPES_H
 
+

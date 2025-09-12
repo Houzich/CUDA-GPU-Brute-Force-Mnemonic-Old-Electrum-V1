@@ -606,3 +606,4 @@ int FuzzedFileProvider::close(void* cookie)
     return fuzzed_file->m_fuzzed_data_provider.ConsumeIntegralInRange<int>(-1, 0);
 }
 
+

@@ -4250,3 +4250,4 @@ Ves a Arxiu &gt; Obrir Cartera per a carregar cartera.
     </message>
 </context>
 </TS>
+

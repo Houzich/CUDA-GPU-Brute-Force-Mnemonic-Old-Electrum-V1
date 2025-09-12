@@ -25,3 +25,4 @@ const std::string& ThreadGetInternalName();
 
 #endif // BITCOIN_UTIL_THREADNAMES_H
 
+

@@ -26,3 +26,4 @@ int64_t CWalletTx::GetTxTime() const
 }
 } // namespace wallet
 
+

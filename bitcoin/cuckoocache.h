@@ -479,3 +479,4 @@ public:
 
 #endif // BITCOIN_CUCKOOCACHE_H
 
+

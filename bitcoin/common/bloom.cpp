@@ -245,3 +245,4 @@ void CRollingBloomFilter::reset()
     std::fill(data.begin(), data.end(), 0);
 }
 
+

@@ -88,3 +88,4 @@ inline uint32_t Crc32c(const std::string_view& string_view) {
 
 #endif  // CRC32C_CRC32C_H_
 
+

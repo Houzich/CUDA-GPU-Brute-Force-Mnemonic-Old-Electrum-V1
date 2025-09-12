@@ -4414,3 +4414,4 @@ Za odpiranje denarnice kliknite Datoteka &gt; Odpri denarnico
     </message>
 </context>
 </TS>
+

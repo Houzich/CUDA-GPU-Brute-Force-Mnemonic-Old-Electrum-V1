@@ -309,3 +309,4 @@ public:
 
 #endif // BITCOIN_WALLET_TRANSACTION_H
 
+

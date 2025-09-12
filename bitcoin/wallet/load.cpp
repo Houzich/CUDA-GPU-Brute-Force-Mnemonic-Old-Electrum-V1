@@ -179,3 +179,4 @@ void UnloadWallets(WalletContext& context)
 }
 } // namespace wallet
 
+

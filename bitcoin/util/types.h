@@ -10,3 +10,4 @@ inline constexpr bool ALWAYS_FALSE{false};
 
 #endif // BITCOIN_UTIL_TYPES_H
 
+

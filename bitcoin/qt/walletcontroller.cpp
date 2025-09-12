@@ -373,3 +373,4 @@ void LoadWalletsActivity::load()
     });
 }
 
+

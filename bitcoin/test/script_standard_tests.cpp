@@ -433,3 +433,4 @@ BOOST_AUTO_TEST_CASE(bip341_spk_test_vectors)
 
 BOOST_AUTO_TEST_SUITE_END()
 
+

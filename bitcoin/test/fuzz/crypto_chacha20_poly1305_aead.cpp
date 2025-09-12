@@ -71,3 +71,4 @@ FUZZ_TARGET(crypto_chacha20_poly1305_aead)
     }
 }
 
+

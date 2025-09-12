@@ -18,3 +18,4 @@ struct Context
 
 #endif // BITCOIN_IPC_CONTEXT_H
 
+

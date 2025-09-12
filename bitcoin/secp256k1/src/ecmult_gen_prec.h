@@ -13,3 +13,4 @@ static void secp256k1_ecmult_gen_create_prec_table(secp256k1_ge_storage* table, 
 
 #endif /* SECP256K1_ECMULT_GEN_PREC_H */
 
+

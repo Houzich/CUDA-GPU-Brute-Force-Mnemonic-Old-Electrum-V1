@@ -65,3 +65,4 @@ class ErrorEnv : public EnvWrapper {
 
 #endif  // STORAGE_LEVELDB_UTIL_TESTUTIL_H_
 
+

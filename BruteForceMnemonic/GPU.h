@@ -35,3 +35,4 @@ extern __constant__ uint32_t dev_num_childs[];
 extern __constant__ uint32_t dev_num_paths[];
 extern __constant__ int16_t dev_static_words_indices[];
 
+

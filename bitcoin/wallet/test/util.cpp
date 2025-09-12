@@ -47,3 +47,4 @@ std::unique_ptr<CWallet> CreateSyncedWallet(interfaces::Chain& chain, CChain& cc
 }
 } // namespace wallet
 
+

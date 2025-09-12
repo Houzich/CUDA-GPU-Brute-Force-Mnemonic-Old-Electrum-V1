@@ -59,3 +59,4 @@ FUZZ_TARGET(asmap)
     (void)net_addr.GetMappedAS(asmap);
 }
 
+

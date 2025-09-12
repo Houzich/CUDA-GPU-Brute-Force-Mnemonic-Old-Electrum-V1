@@ -24,3 +24,4 @@ class EnvWindowsTestHelper {
 
 #endif  // STORAGE_LEVELDB_UTIL_ENV_WINDOWS_TEST_HELPER_H_
 
+

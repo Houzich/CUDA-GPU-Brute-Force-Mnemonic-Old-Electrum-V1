@@ -59,3 +59,4 @@ static void BlockToJsonVerboseWrite(benchmark::Bench& bench)
 
 BENCHMARK(BlockToJsonVerboseWrite);
 
+

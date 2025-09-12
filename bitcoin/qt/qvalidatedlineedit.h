@@ -43,3 +43,4 @@ private Q_SLOTS:
 
 #endif // BITCOIN_QT_QVALIDATEDLINEEDIT_H
 
+

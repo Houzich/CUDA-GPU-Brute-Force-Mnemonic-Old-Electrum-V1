@@ -76,3 +76,4 @@ BOOST_AUTO_TEST_CASE(get_difficulty_for_very_high_target)
 
 BOOST_AUTO_TEST_SUITE_END()
 
+

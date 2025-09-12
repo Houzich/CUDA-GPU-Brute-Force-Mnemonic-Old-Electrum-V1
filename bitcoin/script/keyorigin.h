@@ -48,3 +48,4 @@ struct KeyOriginInfo
 
 #endif // BITCOIN_SCRIPT_KEYORIGIN_H
 
+

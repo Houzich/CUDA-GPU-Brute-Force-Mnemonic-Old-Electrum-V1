@@ -18,3 +18,4 @@ The following interfaces are defined here:
 
 The interfaces above define boundaries between major components of bitcoin code (node, wallet, and gui), making it possible for them to run in [different processes](../../doc/multiprocess.md), and be tested, developed, and understood independently. These interfaces are not currently designed to be stable or to be used externally.
 
+

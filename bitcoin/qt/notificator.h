@@ -76,3 +76,4 @@ private:
 
 #endif // BITCOIN_QT_NOTIFICATOR_H
 
+

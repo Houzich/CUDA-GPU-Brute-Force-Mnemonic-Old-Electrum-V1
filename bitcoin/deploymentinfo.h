@@ -28,3 +28,4 @@ inline std::string DeploymentName(Consensus::DeploymentPos pos)
 
 #endif // BITCOIN_DEPLOYMENTINFO_H
 
+

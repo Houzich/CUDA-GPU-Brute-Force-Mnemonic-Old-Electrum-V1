@@ -30,3 +30,4 @@ FUZZ_TARGET(script_bitcoin_consensus)
     (void)bitcoinconsensus_verify_script_with_amount(random_bytes_1.data(), random_bytes_1.size(), money, random_bytes_2.data(), random_bytes_2.size(), n_in, flags, err_p);
 }
 
+

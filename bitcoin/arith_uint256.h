@@ -286,3 +286,4 @@ arith_uint256 UintToArith256(const uint256 &);
 
 #endif // BITCOIN_ARITH_UINT256_H
 
+

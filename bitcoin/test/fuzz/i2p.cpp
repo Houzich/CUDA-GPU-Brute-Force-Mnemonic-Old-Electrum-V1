@@ -56,3 +56,4 @@ FUZZ_TARGET_INIT(i2p, initialize_i2p)
     CreateSock = CreateSockOrig;
 }
 
+

@@ -142,3 +142,4 @@ void WalletInit::Construct(NodeContext& node) const
 
 const WalletInitInterface& g_wallet_init_interface = wallet::WalletInit();
 
+

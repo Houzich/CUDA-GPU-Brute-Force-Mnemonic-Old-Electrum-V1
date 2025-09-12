@@ -35,3 +35,4 @@ private:
 
 #endif // BITCOIN_NETMESSAGEMAKER_H
 
+

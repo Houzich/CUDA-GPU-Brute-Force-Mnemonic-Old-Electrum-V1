@@ -99,3 +99,4 @@ inline BlockHandle::BlockHandle()
 
 #endif  // STORAGE_LEVELDB_TABLE_FORMAT_H_
 
+

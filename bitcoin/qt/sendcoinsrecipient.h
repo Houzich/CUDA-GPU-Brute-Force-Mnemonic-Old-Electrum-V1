@@ -64,3 +64,4 @@ public:
 
 #endif // BITCOIN_QT_SENDCOINSRECIPIENT_H
 
+

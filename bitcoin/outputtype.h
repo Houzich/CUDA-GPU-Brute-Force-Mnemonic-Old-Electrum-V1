@@ -53,3 +53,4 @@ std::optional<OutputType> OutputTypeFromDestination(const CTxDestination& dest);
 
 #endif // BITCOIN_OUTPUTTYPE_H
 
+

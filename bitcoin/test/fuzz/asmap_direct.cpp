@@ -48,3 +48,4 @@ FUZZ_TARGET(asmap_direct)
     }
 }
 
+

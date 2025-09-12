@@ -12,3 +12,4 @@ fs::path GetUniquePath(const fs::path& base)
     fs::path tmpFile = base / HexStr(rnd.randbytes(8));
     return tmpFile;
 }
+

@@ -328,3 +328,4 @@ FUZZ_TARGET(crypto_diff_fuzz_chacha20)
     }
 }
 
+

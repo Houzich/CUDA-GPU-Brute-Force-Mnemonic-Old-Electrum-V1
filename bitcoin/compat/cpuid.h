@@ -23,3 +23,4 @@ void static inline GetCPUID(uint32_t leaf, uint32_t subleaf, uint32_t& a, uint32
 #endif // defined(__x86_64__) || defined(__amd64__) || defined(__i386__)
 #endif // BITCOIN_COMPAT_CPUID_H
 
+

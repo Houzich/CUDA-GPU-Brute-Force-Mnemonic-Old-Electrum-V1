@@ -115,3 +115,4 @@ int TransactionFilterProxy::rowCount(const QModelIndex &parent) const
     }
 }
 
+

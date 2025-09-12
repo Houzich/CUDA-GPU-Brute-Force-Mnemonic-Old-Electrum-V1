@@ -84,3 +84,4 @@ FUZZ_TARGET_INIT(pow, initialize_pow)
     }
 }
 
+

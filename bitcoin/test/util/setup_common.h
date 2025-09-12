@@ -237,3 +237,4 @@ private:
 
 #endif // BITCOIN_TEST_UTIL_SETUP_COMMON_H
 
+

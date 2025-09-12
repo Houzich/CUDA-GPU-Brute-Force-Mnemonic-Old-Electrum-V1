@@ -124,3 +124,4 @@ uint32_t ExtendArm64(uint32_t crc, const uint8_t *data, size_t size) {
 
 #endif  // HAVE_ARM64_CRC32C
 
+

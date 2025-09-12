@@ -26,3 +26,4 @@ uint32_t ExtendArm64(uint32_t crc, const uint8_t* data, size_t count);
 
 #endif  // CRC32C_CRC32C_ARM_H_
 
+

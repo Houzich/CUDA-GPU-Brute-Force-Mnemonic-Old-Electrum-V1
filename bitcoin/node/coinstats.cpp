@@ -184,3 +184,4 @@ static void FinalizeHash(MuHash3072& muhash, CCoinsStats& stats)
 static void FinalizeHash(std::nullptr_t, CCoinsStats& stats) {}
 } // namespace node
 
+

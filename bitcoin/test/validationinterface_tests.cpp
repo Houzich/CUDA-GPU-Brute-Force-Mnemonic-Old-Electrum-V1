@@ -93,3 +93,4 @@ BOOST_AUTO_TEST_CASE(unregister_all_during_call)
 
 BOOST_AUTO_TEST_SUITE_END()
 
+

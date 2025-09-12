@@ -47,3 +47,4 @@ BENCHMARK(LoggingYoCategory);
 BENCHMARK(LoggingNoCategory);
 BENCHMARK(LoggingNoFile);
 
+

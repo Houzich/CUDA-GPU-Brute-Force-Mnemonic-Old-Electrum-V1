@@ -96,3 +96,4 @@ QValidator::State BitcoinAddressCheckValidator::validate(QString &input, int &po
     return QValidator::Invalid;
 }
 
+

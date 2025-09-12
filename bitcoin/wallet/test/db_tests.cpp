@@ -81,3 +81,4 @@ BOOST_AUTO_TEST_CASE(getwalletenv_g_dbenvs_free_instance)
 BOOST_AUTO_TEST_SUITE_END()
 } // namespace wallet
 
+

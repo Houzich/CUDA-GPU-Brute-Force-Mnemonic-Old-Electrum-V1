@@ -46,3 +46,4 @@ FUZZ_TARGET_INIT(message, initialize_message)
     }
 }
 
+

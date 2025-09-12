@@ -358,3 +358,4 @@ BOOST_AUTO_TEST_CASE(witness_commitment_index)
 }
 BOOST_AUTO_TEST_SUITE_END()
 
+

@@ -102,3 +102,4 @@ FUZZ_TARGET(netaddress)
     assert(net_addr == mutable_net_addr);
 }
 
+

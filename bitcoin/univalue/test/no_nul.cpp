@@ -7,3 +7,4 @@ int main (int argc, char *argv[])
     return val.read(buf + 3, 7) ? 0 : 1;
 }
 
+

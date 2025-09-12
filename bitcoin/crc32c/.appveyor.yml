@@ -37,3 +37,4 @@ test_script:
   - build\%CONFIGURATION%\crc32c_capi_tests.exe
   - build\%CONFIGURATION%\crc32c_bench.exe
 
+

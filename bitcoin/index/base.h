@@ -129,3 +129,4 @@ public:
 
 #endif // BITCOIN_INDEX_BASE_H
 
+

@@ -367,3 +367,4 @@ public:
 
 #endif // BITCOIN_SYNC_H
 
+

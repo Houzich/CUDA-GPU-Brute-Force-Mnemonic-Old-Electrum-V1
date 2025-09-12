@@ -43,3 +43,4 @@ public:
 
 #endif // BITCOIN_IPC_PROTOCOL_H
 
+

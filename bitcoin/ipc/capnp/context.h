@@ -22,3 +22,4 @@ struct Context : ipc::Context
 
 #endif // BITCOIN_IPC_CAPNP_CONTEXT_H
 
+

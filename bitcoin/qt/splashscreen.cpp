@@ -243,3 +243,4 @@ void SplashScreen::closeEvent(QCloseEvent *event)
     event->ignore();
 }
 
+

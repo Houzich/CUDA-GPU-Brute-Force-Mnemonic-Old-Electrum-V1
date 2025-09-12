@@ -44,3 +44,4 @@ void ForEachNoDup(CharType (&string)[StringLength], CharType min_char, CharType 
 
 #endif // BITCOIN_TEST_UTIL_STR_H
 
+

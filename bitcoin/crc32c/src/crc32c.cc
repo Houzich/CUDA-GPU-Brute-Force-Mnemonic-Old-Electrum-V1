@@ -38,3 +38,4 @@ extern "C" uint32_t crc32c_value(const uint8_t* data, size_t count) {
 
 }  // namespace crc32c
 
+

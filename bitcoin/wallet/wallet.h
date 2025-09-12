@@ -943,3 +943,4 @@ bool FillInputToWeight(CTxIn& txin, int64_t target_weight);
 
 #endif // BITCOIN_WALLET_WALLET_H
 
+

@@ -22,3 +22,4 @@ public class BitcoinQtActivity extends QtActivity
     }
 }
 
+

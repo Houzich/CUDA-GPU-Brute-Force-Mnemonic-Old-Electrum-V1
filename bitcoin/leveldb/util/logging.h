@@ -44,3 +44,4 @@ bool ConsumeDecimalNumber(Slice* in, uint64_t* val);
 
 #endif  // STORAGE_LEVELDB_UTIL_LOGGING_H_
 
+

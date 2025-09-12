@@ -78,3 +78,4 @@ static const CRPCCommand commands[] =
 
 #endif // ENABLE_EXTERNAL_SIGNER
 
+

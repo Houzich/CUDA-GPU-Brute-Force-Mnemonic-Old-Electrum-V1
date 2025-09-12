@@ -25,3 +25,4 @@ Iterator* NewDBIterator(DBImpl* db, const Comparator* user_key_comparator,
 
 #endif  // STORAGE_LEVELDB_DB_DB_ITER_H_
 
+

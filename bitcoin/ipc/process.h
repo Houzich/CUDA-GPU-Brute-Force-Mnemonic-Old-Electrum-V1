@@ -41,3 +41,4 @@ std::unique_ptr<Process> MakeProcess();
 
 #endif // BITCOIN_IPC_PROCESS_H
 
+

@@ -28,3 +28,4 @@ std::vector<CMutableTransaction> SetupDummyInputs(FillableSigningProvider& keyst
 
 #endif // BITCOIN_TEST_UTIL_TRANSACTION_UTILS_H
 
+

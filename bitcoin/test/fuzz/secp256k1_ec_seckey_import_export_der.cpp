@@ -37,3 +37,4 @@ FUZZ_TARGET(secp256k1_ec_seckey_import_export_der)
     secp256k1_context_destroy(secp256k1_context_sign);
 }
 
+

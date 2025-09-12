@@ -129,3 +129,4 @@ class PosixLogger final : public Logger {
 
 #endif  // STORAGE_LEVELDB_UTIL_POSIX_LOGGER_H_
 
+

@@ -54,3 +54,4 @@ BENCHMARK(Base58Encode);
 BENCHMARK(Base58CheckEncode);
 BENCHMARK(Base58Decode);
 
+

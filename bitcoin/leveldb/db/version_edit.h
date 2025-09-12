@@ -105,3 +105,4 @@ class VersionEdit {
 
 #endif  // STORAGE_LEVELDB_DB_VERSION_EDIT_H_
 
+

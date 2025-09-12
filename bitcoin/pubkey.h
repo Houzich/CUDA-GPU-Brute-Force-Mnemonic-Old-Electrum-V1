@@ -346,3 +346,4 @@ const secp256k1_context* GetVerifyContext();
 
 #endif // BITCOIN_PUBKEY_H
 
+

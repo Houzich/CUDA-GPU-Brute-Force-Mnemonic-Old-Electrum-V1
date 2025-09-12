@@ -34,3 +34,4 @@ FUZZ_TARGET_INIT(script_format, initialize_script_format)
     ScriptToUniv(script, o3);
 }
 
+

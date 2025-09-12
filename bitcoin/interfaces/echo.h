@@ -25,3 +25,4 @@ std::unique_ptr<Echo> MakeEcho();
 
 #endif // BITCOIN_INTERFACES_ECHO_H
 
+

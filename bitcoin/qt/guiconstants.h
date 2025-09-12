@@ -61,3 +61,4 @@ static constexpr int DEFAULT_PRUNE_TARGET_GB{2};
 
 #endif // BITCOIN_QT_GUICONSTANTS_H
 
+

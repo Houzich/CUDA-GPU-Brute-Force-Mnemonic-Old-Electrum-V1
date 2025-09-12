@@ -33,3 +33,4 @@ FUZZ_TARGET(primitives_transaction)
     }
 }
 
+

@@ -106,3 +106,4 @@ FUZZ_TARGET_INIT(transaction, initialize_transaction)
     TxToUniv(tx, /*hashBlock=*/uint256::ONE, u);
 }
 
+

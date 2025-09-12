@@ -13,3 +13,4 @@ CCoinControl::CCoinControl()
 }
 } // namespace wallet
 
+

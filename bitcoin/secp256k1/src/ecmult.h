@@ -49,3 +49,4 @@ static int secp256k1_ecmult_multi_var(const secp256k1_callback* error_callback, 
 
 #endif /* SECP256K1_ECMULT_H */
 
+

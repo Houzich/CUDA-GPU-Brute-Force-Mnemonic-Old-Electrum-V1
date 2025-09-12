@@ -4449,3 +4449,4 @@ Vai su File &gt; Apri Portafoglio per caricare un portafoglio.
     </message>
 </context>
 </TS>
+

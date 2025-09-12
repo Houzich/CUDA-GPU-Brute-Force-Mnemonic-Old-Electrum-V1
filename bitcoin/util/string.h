@@ -105,3 +105,4 @@ template <typename T1, size_t PREFIX_LEN>
 
 #endif // BITCOIN_UTIL_STRING_H
 
+

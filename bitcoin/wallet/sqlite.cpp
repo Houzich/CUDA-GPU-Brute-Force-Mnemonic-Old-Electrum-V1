@@ -566,3 +566,4 @@ std::string SQLiteDatabaseVersion()
 }
 } // namespace wallet
 
+

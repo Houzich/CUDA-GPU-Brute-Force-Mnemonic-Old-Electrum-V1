@@ -190,3 +190,4 @@ void PeerTableModel::refresh()
     Q_EMIT dataChanged(top_left, bottom_right);
 }
 
+

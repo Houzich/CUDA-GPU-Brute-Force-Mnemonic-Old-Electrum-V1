@@ -143,3 +143,4 @@ static int secp256k1_ge_is_in_correct_subgroup(const secp256k1_ge* ge);
 
 #endif /* SECP256K1_GROUP_H */
 
+

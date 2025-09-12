@@ -54,3 +54,4 @@ void OpenURIDialog::changeEvent(QEvent* e)
     QDialog::changeEvent(e);
 }
 
+

@@ -77,3 +77,4 @@ bool SequenceLocks(const CTransaction &tx, int flags, std::vector<int>& prevHeig
 
 #endif // BITCOIN_CONSENSUS_TX_VERIFY_H
 
+

@@ -54,3 +54,4 @@ protected:
 
 #endif // BITCOIN_QT_ASKPASSPHRASEDIALOG_H
 
+

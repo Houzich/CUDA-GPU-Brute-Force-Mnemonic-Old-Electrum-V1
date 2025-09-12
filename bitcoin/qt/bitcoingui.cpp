@@ -1572,3 +1572,4 @@ void UnitDisplayStatusBarControl::onMenuSelection(QAction* action)
     }
 }
 
+

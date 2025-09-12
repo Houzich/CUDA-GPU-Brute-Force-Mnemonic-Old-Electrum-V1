@@ -421,3 +421,4 @@ uint32_t PartiallySignedTransaction::GetVersion() const
     return 0;
 }
 
+

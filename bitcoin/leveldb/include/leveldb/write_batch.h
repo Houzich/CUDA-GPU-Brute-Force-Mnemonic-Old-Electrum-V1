@@ -82,3 +82,4 @@ class LEVELDB_EXPORT WriteBatch {
 
 #endif  // STORAGE_LEVELDB_INCLUDE_WRITE_BATCH_H_
 
+

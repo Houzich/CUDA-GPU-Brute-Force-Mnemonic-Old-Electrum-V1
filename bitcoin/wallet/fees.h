@@ -47,3 +47,4 @@ CFeeRate GetDiscardRate(const CWallet& wallet);
 
 #endif // BITCOIN_WALLET_FEES_H
 
+

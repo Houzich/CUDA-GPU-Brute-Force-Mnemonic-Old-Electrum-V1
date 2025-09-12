@@ -46,3 +46,4 @@ uint64_t SipHashUint256Extra(uint64_t k0, uint64_t k1, const uint256& val, uint3
 
 #endif // BITCOIN_CRYPTO_SIPHASH_H
 
+

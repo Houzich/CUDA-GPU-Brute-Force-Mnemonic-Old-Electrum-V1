@@ -1123,3 +1123,4 @@ void SendConfirmationDialog::updateButtons()
     }
 }
 
+

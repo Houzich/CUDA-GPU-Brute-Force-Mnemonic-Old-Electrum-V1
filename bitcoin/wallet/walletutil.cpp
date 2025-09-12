@@ -45,3 +45,4 @@ WalletFeature GetClosestWalletFeature(int version)
 }
 } // namespace wallet
 
+

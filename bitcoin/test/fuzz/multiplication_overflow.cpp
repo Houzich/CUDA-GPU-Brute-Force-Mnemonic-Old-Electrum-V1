@@ -50,3 +50,4 @@ FUZZ_TARGET(multiplication_overflow)
     TestMultiplicationOverflow<signed char>(fuzzed_data_provider);
 }
 
+

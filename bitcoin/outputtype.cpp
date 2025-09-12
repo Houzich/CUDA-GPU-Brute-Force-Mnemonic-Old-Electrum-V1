@@ -122,3 +122,4 @@ std::optional<OutputType> OutputTypeFromDestination(const CTxDestination& dest) 
     return std::nullopt;
 }
 
+

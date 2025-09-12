@@ -4516,3 +4516,4 @@ A "Fájl &gt; Tárca megnyitása" menüben tölthet be egyet.
     </message>
 </context>
 </TS>
+

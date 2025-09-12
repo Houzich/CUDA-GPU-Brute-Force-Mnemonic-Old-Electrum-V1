@@ -51,3 +51,4 @@ void InitWalletDirTestingSetup::SetWalletDir(const fs::path& walletdir_path)
 }
 } // namespace wallet
 
+

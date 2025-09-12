@@ -18,3 +18,4 @@ size_t SaltedSipHasher::operator()(const Span<const unsigned char>& script) cons
     return CSipHasher(m_k0, m_k1).Write(script.data(), script.size()).Finalize();
 }
 
+

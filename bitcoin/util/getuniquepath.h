@@ -17,3 +17,4 @@
 fs::path GetUniquePath(const fs::path& base);
 
 #endif // BITCOIN_UTIL_GETUNIQUEPATH_H
+

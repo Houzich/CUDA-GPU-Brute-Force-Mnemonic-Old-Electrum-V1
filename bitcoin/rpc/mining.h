@@ -10,3 +10,4 @@ static const uint64_t DEFAULT_MAX_TRIES{1000000};
 
 #endif // BITCOIN_RPC_MINING_H
 
+

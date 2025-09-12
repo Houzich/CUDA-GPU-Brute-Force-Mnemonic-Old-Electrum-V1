@@ -637,3 +637,4 @@ public:
 
 #endif // BITCOIN_WALLET_SCRIPTPUBKEYMAN_H
 
+

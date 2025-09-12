@@ -186,3 +186,4 @@ private Q_SLOTS:
 
 #endif // BITCOIN_QT_RPCCONSOLE_H
 
+

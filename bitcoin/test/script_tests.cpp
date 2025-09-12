@@ -1822,3 +1822,4 @@ BOOST_AUTO_TEST_CASE(bip341_keypath_test_vectors)
 
 BOOST_AUTO_TEST_SUITE_END()
 
+

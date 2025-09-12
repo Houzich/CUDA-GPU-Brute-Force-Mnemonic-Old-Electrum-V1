@@ -92,3 +92,4 @@ std::unique_ptr<Protocol> MakeCapnpProtocol() { return std::make_unique<CapnpPro
 } // namespace capnp
 } // namespace ipc
 
+

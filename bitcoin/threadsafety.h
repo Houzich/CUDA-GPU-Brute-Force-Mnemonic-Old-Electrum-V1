@@ -76,3 +76,4 @@ public:
 
 #endif // BITCOIN_THREADSAFETY_H
 
+

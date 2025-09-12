@@ -44,3 +44,4 @@ FUZZ_TARGET_INIT(socks5, initialize_socks5)
                  fuzzed_sock);
 }
 
+

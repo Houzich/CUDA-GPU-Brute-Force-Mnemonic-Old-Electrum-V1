@@ -172,3 +172,4 @@ void run_tests(secp256k1_context *ctx, unsigned char *key) {
 #endif
 }
 
+

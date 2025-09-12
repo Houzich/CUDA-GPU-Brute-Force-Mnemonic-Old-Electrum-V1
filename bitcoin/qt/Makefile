@@ -10,3 +10,4 @@ bitcoin-qt bitcoin-qt.exe: FORCE
 apk: FORCE
 	$(MAKE) -C .. bitcoin_qt_apk
 
+

@@ -94,3 +94,4 @@ CHashWriter TaggedHash(const std::string& tag)
     return writer;
 }
 
+

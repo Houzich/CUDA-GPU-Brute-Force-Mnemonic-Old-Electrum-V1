@@ -306,3 +306,4 @@ std::unique_ptr<WalletDatabase> CreateMockWalletDatabase();
 
 #endif // BITCOIN_WALLET_WALLETDB_H
 
+

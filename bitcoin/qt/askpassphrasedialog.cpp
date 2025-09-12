@@ -274,3 +274,4 @@ void AskPassphraseDialog::secureClearPassFields()
     SecureClearQLineEdit(ui->passEdit3);
 }
 
+

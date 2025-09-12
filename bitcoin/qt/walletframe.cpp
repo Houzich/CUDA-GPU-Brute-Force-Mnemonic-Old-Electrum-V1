@@ -282,3 +282,4 @@ WalletModel* WalletFrame::currentWalletModel() const
     return wallet_view ? wallet_view->getWalletModel() : nullptr;
 }
 
+

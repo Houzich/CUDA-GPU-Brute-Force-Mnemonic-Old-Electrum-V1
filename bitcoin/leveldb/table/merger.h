@@ -25,3 +25,4 @@ Iterator* NewMergingIterator(const Comparator* comparator, Iterator** children,
 
 #endif  // STORAGE_LEVELDB_TABLE_MERGER_H_
 
+

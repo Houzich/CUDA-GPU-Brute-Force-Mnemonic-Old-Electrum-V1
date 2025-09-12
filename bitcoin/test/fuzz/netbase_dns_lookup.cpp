@@ -70,3 +70,4 @@ FUZZ_TARGET(netbase_dns_lookup)
     }
 }
 
+

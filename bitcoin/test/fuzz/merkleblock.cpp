@@ -48,3 +48,4 @@ FUZZ_TARGET(merkleblock)
     (void)partial_merkle_tree.ExtractMatches(matches, indices);
 }
 
+

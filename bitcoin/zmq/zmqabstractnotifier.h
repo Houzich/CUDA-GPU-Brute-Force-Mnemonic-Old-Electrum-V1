@@ -65,3 +65,4 @@ protected:
 
 #endif // BITCOIN_ZMQ_ZMQABSTRACTNOTIFIER_H
 
+

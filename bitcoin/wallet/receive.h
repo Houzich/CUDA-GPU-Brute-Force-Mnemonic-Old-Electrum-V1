@@ -65,3 +65,4 @@ std::set<std::set<CTxDestination>> GetAddressGroupings(const CWallet& wallet) EX
 
 #endif // BITCOIN_WALLET_RECEIVE_H
 
+

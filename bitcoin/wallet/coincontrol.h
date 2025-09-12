@@ -142,3 +142,4 @@ private:
 
 #endif // BITCOIN_WALLET_COINCONTROL_H
 
+

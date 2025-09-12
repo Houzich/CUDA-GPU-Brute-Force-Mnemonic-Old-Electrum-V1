@@ -39,3 +39,4 @@ FUZZ_TARGET(fee_rate)
     }
 }
 
+

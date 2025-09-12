@@ -26,3 +26,4 @@ public:
 
 #endif // BITCOIN_QT_WINSHUTDOWNMONITOR_H
 
+

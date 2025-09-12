@@ -67,3 +67,4 @@ inline bool CanUseArm64Crc32() {
 
 #endif  // CRC32C_CRC32C_ARM_CHECK_H_
 
+

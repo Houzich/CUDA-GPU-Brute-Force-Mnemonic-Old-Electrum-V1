@@ -493,3 +493,4 @@ public:
 
 #endif // BITCOIN_CHAIN_H
 
+

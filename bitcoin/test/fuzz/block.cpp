@@ -71,3 +71,4 @@ FUZZ_TARGET_INIT(block, initialize_block)
     assert(is_null);
 }
 
+

@@ -32,3 +32,4 @@ FUZZ_TARGET(secp256k1_ecdsa_signature_parse_der_lax)
     secp256k1_context_destroy(secp256k1_context_verify);
 }
 
+

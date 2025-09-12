@@ -67,3 +67,4 @@ inline bilingual_str _(const char* psz)
 
 #endif // BITCOIN_UTIL_TRANSLATION_H
 
+

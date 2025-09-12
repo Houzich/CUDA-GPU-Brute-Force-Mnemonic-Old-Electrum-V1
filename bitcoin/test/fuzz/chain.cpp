@@ -67,3 +67,4 @@ FUZZ_TARGET(chain)
     (void)block_index.ToString();
 }
 
+

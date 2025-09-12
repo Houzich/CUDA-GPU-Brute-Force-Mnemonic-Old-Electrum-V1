@@ -27,3 +27,4 @@ void ValidationInterfaceTest::BlockConnected(CValidationInterface& obj, const st
     obj.BlockConnected(block, pindex);
 }
 
+

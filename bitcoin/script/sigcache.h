@@ -37,3 +37,4 @@ void InitSignatureCache();
 
 #endif // BITCOIN_SCRIPT_SIGCACHE_H
 
+

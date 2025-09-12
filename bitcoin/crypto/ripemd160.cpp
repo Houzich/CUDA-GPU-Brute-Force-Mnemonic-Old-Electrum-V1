@@ -291,3 +291,4 @@ CRIPEMD160& CRIPEMD160::Reset()
     return *this;
 }
 
+

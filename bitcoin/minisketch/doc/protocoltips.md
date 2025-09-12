@@ -29,3 +29,4 @@ When the number of differences is more than 2<sup>b/2-1</sup> an alternative ske
 * <a name="myfootnote1">[1]</a> Broder, A. *On the Resemblance and Containment of Documents* Proceedings of the Compression and Complexity of Sequences 1997 [[PDF]](https://www.cs.princeton.edu/courses/archive/spring13/cos598C/broder97resemblance.pdf)
 * <a name="myfootnote2">[2]</a> Feigenbaum, Joan and Kannan, Sampath and Strauss, Martin J. and Viswanathan, Mahesh. *An Approximate L1-Difference Algorithm for  Massive Data Streams* SIAM J. Comput. 2003 [[PDF]](http://www.cs.yale.edu/homes/jf/FKSV1.pdf)
 
+

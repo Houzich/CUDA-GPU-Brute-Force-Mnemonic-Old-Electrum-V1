@@ -513,3 +513,4 @@ GenTxid ToGenTxid(const CInv& inv);
 
 #endif // BITCOIN_PROTOCOL_H
 
+

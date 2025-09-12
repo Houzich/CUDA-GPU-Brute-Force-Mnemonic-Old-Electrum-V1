@@ -63,3 +63,4 @@ CTransactionRef GetTransaction(const CBlockIndex* const block_index, const CTxMe
 
 #endif // BITCOIN_NODE_TRANSACTION_H
 
+

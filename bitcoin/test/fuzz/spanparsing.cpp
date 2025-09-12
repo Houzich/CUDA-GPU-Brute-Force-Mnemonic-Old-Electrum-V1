@@ -29,3 +29,4 @@ FUZZ_TARGET(spanparsing)
     }
 }
 
+

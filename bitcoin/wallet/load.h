@@ -40,3 +40,4 @@ void UnloadWallets(WalletContext& context);
 
 #endif // BITCOIN_WALLET_LOAD_H
 
+

@@ -1098,3 +1098,4 @@ size_t GetSerializeSizeMany(int nVersion, const T&... t)
 
 #endif // BITCOIN_SERIALIZE_H
 
+

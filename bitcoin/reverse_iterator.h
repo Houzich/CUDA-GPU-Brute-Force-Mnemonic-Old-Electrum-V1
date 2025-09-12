@@ -38,3 +38,4 @@ reverse_range<T> reverse_iterate(T &x)
 
 #endif // BITCOIN_REVERSE_ITERATOR_H
 
+

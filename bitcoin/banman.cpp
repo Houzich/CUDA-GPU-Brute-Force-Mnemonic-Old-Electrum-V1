@@ -208,3 +208,4 @@ void BanMan::SetBannedSetDirty(bool dirty)
     m_is_dirty = dirty;
 }
 
+

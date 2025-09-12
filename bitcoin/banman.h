@@ -97,3 +97,4 @@ private:
 
 #endif // BITCOIN_BANMAN_H
 
+

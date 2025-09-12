@@ -32,3 +32,4 @@ FUZZ_TARGET_INIT(signet, initialize_signet)
     (void)SignetTxs::Create(*block, ConsumeScript(fuzzed_data_provider));
 }
 
+

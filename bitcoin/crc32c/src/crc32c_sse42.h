@@ -32,3 +32,4 @@ uint32_t ExtendSse42(uint32_t crc, const uint8_t* data, size_t count);
 
 #endif  // CRC32C_CRC32C_SSE42_H_
 
+

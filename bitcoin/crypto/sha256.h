@@ -40,3 +40,4 @@ void SHA256D64(unsigned char* output, const unsigned char* input, size_t blocks)
 
 #endif // BITCOIN_CRYPTO_SHA256_H
 
+

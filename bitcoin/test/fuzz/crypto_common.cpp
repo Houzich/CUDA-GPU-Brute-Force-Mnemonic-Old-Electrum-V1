@@ -69,3 +69,4 @@ FUZZ_TARGET(crypto_common)
     assert(std::memcmp(random_bytes_8.data(), readbe64_arr.data(), 8) == 0);
 }
 
+

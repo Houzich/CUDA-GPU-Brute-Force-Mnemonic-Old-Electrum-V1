@@ -70,3 +70,4 @@ public:
 
 #endif // BITCOIN_UNDO_H
 
+

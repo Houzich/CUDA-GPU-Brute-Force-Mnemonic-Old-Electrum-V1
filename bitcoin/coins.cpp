@@ -308,3 +308,4 @@ bool CCoinsViewErrorCatcher::GetCoin(const COutPoint &outpoint, Coin &coin) cons
     }
 }
 
+

@@ -263,3 +263,4 @@ FUZZ_TARGET_INIT(integer, initialize_integer)
     }
 }
 
+

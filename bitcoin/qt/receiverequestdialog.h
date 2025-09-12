@@ -39,3 +39,4 @@ private:
 
 #endif // BITCOIN_QT_RECEIVEREQUESTDIALOG_H
 
+

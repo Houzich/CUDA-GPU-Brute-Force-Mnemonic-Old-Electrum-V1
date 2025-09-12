@@ -58,3 +58,4 @@ FUZZ_TARGET(kitchen_sink)
     assert(bytes == bytes_decoded);
 }
 
+

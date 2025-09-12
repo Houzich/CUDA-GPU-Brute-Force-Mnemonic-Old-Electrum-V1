@@ -16,3 +16,4 @@ void poly1305_auth(unsigned char out[POLY1305_TAGLEN], const unsigned char *m, s
 
 #endif // BITCOIN_CRYPTO_POLY1305_H
 
+

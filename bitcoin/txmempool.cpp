@@ -1214,3 +1214,4 @@ void CTxMemPool::SetIsLoaded(bool loaded)
     m_is_loaded = loaded;
 }
 
+

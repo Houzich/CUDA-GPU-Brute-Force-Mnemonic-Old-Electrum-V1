@@ -150,3 +150,4 @@ bool CheckSignetBlockSolution(const CBlock& block, const Consensus::Params& cons
     return true;
 }
 
+

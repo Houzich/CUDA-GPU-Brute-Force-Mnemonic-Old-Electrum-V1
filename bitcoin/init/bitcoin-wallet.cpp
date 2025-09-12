@@ -11,3 +11,4 @@ std::unique_ptr<Init> MakeWalletInit(int argc, char* argv[], int& exit_status)
 }
 } // namespace interfaces
 
+

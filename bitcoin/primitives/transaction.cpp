@@ -116,3 +116,4 @@ std::string CTransaction::ToString() const
     return str;
 }
 
+

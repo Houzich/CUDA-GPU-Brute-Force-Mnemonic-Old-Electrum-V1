@@ -63,3 +63,4 @@ public:
 
 #endif // BITCOIN_ZMQ_ZMQPUBLISHNOTIFIER_H
 
+

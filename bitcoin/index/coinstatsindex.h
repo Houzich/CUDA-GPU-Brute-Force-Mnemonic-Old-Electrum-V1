@@ -62,3 +62,4 @@ extern std::unique_ptr<CoinStatsIndex> g_coin_stats_index;
 
 #endif // BITCOIN_INDEX_COINSTATSINDEX_H
 
+

@@ -60,3 +60,4 @@ UniValue CreateUTXOSnapshot(
 
 #endif // BITCOIN_RPC_BLOCKCHAIN_H
 
+

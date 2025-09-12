@@ -499,3 +499,4 @@ void RandAddStaticEnv(CSHA512& hasher)
     hasher << std::this_thread::get_id();
 }
 
+

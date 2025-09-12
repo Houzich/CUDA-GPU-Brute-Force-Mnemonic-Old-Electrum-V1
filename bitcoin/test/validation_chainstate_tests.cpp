@@ -150,3 +150,4 @@ BOOST_FIXTURE_TEST_CASE(chainstate_update_tip, TestChain100Setup)
 
 BOOST_AUTO_TEST_SUITE_END()
 
+

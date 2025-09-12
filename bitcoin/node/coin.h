@@ -26,3 +26,4 @@ void FindCoins(const node::NodeContext& node, std::map<COutPoint, Coin>& coins);
 
 #endif // BITCOIN_NODE_COIN_H
 
+

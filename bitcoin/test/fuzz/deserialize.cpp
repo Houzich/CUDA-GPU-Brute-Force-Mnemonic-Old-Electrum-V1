@@ -325,3 +325,4 @@ FUZZ_TARGET_DESERIALIZE(uint256_deserialize, {
 // * Deserialization of CTxOut is fuzzed in test/fuzz/tx_out.cpp
 // * Deserialization of CMutableTransaction is fuzzed in src/test/fuzz/transaction.cpp
 
+

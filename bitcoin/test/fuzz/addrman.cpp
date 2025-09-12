@@ -325,3 +325,4 @@ FUZZ_TARGET_INIT(addrman_serdeser, initialize_addrman)
     assert(addr_man1 == addr_man2);
 }
 
+

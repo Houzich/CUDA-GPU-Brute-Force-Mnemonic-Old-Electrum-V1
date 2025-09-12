@@ -33,3 +33,4 @@ void CoinControlTreeWidget::keyPressEvent(QKeyEvent *event)
     }
 }
 
+

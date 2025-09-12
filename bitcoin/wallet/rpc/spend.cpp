@@ -1445,3 +1445,4 @@ RPCHelpMan walletcreatefundedpsbt()
 }
 } // namespace wallet
 
+

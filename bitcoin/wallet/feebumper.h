@@ -60,3 +60,4 @@ Result CommitTransaction(CWallet& wallet,
 
 #endif // BITCOIN_WALLET_FEEBUMPER_H
 
+

@@ -2476,3 +2476,4 @@ Nota: Dado que la tasa se calcula por cada byte, una tasa de "100 satoshis por k
     </message>
     </context>
 </TS>
+

@@ -18,3 +18,4 @@ private Q_SLOTS:
 
 #endif // BITCOIN_QT_TEST_URITESTS_H
 
+

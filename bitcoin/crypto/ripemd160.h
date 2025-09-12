@@ -27,3 +27,4 @@ public:
 
 #endif // BITCOIN_CRYPTO_RIPEMD160_H
 
+

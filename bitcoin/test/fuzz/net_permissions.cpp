@@ -40,3 +40,4 @@ FUZZ_TARGET(net_permissions)
     }
 }
 
+

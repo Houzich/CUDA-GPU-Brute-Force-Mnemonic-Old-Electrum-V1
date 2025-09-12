@@ -709,3 +709,4 @@ bool SignTransaction(CMutableTransaction& mtx, const SigningProvider* keystore, 
     return input_errors.empty();
 }
 
+

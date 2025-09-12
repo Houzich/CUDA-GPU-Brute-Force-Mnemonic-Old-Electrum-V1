@@ -55,3 +55,4 @@ bilingual_str AmountErrMsg(const std::string& optname, const std::string& strVal
     return strprintf(_("Invalid amount for -%s=<amount>: '%s'"), optname, strValue);
 }
 
+

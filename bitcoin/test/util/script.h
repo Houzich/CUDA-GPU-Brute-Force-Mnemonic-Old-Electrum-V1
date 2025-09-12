@@ -23,3 +23,4 @@ bool IsValidFlagCombination(unsigned flags);
 
 #endif // BITCOIN_TEST_UTIL_SCRIPT_H
 
+

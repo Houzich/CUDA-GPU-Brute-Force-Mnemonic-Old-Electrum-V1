@@ -86,3 +86,4 @@ FUZZ_TARGET(locale)
     assert(current_cpp_locale == std::locale::classic());
 }
 
+

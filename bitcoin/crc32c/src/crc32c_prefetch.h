@@ -45,3 +45,4 @@ inline void RequestPrefetch(const uint8_t* address) {
 
 #endif  // CRC32C_CRC32C_ROUND_UP_H_
 
+

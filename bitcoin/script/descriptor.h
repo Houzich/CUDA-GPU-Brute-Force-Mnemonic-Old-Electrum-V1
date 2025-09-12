@@ -184,3 +184,4 @@ std::unique_ptr<Descriptor> InferDescriptor(const CScript& script, const Signing
 
 #endif // BITCOIN_SCRIPT_DESCRIPTOR_H
 
+

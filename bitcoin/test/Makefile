@@ -5,3 +5,4 @@ clean:
 check:
 	$(MAKE) -C .. bitcoin_test_check
 
+

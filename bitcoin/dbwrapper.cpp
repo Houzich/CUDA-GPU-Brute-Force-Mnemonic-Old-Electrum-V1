@@ -262,3 +262,4 @@ const std::vector<unsigned char>& GetObfuscateKey(const CDBWrapper &w)
 
 } // namespace dbwrapper_private
 
+

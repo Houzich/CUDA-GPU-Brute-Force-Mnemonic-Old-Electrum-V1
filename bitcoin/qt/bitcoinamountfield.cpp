@@ -341,3 +341,4 @@ void BitcoinAmountField::setSingleStep(const CAmount& step)
     amount->setSingleStep(step);
 }
 
+

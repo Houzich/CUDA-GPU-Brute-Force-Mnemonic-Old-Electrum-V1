@@ -54,3 +54,4 @@ class BlockBuilder {
 
 #endif  // STORAGE_LEVELDB_TABLE_BLOCK_BUILDER_H_
 
+

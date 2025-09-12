@@ -136,3 +136,4 @@ BOOST_AUTO_TEST_CASE(compress_script_to_uncompressed_pubkey_id)
 
 BOOST_AUTO_TEST_SUITE_END()
 
+

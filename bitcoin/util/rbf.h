@@ -22,3 +22,4 @@ bool SignalsOptInRBF(const CTransaction& tx);
 
 #endif // BITCOIN_UTIL_RBF_H
 
+

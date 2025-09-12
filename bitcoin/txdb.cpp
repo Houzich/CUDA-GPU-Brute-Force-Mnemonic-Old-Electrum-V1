@@ -460,3 +460,4 @@ bool CCoinsViewDB::Upgrade() {
     return !ShutdownRequested();
 }
 
+

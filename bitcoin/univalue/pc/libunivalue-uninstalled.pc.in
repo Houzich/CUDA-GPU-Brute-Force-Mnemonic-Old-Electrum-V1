@@ -8,3 +8,4 @@ Description: libunivalue, C++ universal value object and JSON library
 Version: @VERSION@
 Libs: ${pc_top_builddir}/${pcfiledir}/libunivalue.la
 
+

@@ -68,3 +68,4 @@ FUZZ_TARGET_INIT(signature_checker, initialize_signature_checker)
     (void)VerifyScript(script_1, script_2, nullptr, flags, FuzzedSignatureChecker(fuzzed_data_provider), nullptr);
 }
 
+

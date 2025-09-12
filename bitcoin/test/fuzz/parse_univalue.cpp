@@ -103,3 +103,4 @@ FUZZ_TARGET_INIT(parse_univalue, initialize_parse_univalue)
     }
 }
 
+

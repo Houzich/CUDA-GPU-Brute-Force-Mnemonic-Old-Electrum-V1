@@ -17,3 +17,4 @@
 
 #endif // BITCOIN_UTIL_MACROS_H
 
+

@@ -49,3 +49,4 @@ inline bool CanUseSse42() {
 
 #endif  // CRC32C_CRC32C_SSE42_CHECK_H_
 
+

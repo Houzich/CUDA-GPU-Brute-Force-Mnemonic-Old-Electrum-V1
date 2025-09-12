@@ -805,3 +805,4 @@ RPCHelpMan walletdisplayaddress()
 #endif // ENABLE_EXTERNAL_SIGNER
 } // namespace wallet
 
+

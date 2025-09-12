@@ -14,3 +14,4 @@ enum ChangeType {
 
 #endif // BITCOIN_UTIL_UI_CHANGE_TYPE_H
 
+

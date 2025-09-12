@@ -50,3 +50,4 @@ std::string LicenseInfo();
 
 #endif // BITCOIN_CLIENTVERSION_H
 
+

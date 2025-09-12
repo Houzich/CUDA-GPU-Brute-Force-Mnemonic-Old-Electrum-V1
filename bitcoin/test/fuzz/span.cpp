@@ -38,3 +38,4 @@ FUZZ_TARGET(span)
     assert((span >= another_span) != (span < another_span));
 }
 
+

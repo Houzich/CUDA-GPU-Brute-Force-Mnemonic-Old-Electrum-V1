@@ -761,3 +761,4 @@ void TransactionTableModel::unsubscribeFromCoreSignals()
     m_handler_show_progress->disconnect();
 }
 
+

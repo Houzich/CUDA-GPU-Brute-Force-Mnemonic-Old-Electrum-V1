@@ -44,3 +44,4 @@ bool CThreadInterrupt::sleep_for(std::chrono::minutes rel_time)
     return sleep_for(std::chrono::duration_cast<std::chrono::milliseconds>(rel_time));
 }
 
+

@@ -125,3 +125,4 @@ bool CachingTransactionSignatureChecker::VerifySchnorrSignature(Span<const unsig
     return true;
 }
 
+

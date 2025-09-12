@@ -226,3 +226,4 @@ GenTxid ToGenTxid(const CInv& inv)
     return inv.IsMsgWtx() ? GenTxid::Wtxid(inv.hash) : GenTxid::Txid(inv.hash);
 }
 
+

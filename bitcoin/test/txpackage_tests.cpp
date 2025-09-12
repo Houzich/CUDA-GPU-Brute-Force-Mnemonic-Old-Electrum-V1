@@ -572,3 +572,4 @@ BOOST_FIXTURE_TEST_CASE(package_witness_swap_tests, TestChain100Setup)
 }
 BOOST_AUTO_TEST_SUITE_END()
 
+

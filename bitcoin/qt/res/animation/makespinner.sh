@@ -13,3 +13,4 @@ do
     convert "${FRAMEDIR}/../src/spinner.png" -background "rgba(0,0,0,0.0)" -distort SRT $angle "${FRAMEDIR}/spinner-${frame}.png"
 done
 
+

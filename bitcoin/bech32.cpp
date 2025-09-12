@@ -568,3 +568,4 @@ std::pair<std::string, std::vector<int>> LocateErrors(const std::string& str) {
 
 } // namespace bech32
 
+

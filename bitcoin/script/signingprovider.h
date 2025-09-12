@@ -164,3 +164,4 @@ CKeyID GetKeyForDestination(const SigningProvider& store, const CTxDestination& 
 
 #endif // BITCOIN_SCRIPT_SIGNINGPROVIDER_H
 
+

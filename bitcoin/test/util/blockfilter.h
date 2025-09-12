@@ -12,3 +12,4 @@ bool ComputeFilter(BlockFilterType filter_type, const CBlockIndex* block_index, 
 
 #endif // BITCOIN_TEST_UTIL_BLOCKFILTER_H
 
+

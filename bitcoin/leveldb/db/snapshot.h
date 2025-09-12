@@ -94,3 +94,4 @@ class SnapshotList {
 
 #endif  // STORAGE_LEVELDB_DB_SNAPSHOT_H_
 
+

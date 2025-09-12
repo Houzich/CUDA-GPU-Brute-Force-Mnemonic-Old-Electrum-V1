@@ -111,3 +111,4 @@ LEVELDB_EXPORT Iterator* NewErrorIterator(const Status& status);
 
 #endif  // STORAGE_LEVELDB_INCLUDE_ITERATOR_H_
 
+

@@ -992,3 +992,4 @@ bool FinalizeAndExtractPSBT(PartiallySignedTransaction& psbtx, CMutableTransacti
 
 #endif // BITCOIN_PSBT_H
 
+

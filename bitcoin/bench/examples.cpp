@@ -20,3 +20,4 @@ static void Trig(benchmark::Bench& bench)
 
 BENCHMARK(Trig);
 
+

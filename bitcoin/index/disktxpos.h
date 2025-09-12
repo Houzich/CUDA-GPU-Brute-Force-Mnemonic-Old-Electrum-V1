@@ -34,3 +34,4 @@ struct CDiskTxPos : public FlatFilePos
 
 #endif // BITCOIN_INDEX_DISKTXPOS_H
 
+

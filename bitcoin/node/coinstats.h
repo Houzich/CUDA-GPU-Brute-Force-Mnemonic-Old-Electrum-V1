@@ -83,3 +83,4 @@ CDataStream TxOutSer(const COutPoint& outpoint, const Coin& coin);
 
 #endif // BITCOIN_NODE_COINSTATS_H
 
+

@@ -16,3 +16,4 @@ void RandAddStaticEnv(CSHA512& hasher);
 
 #endif // BITCOIN_RANDOMENV_H
 
+

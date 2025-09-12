@@ -109,3 +109,4 @@ uint64_t static inline CountBits(uint64_t x)
 
 #endif // BITCOIN_CRYPTO_COMMON_H
 
+

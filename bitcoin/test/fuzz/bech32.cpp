@@ -42,3 +42,4 @@ FUZZ_TARGET(bech32)
     }
 }
 
+

@@ -161,3 +161,4 @@ echo "Only compiling in support for field sizes: $enable_fields"
 echo "WARNING: this means the library will lack support for other field sizes entirely"
 fi
 
+

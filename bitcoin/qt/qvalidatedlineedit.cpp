@@ -129,3 +129,4 @@ bool QValidatedLineEdit::isValid()
     return valid;
 }
 
+

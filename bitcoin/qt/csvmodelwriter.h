@@ -45,3 +45,4 @@ private:
 
 #endif // BITCOIN_QT_CSVMODELWRITER_H
 
+

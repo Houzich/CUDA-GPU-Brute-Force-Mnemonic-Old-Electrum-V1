@@ -708,3 +708,4 @@ void CoinControlDialog::updateView()
     ui->treeWidget->setEnabled(true);
 }
 
+

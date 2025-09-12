@@ -276,3 +276,4 @@ uint256 BlockFilter::ComputeHeader(const uint256& prev_header) const
     return result;
 }
 
+

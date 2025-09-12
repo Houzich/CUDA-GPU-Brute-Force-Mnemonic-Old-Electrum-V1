@@ -130,3 +130,4 @@ public:
 
 #endif // BITCOIN_CRYPTO_MUHASH_H
 
+

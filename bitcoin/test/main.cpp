@@ -40,3 +40,4 @@ const std::function<std::vector<const char*>()> G_TEST_COMMAND_LINE_ARGUMENTS = 
     return args;
 };
 
+

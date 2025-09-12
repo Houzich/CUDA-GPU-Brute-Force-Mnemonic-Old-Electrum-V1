@@ -208,3 +208,4 @@ BOOST_AUTO_TEST_CASE(sighash_from_data)
 }
 BOOST_AUTO_TEST_SUITE_END()
 
+

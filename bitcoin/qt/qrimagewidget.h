@@ -46,3 +46,4 @@ private:
 
 #endif // BITCOIN_QT_QRIMAGEWIDGET_H
 
+

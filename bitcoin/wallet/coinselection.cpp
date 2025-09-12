@@ -462,3 +462,4 @@ std::string COutput::ToString() const
 }
 } // namespace wallet
 
+

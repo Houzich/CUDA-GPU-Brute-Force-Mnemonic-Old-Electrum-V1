@@ -123,3 +123,4 @@ std::string SQLiteDatabaseVersion();
 
 #endif // BITCOIN_WALLET_SQLITE_H
 
+

@@ -474,3 +474,4 @@ std::set< std::set<CTxDestination> > GetAddressGroupings(const CWallet& wallet)
 }
 } // namespace wallet
 
+

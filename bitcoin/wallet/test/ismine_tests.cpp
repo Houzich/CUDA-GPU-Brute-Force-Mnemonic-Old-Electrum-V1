@@ -420,3 +420,4 @@ BOOST_AUTO_TEST_CASE(ismine_standard)
 BOOST_AUTO_TEST_SUITE_END()
 } // namespace wallet
 
+

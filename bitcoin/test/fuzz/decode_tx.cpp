@@ -31,3 +31,4 @@ FUZZ_TARGET(decode_tx)
     }
 }
 
+

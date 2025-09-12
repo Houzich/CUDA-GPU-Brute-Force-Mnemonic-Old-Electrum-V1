@@ -54,3 +54,4 @@ inline bool DeploymentEnabled(const Consensus::Params& params, Consensus::Deploy
 
 #endif // BITCOIN_DEPLOYMENTSTATUS_H
 
+

@@ -29,3 +29,4 @@ FUZZ_TARGET(flatfile)
     assert(flat_file_pos->IsNull());
 }
 
+

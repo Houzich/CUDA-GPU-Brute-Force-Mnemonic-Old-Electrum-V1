@@ -336,3 +336,4 @@ void BCLog::Logger::ShrinkDebugFile()
         fclose(file);
 }
 
+

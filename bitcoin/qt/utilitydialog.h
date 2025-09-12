@@ -52,3 +52,4 @@ protected:
 
 #endif // BITCOIN_QT_UTILITYDIALOG_H
 
+
